@@ -63,59 +63,59 @@ class Agent:
         # Counter to track when to update the target network
         self.steps_done = 0
 
-        def act(self, state):
-            # Epsilon-greedy action selection to balance exploration and exploitation
-            if random.random() < self.epsilon:
-                return random.randrange(self.action_size)
-            else:
-                with torch.no_grad():
-                    # Convert state to tensor and add batch dimension
-                    state_tensor = torch.FloatTensor(state).unsqueeze(0)  
-                    q_values = self.policy_net(state_tensor)
-                    return q_values.argmax().item()
-
-        def step(self, state, action, reward, next_state, done):
-            # Store the experience in the replay buffer
-            self.replay_buffer.push(state, action, reward, next_state, done)
-            
-            # Trigger the learning process if enough samples are available in memory
-            if len(self.replay_buffer) >= self.batch_size:
-                self.learn()
-
-        def learn(self):
-            # Sample a batch of experiences from the replay buffer
-            batch = self.replay_buffer.sample(self.batch_size)
-            states, actions, rewards, next_states, dones = zip(*batch)
-
-            # Convert to tensors for PyTorch operations
-            states = torch.FloatTensor(np.array(states))
-            actions = torch.LongTensor(np.array(actions)).unsqueeze(1)  # Add dimension for gather
-            rewards = torch.FloatTensor(np.array(rewards)).unsqueeze(1)
-            next_states = torch.FloatTensor(np.array(next_states))
-            dones = torch.FloatTensor(np.array(dones)).unsqueeze(1)
-
-            # Compute Q-values for current states using the policy network
-            current_q_values = self.policy_net(states).gather(1, actions)
-
-            # Compute Q-values for next states using the target network
+    def act(self, state):
+        # Epsilon-greedy action selection to balance exploration and exploitation
+        if random.random() < self.epsilon:
+            return random.randrange(self.action_size)
+        else:
             with torch.no_grad():
-                max_next_q_values = self.target_net(next_states).max(1)[0].unsqueeze(1)
-                target_q_values = rewards + (self.gamma * max_next_q_values * (1 - dones))
+                # Convert state to tensor and add batch dimension
+                state_tensor = torch.FloatTensor(state).unsqueeze(0)  
+                q_values = self.policy_net(state_tensor)
+                return q_values.argmax().item()
 
-            # Compute the loss between current and target Q-values
-            loss = torch.nn.functional.mse_loss(current_q_values, target_q_values)
+    def step(self, state, action, reward, next_state, done):
+        # Store the experience in the replay buffer
+        self.replay_buffer.push(state, action, reward, next_state, done)
+        
+        # Trigger the learning process if enough samples are available in memory
+        if len(self.replay_buffer) >= self.batch_size:
+            self.learn()
 
-            # Optimize the policy network
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
+    def learn(self):
+        # Sample a batch of experiences from the replay buffer
+        batch = self.replay_buffer.sample(self.batch_size)
+        states, actions, rewards, next_states, dones = zip(*batch)
 
-            # Update epsilon for exploration-exploitation trade-off
-            self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
+        # Convert to tensors for PyTorch operations
+        states = torch.FloatTensor(np.array(states))
+        actions = torch.LongTensor(np.array(actions)).unsqueeze(1)  # Add dimension for gather
+        rewards = torch.FloatTensor(np.array(rewards)).unsqueeze(1)
+        next_states = torch.FloatTensor(np.array(next_states))
+        dones = torch.FloatTensor(np.array(dones)).unsqueeze(1)
 
-            # Update the target network periodically
-            if self.steps_done % self.target_update_freq == 0:
-                self.target_net.load_state_dict(self.policy_net.state_dict())
+        # Compute Q-values for current states using the policy network
+        current_q_values = self.policy_net(states).gather(1, actions)
 
-            # Increment the step counter
-            self.steps_done += 1
+        # Compute Q-values for next states using the target network
+        with torch.no_grad():
+            max_next_q_values = self.target_net(next_states).max(1)[0].unsqueeze(1)
+            target_q_values = rewards + (self.gamma * max_next_q_values * (1 - dones))
+
+        # Compute the loss between current and target Q-values
+        loss = torch.nn.functional.mse_loss(current_q_values, target_q_values)
+
+        # Optimize the policy network
+        self.optimizer.zero_grad()
+        loss.backward()
+        self.optimizer.step()
+
+        # Update epsilon for exploration-exploitation trade-off
+        self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
+
+        # Update the target network periodically
+        if self.steps_done % self.target_update_freq == 0:
+            self.target_net.load_state_dict(self.policy_net.state_dict())
+
+        # Increment the step counter
+        self.steps_done += 1

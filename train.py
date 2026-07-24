@@ -66,3 +66,16 @@ for episode in range(1, 1001):  # Train for 1000 episodes
         best_reward = total_reward
         torch.save(agent.policy_net.state_dict(), 'weights.pth')
         print(f"New best reward: {best_reward:.2f}! Weights saved to weights.pth.")
+
+# Calculate final training statistics
+total_tests = len(episode_rewards)
+mean_reward = np.mean(episode_rewards)
+variance_reward = np.var(episode_rewards)
+
+# Display the statistical results
+print("==============================")
+print("Training Phase Completed!")
+print(f"Total Episodes (Tests): {total_tests}")
+print(f"Mean Reward: {mean_reward:.2f}")
+print(f"Reward Variance: {variance_reward:.2f}")
+print("==============================")
