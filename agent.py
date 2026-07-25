@@ -102,16 +102,16 @@ class Agent:
             max_next_q_values = self.target_net(next_states).max(1)[0].unsqueeze(1)
             target_q_values = rewards + (self.gamma * max_next_q_values * (1 - dones))
 
-        # Compute the loss between current and target Q-values
-        loss = torch.nn.functional.mse_loss(current_q_values, target_q_values)
+        # Compute the loss between current and target Q-values.
+        # Huber (Smooth L1) loss is more robust to large Q-value errors than MSE.
+        loss = torch.nn.functional.smooth_l1_loss(current_q_values, target_q_values)
 
         # Optimize the policy network
         self.optimizer.zero_grad()
         loss.backward()
+        # Clip gradients to stabilise training against occasional large updates
+        torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), max_norm=1.0)
         self.optimizer.step()
-
-        # Update epsilon for exploration-exploitation trade-off
-        self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
 
         # Update the target network periodically
         if self.steps_done % self.target_update_freq == 0:
@@ -119,3 +119,9 @@ class Agent:
 
         # Increment the step counter
         self.steps_done += 1
+
+    def decay_epsilon(self):
+        # Decay epsilon once per episode (not per gradient step) so exploration
+        # remains meaningful across the full training run instead of collapsing
+        # within the first few episodes.
+        self.epsilon = max(self.epsilon_end, self.epsilon * self.epsilon_decay)
