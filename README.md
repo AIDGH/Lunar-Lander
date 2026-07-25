@@ -8,8 +8,8 @@ A completely custom, from-scratch implementation of a Deep Q-Network (DQN) agent
 * **Pure Algorithm Implementation**: Features a custom-built Neural Network policy, an Experience Replay buffer to break data correlation, and a periodically updated Target Network to ensure stable training.
 
 
-* **Hyperparameter Robustness**: Carefully tuned parameters (learning rate, discount factor, replay buffer capacity, and epsilon decay) specifically optimized to maintain algorithmic stability and prevent catastrophic forgetting or policy divergence during extended training episodes.
-* **Advanced DQN Variations (Bonus)**: Explores sophisticated extensions of the standard DQN architecture (e.g., Double DQN, Dueling DQN) to push the agent's performance limits, enhance evaluation scores, and achieve faster convergence.
+* **Hyperparameter Robustness**: Carefully tuned parameters (learning rate, discount factor, replay buffer capacity, and episode-level epsilon decay) selected to support algorithmic stability and avoid premature collapse of exploration during training.
+* **Vanilla DQN, by design**: The project implements a clean, transparent Deep Q-Network (experience replay + target network). Advanced variants such as Double DQN and Dueling DQN are documented in the references as possible extensions, but are intentionally not implemented here so that the core DQN mechanism remains the primary, defensible build.
 * **Zero External RL Dependencies**: Built entirely using foundational tools like PyTorch and NumPy, proving a deep understanding of Q-value estimation and backpropagation.
 
 **References & Architecture Foundations**

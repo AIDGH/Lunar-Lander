@@ -1,0 +1,18 @@
+# --- Local-only experiment artifacts (must NOT be committed) ---
+local_archive/
+.venv/
+
+# --- Python bytecode / caches ---
+__pycache__/
+*.py[cod]
+
+# --- Training/diagnostic logs ---
+*.log
+
+# NOTE: The following canonical result files are intentionally tracked and
+# must NOT be ignored (no broad rules that catch them):
+#   weights.pth
+#   training_metrics.json
+#   training_plot.png
+#   diagnostic_report_validation.json
+#   diagnostic_report_unseen_100.json
