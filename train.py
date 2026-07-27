@@ -15,13 +15,13 @@ from agent import Agent
 SEED = 42
 NUM_EPISODES = 1000
 LEARNING_RATE = 5e-4
-TARGET_UPDATE_FREQ = 2000
+TARGET_UPDATE_FREQ = 1000
 REPLAY_BUFFER_CAPACITY = 10_000
 BATCH_SIZE = 64
 GAMMA = 0.99
 EPSILON_START = 1.0
 EPSILON_MIN = 0.01
-EPSILON_DECAY = 0.995
+EPSILON_DECAY = 0.997
 
 # Use disjoint, explicit RNG streams. Training episode seeds are
 # 20042..21041, safely outside all reserved evaluation ranges. Hold-out
