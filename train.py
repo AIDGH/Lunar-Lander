@@ -12,7 +12,7 @@ from game import LunarLanderEnv
 from agent import Agent
 
 # --- Effective training configuration ---
-SEED = 42
+SEED = 43
 NUM_EPISODES = 1000
 LEARNING_RATE = 5e-4
 TARGET_UPDATE_FREQ = 1000
@@ -21,11 +21,11 @@ BATCH_SIZE = 64
 GAMMA = 0.99
 EPSILON_START = 1.0
 EPSILON_MIN = 0.01
-EPSILON_DECAY = 0.997
+EPSILON_DECAY = 0.995
 
 # Use disjoint, explicit RNG streams. Training episode seeds are
-# 20042..21041, safely outside all reserved evaluation ranges. Hold-out
-# collection uses its own environment and separate 30042+/40042 streams.
+# 20043..21042, safely outside all reserved evaluation ranges. Hold-out
+# collection uses its own environment and separate 30043+/40043 streams.
 TRAIN_ENV_SEED_BASE = 20_000 + SEED
 TRAIN_ACTION_SPACE_SEED = 21_000 + SEED
 HOLDOUT_ENV_SEED_BASE = 30_000 + SEED
