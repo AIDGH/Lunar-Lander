@@ -11,18 +11,37 @@ import matplotlib.pyplot as plt
 from game import LunarLanderEnv
 from agent import Agent
 
-# --- Reproducibility ---
+# --- Effective training configuration ---
 SEED = 42
+NUM_EPISODES = 1000
+LEARNING_RATE = 5e-4
+TARGET_UPDATE_FREQ = 1000
+REPLAY_BUFFER_CAPACITY = 10_000
+BATCH_SIZE = 64
+GAMMA = 0.99
+EPSILON_START = 1.0
+EPSILON_MIN = 0.01
+EPSILON_DECAY = 0.995
+
+# Use disjoint, explicit RNG streams. Training episode seeds are
+# 20042..21041, safely outside all reserved evaluation ranges. Hold-out
+# collection uses its own environment and separate 30042+/40042 streams.
+TRAIN_ENV_SEED_BASE = 20_000 + SEED
+TRAIN_ACTION_SPACE_SEED = 21_000 + SEED
+HOLDOUT_ENV_SEED_BASE = 30_000 + SEED
+HOLDOUT_ACTION_SPACE_SEED = 40_000 + SEED
+
+# Seed the process-level RNGs used by epsilon-greedy action selection, replay
+# sampling, NumPy operations, and PyTorch initialization/learning.
 random.seed(SEED)
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 
-# Number of training episodes
-NUM_EPISODES = 1000
 # Window used for the moving-average reward curve (training metric).
 MOVING_AVG_WINDOW = 50
 # Evaluate average max Q-value on the hold-out states every N episodes.
 Q_EVAL_EVERY = 10
+HOLDOUT_STATE_COUNT = 200
 
 # --- Greedy validation checkpoint selection ---
 # The training moving-average reward is an epsilon-greedy metric; it measures
@@ -93,29 +112,45 @@ def run_greedy_validation(agent, episodes, base_seed):
 
 # Initialize the environment
 env = LunarLanderEnv()
+env.action_space.seed(TRAIN_ACTION_SPACE_SEED)
 state_size = env.observation_space.shape[0]
 action_size = env.action_space.n
 
-# Initialize the agent with standard hyperparameters
+# Initialize the agent with every experimental hyperparameter explicit.
 agent = Agent(action_size=action_size,
               state_size=state_size,
-              batch_size=64)
+              batch_size=BATCH_SIZE,
+              replay_buffer_capacity=REPLAY_BUFFER_CAPACITY,
+              gamma=GAMMA,
+              epsilon_start=EPSILON_START,
+              epsilon_end=EPSILON_MIN,
+              epsilon_decay=EPSILON_DECAY,
+              lr=LEARNING_RATE,
+              target_update_freq=TARGET_UPDATE_FREQ)
 
 # --- Hold-out States Collection ---
-# Collect a set of random states to track Q-value stability during training.
+# Use a separate, fully seeded environment so diagnostic state collection
+# cannot consume or alter the training environment's RNG state.
+hold_out_env = LunarLanderEnv()
+hold_out_env.action_space.seed(HOLDOUT_ACTION_SPACE_SEED)
 hold_out_states = []
-state = env.reset(seed=SEED)
+hold_out_reset_count = 0
+state = hold_out_env.reset(seed=HOLDOUT_ENV_SEED_BASE)
 
-for _ in range(200):
-    action = env.action_space.sample()  # Take a random action
-    next_state, reward, done = env.step(action)
+for _ in range(HOLDOUT_STATE_COUNT):
+    action = hold_out_env.action_space.sample()  # Take a seeded random action
+    next_state, reward, done = hold_out_env.step(action)
     hold_out_states.append(state)
     state = next_state
     if done:
-        state = env.reset()
+        hold_out_reset_count += 1
+        state = hold_out_env.reset(
+            seed=HOLDOUT_ENV_SEED_BASE + hold_out_reset_count
+        )
 
 # Convert hold-out states to tensor for fast evaluation later
 hold_out_states_tensor = torch.FloatTensor(np.array(hold_out_states))
+hold_out_env.close()
 
 # Lists to keep track of rewards and average max Q-values for reporting
 episode_rewards = []
@@ -130,7 +165,9 @@ best_val_solved = -1.0        # tie-breaker only
 best_val_episode = None       # training episode at which the best ckpt was saved
 
 for episode in range(1, NUM_EPISODES + 1):
-    state = env.reset()
+    # A fixed per-episode seed gives every experiment the same initial-state
+    # schedule without using validation, benchmark, or final-holdout seeds.
+    state = env.reset(seed=TRAIN_ENV_SEED_BASE + episode - 1)
     total_reward = 0
     done = False
 
@@ -204,6 +241,41 @@ print("==============================")
 metrics = {
     "seed": SEED,
     "num_episodes": total_tests,
+    "hyperparameters": {
+        "algorithm": "vanilla_dqn",
+        "learning_rate": LEARNING_RATE,
+        "target_update_freq": TARGET_UPDATE_FREQ,
+        "target_update_unit": "learning_optimizer_updates",
+        "replay_buffer_capacity": REPLAY_BUFFER_CAPACITY,
+        "batch_size": BATCH_SIZE,
+        "gamma": GAMMA,
+        "epsilon_start": EPSILON_START,
+        "epsilon_min": EPSILON_MIN,
+        "epsilon_decay": EPSILON_DECAY,
+        "epsilon_decay_unit": "episode",
+        "num_episodes": NUM_EPISODES,
+    },
+    "reproducibility": {
+        "global_seed": SEED,
+        "python_random_seed": SEED,
+        "numpy_seed": SEED,
+        "torch_seed": SEED,
+        "training_env_seed_scheme": "TRAIN_ENV_SEED_BASE + episode - 1",
+        "training_env_seed_base": TRAIN_ENV_SEED_BASE,
+        "training_env_seed_last": TRAIN_ENV_SEED_BASE + NUM_EPISODES - 1,
+        "training_action_space_seed": TRAIN_ACTION_SPACE_SEED,
+        "holdout_uses_separate_environment": True,
+        "holdout_state_count": HOLDOUT_STATE_COUNT,
+        "holdout_env_seed_base": HOLDOUT_ENV_SEED_BASE,
+        "holdout_env_seed_last": HOLDOUT_ENV_SEED_BASE + hold_out_reset_count,
+        "holdout_action_space_seed": HOLDOUT_ACTION_SPACE_SEED,
+        "reserved_evaluation_seed_ranges": {
+            "validation": [901, 910],
+            "benchmark_a": [1234, 1283],
+            "benchmark_b": [5000, 5099],
+            "final_holdout": [10000, 10099],
+        },
+    },
     "moving_avg_window": MOVING_AVG_WINDOW,
     "q_eval_every": Q_EVAL_EVERY,
     "mean_reward": mean_reward,
