@@ -69,6 +69,7 @@ def run_rendered(episodes=5):
     print("==============================")
     print(f"Mean Evaluation Reward (over {len(eval_rewards)} episodes): "
           f"{np.mean(eval_rewards):.2f}")
+    print(f"Standard Deviation of Reward: {np.std(eval_rewards):.2f}")
     print("==============================")
 
     env.close()
