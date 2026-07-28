@@ -1,8 +1,34 @@
 import random
 import torch
 import torch.optim as optim
-from model import DQN
+from model import DQN, DuelingDQN
 import numpy as np
+
+
+ALGORITHM_MODES = {
+    "vanilla": {
+        "network_class": DQN,
+        "architecture": "standard",
+        "target_strategy": "vanilla",
+    },
+    "double_dqn": {
+        "network_class": DQN,
+        "architecture": "standard",
+        "target_strategy": "double",
+    },
+    "dueling_dqn": {
+        "network_class": DuelingDQN,
+        "architecture": "dueling",
+        "target_strategy": "vanilla",
+    },
+    "d3qn": {
+        "network_class": DuelingDQN,
+        "architecture": "dueling",
+        "target_strategy": "double",
+    },
+}
+SUPPORTED_ALGORITHMS = tuple(ALGORITHM_MODES)
+
 
 class ReplayBuffer:
     def __init__(self, capacity):
@@ -35,10 +61,13 @@ class Agent:
                  algorithm="vanilla"):
         
         # Core hyperparameters
-        if algorithm not in {"vanilla", "double_dqn"}:
+        try:
+            mode = ALGORITHM_MODES[algorithm]
+        except KeyError:
             raise ValueError(
-                "algorithm must be either 'vanilla' or 'double_dqn'"
-            )
+                "algorithm must be one of: "
+                + ", ".join(SUPPORTED_ALGORITHMS)
+            ) from None
         self.action_size = action_size
         self.state_size = state_size
         self.batch_size = batch_size
@@ -49,13 +78,16 @@ class Agent:
         self.lr = lr
         self.target_update_freq = target_update_freq
         self.algorithm = algorithm
+        self.architecture = mode["architecture"]
+        self.target_strategy = mode["target_strategy"]
+        self.network_class = mode["network_class"]
 
         # Initialize experience replay memory
         self.replay_buffer = ReplayBuffer(replay_buffer_capacity)
         
         # Initialize Policy and Target Networks
-        self.policy_net = DQN(state_size, action_size)
-        self.target_net = DQN(state_size, action_size)
+        self.policy_net = self.network_class(state_size, action_size)
+        self.target_net = self.network_class(state_size, action_size)
         
         # Copy initial weights from Policy Net to Target Net
         self.target_net.load_state_dict(self.policy_net.state_dict())
@@ -107,17 +139,21 @@ class Agent:
         # with the target network. Double DQN selects with the online network
         # and evaluates that selected action with the target network.
         with torch.no_grad():
-            if self.algorithm == "double_dqn":
+            if self.target_strategy == "double":
                 next_actions = self.policy_net(next_states).argmax(
                     dim=1, keepdim=True
                 )
                 next_q_values = self.target_net(next_states).gather(
                     1, next_actions
                 )
-            else:
+            elif self.target_strategy == "vanilla":
                 next_q_values = self.target_net(next_states).max(
                     dim=1, keepdim=True
                 ).values
+            else:
+                raise RuntimeError(
+                    f"unsupported target strategy: {self.target_strategy}"
+                )
             target_q_values = rewards + (
                 self.gamma * next_q_values * (1 - dones)
             )

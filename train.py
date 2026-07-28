@@ -11,7 +11,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 from game import LunarLanderEnv
-from agent import Agent
+from agent import Agent, SUPPORTED_ALGORITHMS
 
 # --- Effective training configuration ---
 ALGORITHM = "vanilla"
@@ -29,12 +29,12 @@ EPSILON_DECAY = 0.995
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        description="Train a deterministic Vanilla or Double DQN agent.",
+        description="Train a deterministic DQN-family agent.",
         allow_abbrev=False,
     )
     parser.add_argument(
         "--algorithm",
-        choices=("vanilla", "double_dqn"),
+        choices=SUPPORTED_ALGORITHMS,
         default=ALGORITHM,
     )
     parser.add_argument("--seed", type=int, default=SEED)
@@ -322,6 +322,9 @@ metrics = {
     "num_episodes": total_tests,
     "hyperparameters": {
         "algorithm": ALGORITHM,
+        "architecture": agent.architecture,
+        "target_strategy": agent.target_strategy,
+        "network_class": agent.network_class.__name__,
         "learning_rate": LEARNING_RATE,
         "target_update_freq": TARGET_UPDATE_FREQ,
         "target_update_unit": "learning_optimizer_updates",

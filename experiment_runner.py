@@ -30,6 +30,28 @@ TIMEOUT_LENGTH = 1000
 HOLDOUT_STATE_COUNT = 200
 SOLVED_THRESHOLD = 200.0
 LOW_SCORE_THRESHOLD = 0.0
+ALGORITHM_PROVENANCE = {
+    "vanilla": {
+        "architecture": "standard",
+        "target_strategy": "vanilla",
+        "network_class": "DQN",
+    },
+    "double_dqn": {
+        "architecture": "standard",
+        "target_strategy": "double",
+        "network_class": "DQN",
+    },
+    "dueling_dqn": {
+        "architecture": "dueling",
+        "target_strategy": "vanilla",
+        "network_class": "DuelingDQN",
+    },
+    "d3qn": {
+        "architecture": "dueling",
+        "target_strategy": "double",
+        "network_class": "DuelingDQN",
+    },
+}
 MAX_EXPERIMENTS = 100
 MAX_ID_LENGTH = 100
 SAFE_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]*$")
@@ -216,9 +238,13 @@ def path_is_within(path, parent):
 
 def validate_configuration(config, label, validate_every, reserved_ranges):
     require_keys(config, CONFIG_FIELDS, CONFIG_FIELDS, label)
-    if config["algorithm"] not in {"vanilla", "double_dqn"}:
+    if (
+        not isinstance(config["algorithm"], str)
+        or config["algorithm"] not in ALGORITHM_PROVENANCE
+    ):
         raise RunnerError(
-            f"{label}.algorithm must be 'vanilla' or 'double_dqn'"
+            f"{label}.algorithm must be one of "
+            f"{tuple(ALGORITHM_PROVENANCE)!r}"
         )
 
     seed = require_int(config["training_seed"], f"{label}.training_seed", 0)
@@ -1106,12 +1132,14 @@ def train_command(snapshot_dir, config):
     ]
 
 
-def benchmark_command(snapshot_dir, benchmark):
+def benchmark_command(snapshot_dir, benchmark, config):
     return [
         sys.executable,
         "-u",
         str(Path(snapshot_dir) / "test.py"),
         "--diagnostic",
+        "--algorithm",
+        config["algorithm"],
         "--episodes",
         str(benchmark["episodes"]),
         "--seed",
@@ -1234,8 +1262,12 @@ def verify_training_artifacts(run_dir, resolved):
         metrics.get("hyperparameters"),
         "training_metrics.hyperparameters",
     )
+    algorithm_provenance = ALGORITHM_PROVENANCE[config["algorithm"]]
     expected_hyperparameters = {
         "algorithm": config["algorithm"],
+        "architecture": algorithm_provenance["architecture"],
+        "target_strategy": algorithm_provenance["target_strategy"],
+        "network_class": algorithm_provenance["network_class"],
         "learning_rate": config["learning_rate"],
         "target_update_freq": config["target_update_freq"],
         "target_update_unit": config["target_update_unit"],
@@ -1343,13 +1375,24 @@ def verify_training_artifacts(run_dir, resolved):
     }
 
 
-def verify_benchmark_report(report_path, benchmark):
+def verify_benchmark_report(report_path, benchmark, expected_configuration):
     report = load_json_strict(report_path)
     config = require_object(report.get("config"), f"{report_path}.config")
     if config.get("weights") != "weights.pth":
         raise RunnerError(
             f"{report_path} did not evaluate the run-local weights.pth"
         )
+    algorithm = expected_configuration["algorithm"]
+    expected_provenance = {
+        "algorithm": algorithm,
+        **ALGORITHM_PROVENANCE[algorithm],
+    }
+    for field, expected in expected_provenance.items():
+        if config.get(field) != expected:
+            raise RunnerError(
+                f"{report_path} {field}={config.get(field)!r} does not "
+                f"match expected value {expected!r}"
+            )
     if config.get("episodes") != benchmark["episodes"]:
         raise RunnerError(f"{report_path} episode count does not match plan")
     if config.get("base_seed") != benchmark["base_seed"]:
@@ -1478,6 +1521,10 @@ def verify_benchmark_report(report_path, benchmark):
     )
     return {
         "benchmark_id": benchmark["id"],
+        "algorithm": algorithm,
+        "architecture": expected_provenance["architecture"],
+        "target_strategy": expected_provenance["target_strategy"],
+        "network_class": expected_provenance["network_class"],
         "episodes": benchmark["episodes"],
         "base_seed": benchmark["base_seed"],
         "last_seed": benchmark["last_seed"],
@@ -1745,7 +1792,7 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
             ],
             "pending Benchmark A phase",
         )
-        command = benchmark_command(snapshot_dir, benchmark)
+        command = benchmark_command(snapshot_dir, benchmark, config)
         transition_run(
             run_dir,
             "benchmark_a_running",
@@ -1759,7 +1806,9 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
             raise RunnerError(
                 f"Benchmark A subprocess exited with code {returncode}"
             )
-        benchmark_a = verify_benchmark_report(output_path, benchmark)
+        benchmark_a = verify_benchmark_report(
+            output_path, benchmark, config
+        )
         transition_run(
             run_dir,
             "benchmark_a_succeeded",
@@ -1776,6 +1825,7 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
         benchmark_a = verify_benchmark_report(
             run_dir / benchmark_a_spec["json_filename"],
             benchmark_a_spec,
+            config,
         )
         benchmark = benchmark_by_id(protocol, "benchmark_b")
         output_path = run_dir / benchmark["json_filename"]
@@ -1787,7 +1837,7 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
             ],
             "pending Benchmark B phase",
         )
-        command = benchmark_command(snapshot_dir, benchmark)
+        command = benchmark_command(snapshot_dir, benchmark, config)
         transition_run(
             run_dir,
             "benchmark_b_running",
@@ -1804,7 +1854,9 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
             raise RunnerError(
                 f"Benchmark B subprocess exited with code {returncode}"
             )
-        benchmark_b = verify_benchmark_report(output_path, benchmark)
+        benchmark_b = verify_benchmark_report(
+            output_path, benchmark, config
+        )
         transition_run(
             run_dir,
             "benchmark_b_succeeded",
@@ -1823,7 +1875,9 @@ def execute_experiment(run_dir, experiment, protocol, provenance):
             benchmark = benchmark_by_id(protocol, benchmark_id)
             benchmark_results.append(
                 verify_benchmark_report(
-                    run_dir / benchmark["json_filename"], benchmark
+                    run_dir / benchmark["json_filename"],
+                    benchmark,
+                    config,
                 )
             )
         combined = calculate_combined(
@@ -2163,7 +2217,11 @@ def print_dry_run(plan, experiments, provenance, suite_dir, state=None):
             print(
                 f"  {benchmark['id']}: "
                 + display_command(
-                    benchmark_command(snapshot_dir, benchmark)
+                    benchmark_command(
+                        snapshot_dir,
+                        benchmark,
+                        experiment["configuration"],
+                    )
                 )
             )
     print("")

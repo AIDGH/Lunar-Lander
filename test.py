@@ -4,7 +4,7 @@ import time
 import numpy as np
 import torch
 from game import LunarLanderEnv
-from agent import Agent
+from agent import Agent, SUPPORTED_ALGORITHMS
 
 WEIGHTS_PATH = "weights.pth"
 
@@ -26,27 +26,35 @@ STATE_KEYS = [
 ]
 
 
-def _load_greedy_agent(env):
+def _load_greedy_agent(env, algorithm="vanilla"):
     """Build an Agent matched to the env sizes, load weights.pth, and force
     greedy (epsilon=0) evaluation. Used by both evaluation modes."""
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     agent = Agent(action_size=action_size,
                   state_size=state_size,
-                  batch_size=64)
-    agent.policy_net.load_state_dict(
-        torch.load(WEIGHTS_PATH, map_location='cpu', weights_only=True)
+                  batch_size=64,
+                  algorithm=algorithm)
+    state_dict = torch.load(
+        WEIGHTS_PATH, map_location='cpu', weights_only=True
     )
+    try:
+        agent.policy_net.load_state_dict(state_dict, strict=True)
+    except RuntimeError as exc:
+        raise RuntimeError(
+            f"{WEIGHTS_PATH} is incompatible with algorithm {algorithm!r} "
+            f"and network class {agent.network_class.__name__}"
+        ) from exc
     agent.policy_net.eval()
     agent.epsilon = 0.0
     return agent
 
 
-def run_rendered(episodes=5):
+def run_rendered(episodes=5, algorithm="vanilla"):
     """Default mode: render greedy evaluation, identical to the original
     test.py workflow."""
     env = LunarLanderEnv(render_mode="human")
-    agent = _load_greedy_agent(env)
+    agent = _load_greedy_agent(env, algorithm=algorithm)
 
     print("Starting evaluation...")
 
@@ -87,11 +95,12 @@ def _longest_run(actions, target):
 
 
 def run_diagnostic(episodes, base_seed, output_path, long_streak_threshold,
-                   solved_threshold=200.0, low_score_threshold=0.0):
+                   solved_threshold=200.0, low_score_threshold=0.0,
+                   algorithm="vanilla"):
     """Non-rendered greedy evaluation over reproducible seeds, collecting
     metrics to determine whether the side-engine behaviour is systematic."""
     env = LunarLanderEnv()  # non-rendered
-    agent = _load_greedy_agent(env)
+    agent = _load_greedy_agent(env, algorithm=algorithm)
 
     per_episode = []
     all_rewards = []
@@ -232,6 +241,10 @@ def run_diagnostic(episodes, base_seed, output_path, long_streak_threshold,
     report = {
         "config": {
             "weights": WEIGHTS_PATH,
+            "algorithm": agent.algorithm,
+            "architecture": agent.architecture,
+            "target_strategy": agent.target_strategy,
+            "network_class": agent.network_class.__name__,
             "episodes": int(episodes),
             "base_seed": int(base_seed),
             "long_streak_threshold": int(long_streak_threshold),
@@ -304,6 +317,12 @@ def main():
         help="Run a larger non-rendered greedy evaluation and write a JSON report."
     )
     parser.add_argument(
+        "--algorithm",
+        choices=SUPPORTED_ALGORITHMS,
+        default="vanilla",
+        help="Algorithm mode used to construct the checkpoint architecture.",
+    )
+    parser.add_argument(
         "--episodes", type=int, default=50,
         help="Diagnostic episodes (default 50). Ignored in rendered mode."
     )
@@ -327,9 +346,10 @@ def main():
             base_seed=args.seed,
             output_path=args.output,
             long_streak_threshold=args.long_streak,
+            algorithm=args.algorithm,
         )
     else:
-        run_rendered()
+        run_rendered(algorithm=args.algorithm)
 
 
 if __name__ == "__main__":
