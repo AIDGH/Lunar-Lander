@@ -1,4 +1,6 @@
+import argparse
 import json
+import math
 import random
 import numpy as np
 import torch
@@ -12,6 +14,7 @@ from game import LunarLanderEnv
 from agent import Agent
 
 # --- Effective training configuration ---
+ALGORITHM = "vanilla"
 SEED = 43
 NUM_EPISODES = 1000
 LEARNING_RATE = 5e-4
@@ -23,9 +26,84 @@ EPSILON_START = 1.0
 EPSILON_MIN = 0.01
 EPSILON_DECAY = 0.995
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Train a deterministic Vanilla or Double DQN agent.",
+        allow_abbrev=False,
+    )
+    parser.add_argument(
+        "--algorithm",
+        choices=("vanilla", "double_dqn"),
+        default=ALGORITHM,
+    )
+    parser.add_argument("--seed", type=int, default=SEED)
+    parser.add_argument("--episodes", type=int, default=NUM_EPISODES)
+    parser.add_argument(
+        "--learning-rate", type=float, default=LEARNING_RATE
+    )
+    parser.add_argument(
+        "--target-update-freq",
+        "--target-update-frequency",
+        dest="target_update_freq",
+        type=int,
+        default=TARGET_UPDATE_FREQ,
+    )
+    parser.add_argument(
+        "--epsilon-start", type=float, default=EPSILON_START
+    )
+    parser.add_argument("--epsilon-min", type=float, default=EPSILON_MIN)
+    parser.add_argument("--epsilon-decay", type=float, default=EPSILON_DECAY)
+    parser.add_argument(
+        "--replay-capacity", type=int, default=REPLAY_BUFFER_CAPACITY
+    )
+    parser.add_argument("--batch-size", type=int, default=BATCH_SIZE)
+    parser.add_argument("--gamma", type=float, default=GAMMA)
+    args = parser.parse_args()
+
+    if args.seed < 0:
+        parser.error("--seed must be non-negative")
+    if args.episodes <= 0:
+        parser.error("--episodes must be positive")
+    if not math.isfinite(args.learning_rate) or args.learning_rate <= 0:
+        parser.error("--learning-rate must be positive")
+    if args.target_update_freq <= 0:
+        parser.error("--target-update-freq must be positive")
+    if args.replay_capacity <= 0:
+        parser.error("--replay-capacity must be positive")
+    if args.batch_size <= 0:
+        parser.error("--batch-size must be positive")
+    if args.replay_capacity < args.batch_size:
+        parser.error("--replay-capacity must be at least --batch-size")
+    if not 0.0 <= args.gamma <= 1.0:
+        parser.error("--gamma must be between 0 and 1")
+    if not 0.0 <= args.epsilon_min <= args.epsilon_start <= 1.0:
+        parser.error(
+            "epsilon values must satisfy "
+            "0 <= --epsilon-min <= --epsilon-start <= 1"
+        )
+    if not 0.0 < args.epsilon_decay <= 1.0:
+        parser.error("--epsilon-decay must be greater than 0 and at most 1")
+
+    return args
+
+
+ARGS = parse_args()
+ALGORITHM = ARGS.algorithm
+SEED = ARGS.seed
+NUM_EPISODES = ARGS.episodes
+LEARNING_RATE = ARGS.learning_rate
+TARGET_UPDATE_FREQ = ARGS.target_update_freq
+REPLAY_BUFFER_CAPACITY = ARGS.replay_capacity
+BATCH_SIZE = ARGS.batch_size
+GAMMA = ARGS.gamma
+EPSILON_START = ARGS.epsilon_start
+EPSILON_MIN = ARGS.epsilon_min
+EPSILON_DECAY = ARGS.epsilon_decay
+
 # Use disjoint, explicit RNG streams. Training episode seeds are
-# 20043..21042, safely outside all reserved evaluation ranges. Hold-out
-# collection uses its own environment and separate 30043+/40043 streams.
+# 20000 + SEED through that base plus NUM_EPISODES - 1. Hold-out collection
+# uses its own environment and separate 30000 + SEED / 40000 + SEED streams.
 TRAIN_ENV_SEED_BASE = 20_000 + SEED
 TRAIN_ACTION_SPACE_SEED = 21_000 + SEED
 HOLDOUT_ENV_SEED_BASE = 30_000 + SEED
@@ -126,7 +204,8 @@ agent = Agent(action_size=action_size,
               epsilon_end=EPSILON_MIN,
               epsilon_decay=EPSILON_DECAY,
               lr=LEARNING_RATE,
-              target_update_freq=TARGET_UPDATE_FREQ)
+              target_update_freq=TARGET_UPDATE_FREQ,
+              algorithm=ALGORITHM)
 
 # --- Hold-out States Collection ---
 # Use a separate, fully seeded environment so diagnostic state collection
@@ -242,7 +321,7 @@ metrics = {
     "seed": SEED,
     "num_episodes": total_tests,
     "hyperparameters": {
-        "algorithm": "vanilla_dqn",
+        "algorithm": ALGORITHM,
         "learning_rate": LEARNING_RATE,
         "target_update_freq": TARGET_UPDATE_FREQ,
         "target_update_unit": "learning_optimizer_updates",

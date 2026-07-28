@@ -31,9 +31,14 @@ class Agent:
                  gamma=0.99,
                  epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.995,
                  lr=1e-3,
-                 target_update_freq=1000):
+                 target_update_freq=1000,
+                 algorithm="vanilla"):
         
         # Core hyperparameters
+        if algorithm not in {"vanilla", "double_dqn"}:
+            raise ValueError(
+                "algorithm must be either 'vanilla' or 'double_dqn'"
+            )
         self.action_size = action_size
         self.state_size = state_size
         self.batch_size = batch_size
@@ -43,6 +48,7 @@ class Agent:
         self.epsilon_decay = epsilon_decay
         self.lr = lr
         self.target_update_freq = target_update_freq
+        self.algorithm = algorithm
 
         # Initialize experience replay memory
         self.replay_buffer = ReplayBuffer(replay_buffer_capacity)
@@ -97,10 +103,24 @@ class Agent:
         # Compute Q-values for current states using the policy network
         current_q_values = self.policy_net(states).gather(1, actions)
 
-        # Compute Q-values for next states using the target network
+        # Compute Q-values for next states. Vanilla DQN selects and evaluates
+        # with the target network. Double DQN selects with the online network
+        # and evaluates that selected action with the target network.
         with torch.no_grad():
-            max_next_q_values = self.target_net(next_states).max(1)[0].unsqueeze(1)
-            target_q_values = rewards + (self.gamma * max_next_q_values * (1 - dones))
+            if self.algorithm == "double_dqn":
+                next_actions = self.policy_net(next_states).argmax(
+                    dim=1, keepdim=True
+                )
+                next_q_values = self.target_net(next_states).gather(
+                    1, next_actions
+                )
+            else:
+                next_q_values = self.target_net(next_states).max(
+                    dim=1, keepdim=True
+                ).values
+            target_q_values = rewards + (
+                self.gamma * next_q_values * (1 - dones)
+            )
 
         # Compute the loss between current and target Q-values.
         # Huber (Smooth L1) loss is more robust to large Q-value errors than MSE.
