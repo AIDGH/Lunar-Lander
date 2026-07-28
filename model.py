@@ -46,3 +46,37 @@ class DuelingDQN(nn.Module):
         # Keep the action mean as [B, 1] for safe broadcasting, including
         # batch size one. The result is [B, action_size].
         return value + advantage - advantage.mean(dim=-1, keepdim=True)
+
+
+class DeepDuelingDQN(nn.Module):
+    def __init__(self, state_size, action_size):
+        super(DeepDuelingDQN, self).__init__()
+
+        # Shared trunk. Its dimensions and construction order match the
+        # existing direct-head DuelingDQN.
+        self.fc1 = nn.Linear(state_size, 128)
+        self.fc2 = nn.Linear(128, 128)
+
+        # Deep value stream: [B, 128] -> [B, 128] -> [B, 1].
+        self.value_hidden = nn.Linear(128, 128)
+        self.value_head = nn.Linear(128, 1)
+
+        # Deep advantage stream: [B, 128] -> [B, 128] -> [B, action_size].
+        self.advantage_hidden = nn.Linear(128, 128)
+        self.advantage_head = nn.Linear(128, action_size)
+
+    def forward(self, x):
+        # x: [B, state_size] -> shared features: [B, 128]
+        x = F.relu(self.fc1(x))
+        features = F.relu(self.fc2(x))
+
+        # Hidden stream activations remain [B, 128].
+        value_hidden = F.relu(self.value_hidden(features))
+        advantage_hidden = F.relu(self.advantage_hidden(features))
+
+        # value: [B, 1], advantage: [B, action_size]
+        value = self.value_head(value_hidden)
+        advantage = self.advantage_head(advantage_hidden)
+
+        # Preserve the batch dimension and broadcast the per-state action mean.
+        return value + advantage - advantage.mean(dim=-1, keepdim=True)

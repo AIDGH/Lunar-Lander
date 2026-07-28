@@ -51,6 +51,11 @@ ALGORITHM_PROVENANCE = {
         "target_strategy": "double",
         "network_class": "DuelingDQN",
     },
+    "deep_d3qn": {
+        "architecture": "dueling_deep",
+        "target_strategy": "double",
+        "network_class": "DeepDuelingDQN",
+    },
 }
 MAX_EXPERIMENTS = 100
 MAX_ID_LENGTH = 100

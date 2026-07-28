@@ -1,29 +1,40 @@
 import random
 import torch
 import torch.optim as optim
-from model import DQN, DuelingDQN
+from model import DQN, DuelingDQN, DeepDuelingDQN
 import numpy as np
 
 
+ARCHITECTURE_CLASSES = {
+    "standard": DQN,
+    "dueling_direct": DuelingDQN,
+    "dueling_deep": DeepDuelingDQN,
+}
+
 ALGORITHM_MODES = {
     "vanilla": {
-        "network_class": DQN,
-        "architecture": "standard",
+        "architecture_mode": "standard",
+        "metadata_architecture": "standard",
         "target_strategy": "vanilla",
     },
     "double_dqn": {
-        "network_class": DQN,
-        "architecture": "standard",
+        "architecture_mode": "standard",
+        "metadata_architecture": "standard",
         "target_strategy": "double",
     },
     "dueling_dqn": {
-        "network_class": DuelingDQN,
-        "architecture": "dueling",
+        "architecture_mode": "dueling_direct",
+        "metadata_architecture": "dueling",
         "target_strategy": "vanilla",
     },
     "d3qn": {
-        "network_class": DuelingDQN,
-        "architecture": "dueling",
+        "architecture_mode": "dueling_direct",
+        "metadata_architecture": "dueling",
+        "target_strategy": "double",
+    },
+    "deep_d3qn": {
+        "architecture_mode": "dueling_deep",
+        "metadata_architecture": "dueling_deep",
         "target_strategy": "double",
     },
 }
@@ -78,9 +89,10 @@ class Agent:
         self.lr = lr
         self.target_update_freq = target_update_freq
         self.algorithm = algorithm
-        self.architecture = mode["architecture"]
+        self.architecture_mode = mode["architecture_mode"]
+        self.architecture = mode["metadata_architecture"]
         self.target_strategy = mode["target_strategy"]
-        self.network_class = mode["network_class"]
+        self.network_class = ARCHITECTURE_CLASSES[self.architecture_mode]
 
         # Initialize experience replay memory
         self.replay_buffer = ReplayBuffer(replay_buffer_capacity)
