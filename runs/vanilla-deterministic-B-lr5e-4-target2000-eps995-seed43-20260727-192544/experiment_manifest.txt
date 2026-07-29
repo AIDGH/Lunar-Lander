@@ -1,0 +1,97 @@
+Experiment: Configuration B Replication — Target 2000, Training Seed 43
+
+Purpose:
+Complete the deterministic seed-by-target-interval comparison and determine
+whether the target-2000 behavior observed on seed 42 is repeatable.
+
+Algorithm: Vanilla DQN
+Architecture: 8 -> 128 -> 128 -> 4
+Training seed: 43
+Episodes: 1000
+
+Learning rate: 5e-4
+Target update frequency: 2000 successful optimizer updates
+Replay capacity: 10000
+Batch size: 64
+Gamma: 0.99
+Epsilon start: 1.0
+Epsilon minimum: 0.01
+Epsilon decay: 0.995 per completed episode
+
+Training environment seeds: 20043–21042
+Training action-space seed: 21043
+Hold-out environment seeds reported by implementation review: 30043–30045
+Hold-out action-space seed: 40043
+
+Validation:
+- Greedy evaluation every 50 episodes
+- Fixed validation seeds 901–910
+- Checkpoint selected by highest validation mean
+
+Benchmark A:
+- 50 episodes
+- Seeds 1234–1283
+
+Benchmark B:
+- 100 episodes
+- Seeds 5000–5099
+
+Final holdout:
+- Seeds 10000–10099
+- Reserved and not authorized for this run
+
+Strict paired comparison:
+A43:
+- seed 43
+- lr 5e-4
+- target interval 1000
+- epsilon decay 0.995
+- 1000 episodes
+
+B43:
+- identical to A43 except target interval 2000
+
+Archived A43 combined results:
+- Mean reward: 233.94
+- Solved: 129/150 (86.00%)
+- Low below zero: 1/150 (0.67%)
+- Mean length: 311.65
+- Timeouts: 3/150
+
+Archived B42 combined results:
+- Mean reward: 235.79
+- Solved: 130/150 (86.67%)
+- Low below zero: 8/150 (5.33%)
+- Mean length: 324.17
+- Timeouts: 11/150
+
+B42 artifact caveat:
+The old B42 directory was later contaminated by an unrelated lr=1e-3 run.
+Only its target2000-specific logs, benchmark JSON files, combined summary,
+source snapshot, and original provenance should be treated as authoritative.
+
+Predeclared interpretation criteria:
+
+1. Target 2000 is supported as a stronger candidate only if B43 improves mean
+   reward or solved rate over A43 without a substantial increase in negative
+   failures, episode length, timeouts, or pathological side-engine streaks.
+
+2. A repeat of B42's higher solved rate together with worse failure tails and
+   longer behavior supports a repeatable target-interval tradeoff, not an
+   unconditional improvement.
+
+3. If B43 does not improve mean reward or solved rate over A43, target 2000
+   should be retired from the immediate search.
+
+4. If the A/B ordering reverses substantially between seeds 42 and 43, target
+   interval should be considered training-seed sensitive. The next priority
+   should then be additional replication rather than target 1500.
+
+Interpretation caveats:
+- Benchmark A and B are now known evaluation sets.
+- Fixed validation seeds may produce checkpoint-selection optimism.
+- Different policies can produce different episode lengths and therefore
+  different total optimizer-update counts.
+- Target frequency is measured in successful optimizer updates.
+- Timeout truncation is represented as done and benchmark timeouts are inferred
+  from episode length 1000.

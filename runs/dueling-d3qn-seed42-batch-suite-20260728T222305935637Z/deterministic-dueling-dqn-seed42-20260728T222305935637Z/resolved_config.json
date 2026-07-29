@@ -1,0 +1,133 @@
+{
+  "protocol": "deterministic_harness",
+  "protocol_version": 1,
+  "experiment_id": "deterministic-dueling-dqn-seed42",
+  "purpose": "Measure the controlled dueling-architecture effect under the Vanilla Bellman target at training seed 42.",
+  "configuration": {
+    "algorithm": "dueling_dqn",
+    "training_seed": 42,
+    "episodes": 1000,
+    "learning_rate": 0.0005,
+    "target_update_freq": 1000,
+    "target_update_unit": "learning_optimizer_updates",
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.995,
+    "epsilon_decay_unit": "episode",
+    "replay_capacity": 10000,
+    "batch_size": 64,
+    "gamma": 0.99
+  },
+  "reproducibility": {
+    "global_seed": 42,
+    "python_random_seed": 42,
+    "numpy_seed": 42,
+    "torch_seed": 42,
+    "training_env_seed_base": 20042,
+    "training_env_seed_scheme": "TRAIN_ENV_SEED_BASE + episode - 1",
+    "training_env_seed_last": 21041,
+    "training_action_space_seed": 21042,
+    "holdout_uses_separate_environment": true,
+    "holdout_state_count": 200,
+    "holdout_env_seed_base": 30042,
+    "holdout_env_seed_last": "runtime value from training_metrics.json",
+    "holdout_action_space_seed": 40042
+  },
+  "validation": {
+    "validate_every": 50,
+    "episodes": 10,
+    "base_seed": 901,
+    "last_seed": 910,
+    "greedy": true,
+    "checkpoint_metric": "mean_reward",
+    "tie_breaker": "solved_rate"
+  },
+  "benchmarks": [
+    {
+      "id": "benchmark_a",
+      "episodes": 50,
+      "base_seed": 1234,
+      "last_seed": 1283,
+      "json_filename": "benchmark_a.json",
+      "log_filename": "benchmark_a.log",
+      "long_streak_threshold": 20
+    },
+    {
+      "id": "benchmark_b",
+      "episodes": 100,
+      "base_seed": 5000,
+      "last_seed": 5099,
+      "json_filename": "benchmark_b.json",
+      "log_filename": "benchmark_b.log",
+      "long_streak_threshold": 20
+    }
+  ],
+  "final_holdout": {
+    "base_seed": 10000,
+    "last_seed": 10099,
+    "reserved": true
+  },
+  "reference": {
+    "id": "deterministic-vanilla-A-seed42",
+    "description": "Archived deterministic Vanilla DQN A42 reference.",
+    "episodes": 150,
+    "mean_reward": 230.12,
+    "solved_count": 116,
+    "solved_rate_pct": 77.33,
+    "low_score_count": 0,
+    "low_score_rate_pct": 0.0,
+    "mean_length": 244.59,
+    "timeout_count": 9
+  },
+  "screening_rule": {
+    "id": "dueling-dqn-seed42-manual-screen",
+    "automatic_followup": false,
+    "description": "Manual architecture-ablation screen against A42 and replication-eligibility screen against the A44 balanced leader.",
+    "combined_constraints": {
+      "max_low_score_count": 1,
+      "max_timeout_count": 9,
+      "max_mean_length": 269.05
+    },
+    "manual_criteria": [
+      "Against A42, material improvement requires combined mean reward at least 235.12 or solved count at least 124/150; the other primary metric should remain approximately non-inferior.",
+      "Maximum same-side-engine streak must be below 100.",
+      "Neither Benchmark A nor Benchmark B may contain a severe isolated regression hidden by the combined result.",
+      "A44 balanced-leader reference: mean reward 237.929; solved 134/150 (89.33%); low 0/150; mean length 283.11; timeouts 1/150.",
+      "A seed-42 challenger can only earn replication, never replace A44 directly. Eligibility requires either mean reward at least 242.929 with solved count at least 131/150, or solved count at least 142/150 with mean reward at least 235.929.",
+      "Replication eligibility additionally requires at most 1 negative episode, at most 3 timeouts, mean length at most 297.27, maximum same-side-engine streak below 100, and acceptable performance on both Benchmark A and Benchmark B.",
+      "All screening decisions are manual; no threshold authorizes automatic follow-up."
+    ]
+  },
+  "automatic_followup": false,
+  "source_provenance": {
+    "root": "/mnt/e/uni/ai/project/Lunar-Lander",
+    "branch": "experiment/deterministic-vanilla-search",
+    "commit": "d40997c6b974141b8ce9c915af5503711a55e882",
+    "status": ""
+  },
+  "source_snapshot_sha256": {
+    "agent.py": "26a57435efc7edaa5f9c30b2fa384d3258da6d828ddf414b9a95db22d11ef830",
+    "model.py": "8e7ea19cfe17a63752f1f1c64bceaac0f8a641f505d818071695239ed3ceee14",
+    "train.py": "7d1fd85cc64f72290e2bbd8f94d8af8bd22f6fded84e88bcd5d954fd3336ff45",
+    "test.py": "28d970f5066a55dcd516cb7bf01deb410a2417775fb1bf26d8565837a7e38ba5",
+    "game.py": "6ca8f9e7a918b74739871cad29929defac18c28366f5d9922b534c418028fcba"
+  },
+  "artifact_paths": {
+    "manifest": "experiment_manifest.txt",
+    "resolved_config": "resolved_config.json",
+    "run_status": "run_status.json",
+    "source_branch": "source_branch.txt",
+    "source_commit": "source_commit.txt",
+    "source_status": "source_status.txt",
+    "source_snapshot": "source_snapshot",
+    "training_log": "training.log",
+    "weights": "weights.pth",
+    "training_metrics": "training_metrics.json",
+    "training_plot": "training_plot.png",
+    "benchmark_a_log": "benchmark_a.log",
+    "benchmark_a_json": "benchmark_a.json",
+    "benchmark_b_log": "benchmark_b.log",
+    "benchmark_b_json": "benchmark_b.json",
+    "combined_summary": "combined_summary.txt"
+  }
+}

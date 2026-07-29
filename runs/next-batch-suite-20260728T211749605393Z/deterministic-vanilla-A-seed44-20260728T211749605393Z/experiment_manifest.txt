@@ -1,0 +1,146 @@
+Pre-execution experiment manifest
+=================================
+Experiment ID: deterministic-vanilla-A-seed44
+Protocol: deterministic_harness
+Purpose: Add a third deterministic training-seed replication of balanced Configuration A.
+Automatic follow-up scheduling: disabled
+
+Git provenance:
+  Branch: experiment/deterministic-vanilla-search
+  Commit: d286e4be15f681d790ae35f611ab63359f553f7b
+  Status: clean
+
+Resolved configuration:
+{
+  "protocol": "deterministic_harness",
+  "protocol_version": 1,
+  "experiment_id": "deterministic-vanilla-A-seed44",
+  "purpose": "Add a third deterministic training-seed replication of balanced Configuration A.",
+  "configuration": {
+    "algorithm": "vanilla",
+    "training_seed": 44,
+    "episodes": 1000,
+    "learning_rate": 0.0005,
+    "target_update_freq": 1000,
+    "target_update_unit": "learning_optimizer_updates",
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.01,
+    "epsilon_decay": 0.995,
+    "epsilon_decay_unit": "episode",
+    "replay_capacity": 10000,
+    "batch_size": 64,
+    "gamma": 0.99
+  },
+  "reproducibility": {
+    "global_seed": 44,
+    "python_random_seed": 44,
+    "numpy_seed": 44,
+    "torch_seed": 44,
+    "training_env_seed_base": 20044,
+    "training_env_seed_scheme": "TRAIN_ENV_SEED_BASE + episode - 1",
+    "training_env_seed_last": 21043,
+    "training_action_space_seed": 21044,
+    "holdout_uses_separate_environment": true,
+    "holdout_state_count": 200,
+    "holdout_env_seed_base": 30044,
+    "holdout_env_seed_last": "runtime value from training_metrics.json",
+    "holdout_action_space_seed": 40044
+  },
+  "validation": {
+    "validate_every": 50,
+    "episodes": 10,
+    "base_seed": 901,
+    "last_seed": 910,
+    "greedy": true,
+    "checkpoint_metric": "mean_reward",
+    "tie_breaker": "solved_rate"
+  },
+  "benchmarks": [
+    {
+      "id": "benchmark_a",
+      "episodes": 50,
+      "base_seed": 1234,
+      "last_seed": 1283,
+      "json_filename": "benchmark_a.json",
+      "log_filename": "benchmark_a.log",
+      "long_streak_threshold": 20
+    },
+    {
+      "id": "benchmark_b",
+      "episodes": 100,
+      "base_seed": 5000,
+      "last_seed": 5099,
+      "json_filename": "benchmark_b.json",
+      "log_filename": "benchmark_b.log",
+      "long_streak_threshold": 20
+    }
+  ],
+  "final_holdout": {
+    "base_seed": 10000,
+    "last_seed": 10099,
+    "reserved": true
+  },
+  "reference": null,
+  "screening_rule": null,
+  "automatic_followup": false,
+  "source_provenance": {
+    "root": "/mnt/e/uni/ai/project/Lunar-Lander",
+    "branch": "experiment/deterministic-vanilla-search",
+    "commit": "d286e4be15f681d790ae35f611ab63359f553f7b",
+    "status": ""
+  },
+  "source_snapshot_sha256": {
+    "agent.py": "e824d53d1bd38b9194f76242bece18461a2d1eb714529829c3986fc2c241414c",
+    "model.py": "0eacec70dbde534d16734899e1f868978842945aa7017cbebebcde9128207d1c",
+    "train.py": "7ecc76a51cff0058744a41468414322612ed1a76154fc2c76de194656ea1bcf6",
+    "test.py": "f8092e98bddc714fb76c8c84a1f9213f592cad33b201de88a6f5ad90049cb74a",
+    "game.py": "6ca8f9e7a918b74739871cad29929defac18c28366f5d9922b534c418028fcba"
+  },
+  "artifact_paths": {
+    "manifest": "experiment_manifest.txt",
+    "resolved_config": "resolved_config.json",
+    "run_status": "run_status.json",
+    "source_branch": "source_branch.txt",
+    "source_commit": "source_commit.txt",
+    "source_status": "source_status.txt",
+    "source_snapshot": "source_snapshot",
+    "training_log": "training.log",
+    "weights": "weights.pth",
+    "training_metrics": "training_metrics.json",
+    "training_plot": "training_plot.png",
+    "benchmark_a_log": "benchmark_a.log",
+    "benchmark_a_json": "benchmark_a.json",
+    "benchmark_b_log": "benchmark_b.log",
+    "benchmark_b_json": "benchmark_b.json",
+    "combined_summary": "combined_summary.txt"
+  }
+}
+
+Source snapshot SHA-256:
+  agent.py: e824d53d1bd38b9194f76242bece18461a2d1eb714529829c3986fc2c241414c
+  model.py: 0eacec70dbde534d16734899e1f868978842945aa7017cbebebcde9128207d1c
+  train.py: 7ecc76a51cff0058744a41468414322612ed1a76154fc2c76de194656ea1bcf6
+  test.py: f8092e98bddc714fb76c8c84a1f9213f592cad33b201de88a6f5ad90049cb74a
+  game.py: 6ca8f9e7a918b74739871cad29929defac18c28366f5d9922b534c418028fcba
+
+Planned artifacts:
+{
+  "manifest": "experiment_manifest.txt",
+  "resolved_config": "resolved_config.json",
+  "run_status": "run_status.json",
+  "source_branch": "source_branch.txt",
+  "source_commit": "source_commit.txt",
+  "source_status": "source_status.txt",
+  "source_snapshot": "source_snapshot",
+  "training_log": "training.log",
+  "weights": "weights.pth",
+  "training_metrics": "training_metrics.json",
+  "training_plot": "training_plot.png",
+  "benchmark_a_log": "benchmark_a.log",
+  "benchmark_a_json": "benchmark_a.json",
+  "benchmark_b_log": "benchmark_b.log",
+  "benchmark_b_json": "benchmark_b.json",
+  "combined_summary": "combined_summary.txt"
+}
+
+Screening metadata is descriptive only. This runner never schedules a follow-up experiment.

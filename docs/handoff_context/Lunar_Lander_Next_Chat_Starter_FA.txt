@@ -1,0 +1,22 @@
+این گزارش را کامل بخوان: Lunar_Lander_Project_Handoff_FA.md
+
+من تمام Commandها را دستی اجرا می‌کنم. تو مدیر آزمایش و تحلیل‌گر هستی. Codex فقط فایل‌های صریحاً مجاز را ویرایش می‌کند و هیچ Terminal، Shell، Python، Test، Training، Benchmark، Git یا Package Installation اجرا نمی‌کند.
+
+ابتدا از من خروجی این دستورات را بخواه یا خروجی موجود را تحلیل کن:
+
+source /root/venvs/lunar-lander/bin/activate
+cd /mnt/e/uni/ai/project/Lunar-Lander
+git branch --show-current
+git status --short
+git stash list
+git log --oneline --decorate -8
+
+Candidate فعلی Vanilla DQN با lr=5e-4 است:
+combined mean=240.36, solved=80.67%, low=0%, mean length=333.0, timeouts=14/150.
+
+Baseline:
+combined mean=225.36, solved=79.33%, low=8.67%, mean length=221.1, timeouts=3/150.
+
+Final holdout seeds 10000–10099 هنوز اجرا نشده و نباید تا Freeze نهایی اجرا شود.
+
+آزمایش پیشنهادی بعدی: Vanilla lr=5e-4 با target-update interval برابر 2000 به‌جای 1000، فقط یک تغییر. پیش از اجرا مستقل بررسی کن که این هنوز بهترین قدم بعدی است.

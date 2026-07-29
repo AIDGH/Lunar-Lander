@@ -1,0 +1,38 @@
+Experiment: Deterministic Vanilla DQN — Learning Rate 1e-3
+
+Algorithm: Vanilla DQN
+Training seed: 42
+Training episode seeds: 20042–21041
+Episodes: 1000
+
+Learning rate: 1e-3
+Target update frequency: 1000 optimizer updates
+Replay capacity: 10000
+Batch size: 64
+Gamma: 0.99
+Epsilon start: 1.0
+Epsilon minimum: 0.01
+Epsilon decay: 0.995 per episode
+
+Paired control:
+Vanilla DQN, lr=5e-4, target_update_freq=1000,
+same deterministic harness and seed schedule.
+
+Archived paired-control results:
+- Combined mean reward: 230.12
+- Solved: 116/150 (77.33%)
+- Low below zero: 0/150
+- Mean episode length: 244.57
+- Timeouts: 9/150
+
+Benchmark A: seeds 1234–1283
+Benchmark B: seeds 5000–5099
+
+Reserved final holdout:
+seeds 10000–10099 — DO NOT RUN
+
+Interpretation caveats:
+- Comparison currently uses one deterministic training seed.
+- Different learned policies can produce different episode lengths and therefore
+  different total optimizer-update counts.
+- Timeout truncation remains treated as done by the unchanged environment wrapper.

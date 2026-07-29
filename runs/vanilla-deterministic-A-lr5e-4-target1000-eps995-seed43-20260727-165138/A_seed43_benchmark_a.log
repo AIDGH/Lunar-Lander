@@ -1,0 +1,9 @@
+Starting evaluation...
+Test Episode 1: Total Reward = 56.11
+Test Episode 2: Total Reward = 48.03
+Test Episode 3: Total Reward = 263.46
+Test Episode 4: Total Reward = 274.99
+Test Episode 5: Total Reward = 244.77
+==============================
+Mean Evaluation Reward (over 5 episodes): 177.47
+==============================

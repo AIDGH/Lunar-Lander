@@ -1,0 +1,130 @@
+Episode 10, Total Reward: -115.61, Average Max Q-Value: 0.3080, Epsilon: 0.9511
+Episode 20, Total Reward: -162.58, Average Max Q-Value: 1.0272, Epsilon: 0.9046
+Episode 30, Total Reward: -112.41, Average Max Q-Value: 1.8274, Epsilon: 0.8604
+Episode 40, Total Reward: -83.60, Average Max Q-Value: 2.3357, Epsilon: 0.8183
+Episode 50, Total Reward: -119.79, Average Max Q-Value: 3.0874, Epsilon: 0.7783
+[Validation @ ep 50] mean=-128.01 median=-123.37 std=16.11 solved=0%  <- NEW BEST (saved)
+Episode 60, Total Reward: -61.54, Average Max Q-Value: 3.8067, Epsilon: 0.7403
+Episode 70, Total Reward: -82.52, Average Max Q-Value: 4.4606, Epsilon: 0.7041
+Episode 80, Total Reward: -56.66, Average Max Q-Value: 4.9104, Epsilon: 0.6696
+Episode 90, Total Reward: -26.30, Average Max Q-Value: 5.8967, Epsilon: 0.6369
+Episode 100, Total Reward: -119.35, Average Max Q-Value: 7.0960, Epsilon: 0.6058
+[Validation @ ep 100] mean=-150.20 median=-148.59 std=16.72 solved=0%
+Episode 110, Total Reward: 30.42, Average Max Q-Value: 8.6289, Epsilon: 0.5762
+Episode 120, Total Reward: -69.77, Average Max Q-Value: 11.0704, Epsilon: 0.5480
+Episode 130, Total Reward: -33.29, Average Max Q-Value: 11.7915, Epsilon: 0.5212
+Episode 140, Total Reward: -32.05, Average Max Q-Value: 14.3616, Epsilon: 0.4957
+Episode 150, Total Reward: -124.12, Average Max Q-Value: 15.5172, Epsilon: 0.4715
+[Validation @ ep 150] mean=-416.46 median=-318.72 std=297.45 solved=0%
+Episode 160, Total Reward: -89.37, Average Max Q-Value: 16.5987, Epsilon: 0.4484
+Episode 170, Total Reward: -67.49, Average Max Q-Value: 15.7009, Epsilon: 0.4265
+Episode 180, Total Reward: 35.73, Average Max Q-Value: 14.4764, Epsilon: 0.4057
+Episode 190, Total Reward: 12.58, Average Max Q-Value: 14.8504, Epsilon: 0.3858
+Episode 200, Total Reward: -36.16, Average Max Q-Value: 13.0953, Epsilon: 0.3670
+[Validation @ ep 200] mean=-9.36 median=-47.50 std=111.86 solved=0%  <- NEW BEST (saved)
+Episode 210, Total Reward: -1.76, Average Max Q-Value: 15.3639, Epsilon: 0.3490
+Episode 220, Total Reward: -0.23, Average Max Q-Value: 16.4530, Epsilon: 0.3320
+Episode 230, Total Reward: -24.71, Average Max Q-Value: 17.1192, Epsilon: 0.3157
+Episode 240, Total Reward: -175.82, Average Max Q-Value: 19.8963, Epsilon: 0.3003
+Episode 250, Total Reward: 26.42, Average Max Q-Value: 19.5735, Epsilon: 0.2856
+[Validation @ ep 250] mean=132.14 median=169.75 std=112.22 solved=40%  <- NEW BEST (saved)
+Episode 260, Total Reward: -17.71, Average Max Q-Value: 22.8063, Epsilon: 0.2716
+Episode 270, Total Reward: 155.97, Average Max Q-Value: 24.6111, Epsilon: 0.2584
+Episode 280, Total Reward: -300.46, Average Max Q-Value: 24.7193, Epsilon: 0.2457
+Episode 290, Total Reward: 241.53, Average Max Q-Value: 26.7160, Epsilon: 0.2337
+Episode 300, Total Reward: 132.68, Average Max Q-Value: 35.8976, Epsilon: 0.2223
+[Validation @ ep 300] mean=40.32 median=22.13 std=205.50 solved=40%
+Episode 310, Total Reward: -26.71, Average Max Q-Value: 46.9145, Epsilon: 0.2114
+Episode 320, Total Reward: 6.54, Average Max Q-Value: 45.0724, Epsilon: 0.2011
+Episode 330, Total Reward: 74.92, Average Max Q-Value: 47.3196, Epsilon: 0.1913
+Episode 340, Total Reward: 20.55, Average Max Q-Value: 54.7548, Epsilon: 0.1819
+Episode 350, Total Reward: 29.77, Average Max Q-Value: 61.3578, Epsilon: 0.1730
+[Validation @ ep 350] mean=103.19 median=16.53 std=130.42 solved=40%
+Episode 360, Total Reward: 117.79, Average Max Q-Value: 63.7764, Epsilon: 0.1646
+Episode 370, Total Reward: 29.77, Average Max Q-Value: 65.1801, Epsilon: 0.1565
+Episode 380, Total Reward: 286.11, Average Max Q-Value: 69.0149, Epsilon: 0.1489
+Episode 390, Total Reward: -8.08, Average Max Q-Value: 75.7238, Epsilon: 0.1416
+Episode 400, Total Reward: 32.94, Average Max Q-Value: 75.9827, Epsilon: 0.1347
+[Validation @ ep 400] mean=171.73 median=264.04 std=135.52 solved=60%  <- NEW BEST (saved)
+Episode 410, Total Reward: 37.22, Average Max Q-Value: 76.5072, Epsilon: 0.1281
+Episode 420, Total Reward: 33.69, Average Max Q-Value: 77.1580, Epsilon: 0.1218
+Episode 430, Total Reward: -12.27, Average Max Q-Value: 76.6489, Epsilon: 0.1159
+Episode 440, Total Reward: 6.31, Average Max Q-Value: 77.2787, Epsilon: 0.1102
+Episode 450, Total Reward: 11.41, Average Max Q-Value: 80.0848, Epsilon: 0.1048
+[Validation @ ep 450] mean=152.28 median=224.10 std=105.23 solved=60%
+Episode 460, Total Reward: -39.91, Average Max Q-Value: 80.5381, Epsilon: 0.0997
+Episode 470, Total Reward: 11.04, Average Max Q-Value: 81.8609, Epsilon: 0.0948
+Episode 480, Total Reward: 263.20, Average Max Q-Value: 85.2724, Epsilon: 0.0902
+Episode 490, Total Reward: 13.53, Average Max Q-Value: 86.2920, Epsilon: 0.0858
+Episode 500, Total Reward: 37.96, Average Max Q-Value: 86.1608, Epsilon: 0.0816
+[Validation @ ep 500] mean=196.92 median=214.85 std=77.96 solved=50%  <- NEW BEST (saved)
+Episode 510, Total Reward: 268.49, Average Max Q-Value: 86.6664, Epsilon: 0.0776
+Episode 520, Total Reward: 274.65, Average Max Q-Value: 86.1038, Epsilon: 0.0738
+Episode 530, Total Reward: 208.66, Average Max Q-Value: 83.8531, Epsilon: 0.0702
+Episode 540, Total Reward: -85.19, Average Max Q-Value: 83.0746, Epsilon: 0.0668
+Episode 550, Total Reward: 244.83, Average Max Q-Value: 82.2503, Epsilon: 0.0635
+[Validation @ ep 550] mean=150.39 median=187.08 std=119.70 solved=50%
+Episode 560, Total Reward: 280.24, Average Max Q-Value: 80.5402, Epsilon: 0.0604
+Episode 570, Total Reward: 24.72, Average Max Q-Value: 76.1190, Epsilon: 0.0574
+Episode 580, Total Reward: 23.91, Average Max Q-Value: 72.3048, Epsilon: 0.0546
+Episode 590, Total Reward: 291.55, Average Max Q-Value: 68.4093, Epsilon: 0.0520
+Episode 600, Total Reward: 33.90, Average Max Q-Value: 67.9191, Epsilon: 0.0494
+[Validation @ ep 600] mean=260.89 median=285.17 std=70.65 solved=90%  <- NEW BEST (saved)
+Episode 610, Total Reward: 53.18, Average Max Q-Value: 66.8226, Epsilon: 0.0470
+Episode 620, Total Reward: 248.37, Average Max Q-Value: 68.0728, Epsilon: 0.0447
+Episode 630, Total Reward: 267.87, Average Max Q-Value: 71.1578, Epsilon: 0.0425
+Episode 640, Total Reward: 265.69, Average Max Q-Value: 75.2871, Epsilon: 0.0404
+Episode 650, Total Reward: 271.03, Average Max Q-Value: 79.1725, Epsilon: 0.0385
+[Validation @ ep 650] mean=206.51 median=293.93 std=174.03 solved=80%
+Episode 660, Total Reward: 246.67, Average Max Q-Value: 82.4620, Epsilon: 0.0366
+Episode 670, Total Reward: 294.30, Average Max Q-Value: 82.7395, Epsilon: 0.0348
+Episode 680, Total Reward: 308.47, Average Max Q-Value: 82.3549, Epsilon: 0.0331
+Episode 690, Total Reward: 313.74, Average Max Q-Value: 82.6658, Epsilon: 0.0315
+Episode 700, Total Reward: 281.58, Average Max Q-Value: 83.5285, Epsilon: 0.0299
+[Validation @ ep 700] mean=274.77 median=279.25 std=19.06 solved=100%  <- NEW BEST (saved)
+Episode 710, Total Reward: 279.57, Average Max Q-Value: 86.2213, Epsilon: 0.0285
+Episode 720, Total Reward: 269.70, Average Max Q-Value: 87.2809, Epsilon: 0.0271
+Episode 730, Total Reward: 301.56, Average Max Q-Value: 89.1272, Epsilon: 0.0258
+Episode 740, Total Reward: 246.03, Average Max Q-Value: 89.4259, Epsilon: 0.0245
+Episode 750, Total Reward: 314.23, Average Max Q-Value: 91.9535, Epsilon: 0.0233
+[Validation @ ep 750] mean=282.62 median=285.25 std=14.96 solved=100%  <- NEW BEST (saved)
+Episode 760, Total Reward: 229.52, Average Max Q-Value: 96.7035, Epsilon: 0.0222
+Episode 770, Total Reward: 291.13, Average Max Q-Value: 98.2425, Epsilon: 0.0211
+Episode 780, Total Reward: 285.92, Average Max Q-Value: 100.8410, Epsilon: 0.0200
+Episode 790, Total Reward: 256.33, Average Max Q-Value: 101.0505, Epsilon: 0.0191
+Episode 800, Total Reward: 262.41, Average Max Q-Value: 100.5171, Epsilon: 0.0181
+[Validation @ ep 800] mean=120.86 median=112.53 std=151.04 solved=50%
+Episode 810, Total Reward: 55.03, Average Max Q-Value: 99.7451, Epsilon: 0.0172
+Episode 820, Total Reward: 32.72, Average Max Q-Value: 99.5187, Epsilon: 0.0164
+Episode 830, Total Reward: 249.58, Average Max Q-Value: 98.6523, Epsilon: 0.0156
+Episode 840, Total Reward: 52.75, Average Max Q-Value: 97.1544, Epsilon: 0.0148
+Episode 850, Total Reward: 38.65, Average Max Q-Value: 98.7007, Epsilon: 0.0141
+[Validation @ ep 850] mean=92.69 median=28.18 std=126.39 solved=30%
+Episode 860, Total Reward: 34.74, Average Max Q-Value: 100.1611, Epsilon: 0.0134
+Episode 870, Total Reward: 12.59, Average Max Q-Value: 99.2878, Epsilon: 0.0128
+Episode 880, Total Reward: 38.07, Average Max Q-Value: 98.6391, Epsilon: 0.0121
+Episode 890, Total Reward: 27.08, Average Max Q-Value: 97.8689, Epsilon: 0.0115
+Episode 900, Total Reward: 22.41, Average Max Q-Value: 93.3268, Epsilon: 0.0110
+[Validation @ ep 900] mean=189.47 median=272.03 std=120.97 solved=60%
+Episode 910, Total Reward: 33.41, Average Max Q-Value: 91.3518, Epsilon: 0.0104
+Episode 920, Total Reward: 43.57, Average Max Q-Value: 87.8243, Epsilon: 0.0100
+Episode 930, Total Reward: 275.82, Average Max Q-Value: 84.2116, Epsilon: 0.0100
+Episode 940, Total Reward: 247.22, Average Max Q-Value: 81.7418, Epsilon: 0.0100
+Episode 950, Total Reward: 21.98, Average Max Q-Value: 80.8053, Epsilon: 0.0100
+[Validation @ ep 950] mean=95.55 median=150.72 std=235.80 solved=50%
+Episode 960, Total Reward: 257.11, Average Max Q-Value: 83.9573, Epsilon: 0.0100
+Episode 970, Total Reward: 308.77, Average Max Q-Value: 83.5226, Epsilon: 0.0100
+Episode 980, Total Reward: 268.12, Average Max Q-Value: 84.2068, Epsilon: 0.0100
+Episode 990, Total Reward: 23.12, Average Max Q-Value: 85.3402, Epsilon: 0.0100
+Episode 1000, Total Reward: 287.45, Average Max Q-Value: 82.3265, Epsilon: 0.0100
+[Validation @ ep 1000] mean=121.61 median=56.51 std=134.78 solved=40%
+==============================
+Training Phase Completed!
+Total Episodes (Tests): 1000
+Mean Reward: 84.16
+Reward Variance: 23878.41
+Final Moving-Avg Reward (w=50): 149.58
+Final Epsilon: 0.0100
+==============================
+Training metrics saved to training_metrics.json.
+Training plot saved to training_plot.png.

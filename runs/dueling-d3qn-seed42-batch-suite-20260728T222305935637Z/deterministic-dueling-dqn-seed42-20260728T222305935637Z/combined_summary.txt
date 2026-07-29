@@ -1,0 +1,60 @@
+Experiment: deterministic-dueling-dqn-seed42
+Protocol: deterministic_harness
+Algorithm: dueling_dqn
+Training seed: 42
+
+benchmark_a:
+  seeds        = 1234-1283
+  episodes     = 50
+  mean reward  = 222.8843
+  solved       = 37/50 (74.00%)
+  low          = 0/50 (0.00%)
+  mean length  = 293.42
+  timeouts     = 4
+
+benchmark_b:
+  seeds        = 5000-5099
+  episodes     = 100
+  mean reward  = 224.7654
+  solved       = 75/100 (75.00%)
+  low          = 3/100 (3.00%)
+  mean length  = 329.04
+  timeouts     = 11
+
+Combined:
+  episodes     = 150
+  mean reward  = 224.1384
+  solved       = 112/150 (74.67%)
+  low          = 3/150 (2.00%)
+  mean length  = 317.17
+  timeouts     = 15
+  max side     = L=25, R=58
+  timeout rule = episode length 1000; truncation is not separate in game.py
+
+Approximate deltas against declared rounded reference:
+{
+  "mean_reward": -5.9816,
+  "solved_rate_percentage_points": -2.66,
+  "low_score_rate_percentage_points": 2.0,
+  "mean_length": 72.58,
+  "timeout_count": 6
+}
+
+Screening: manual review required.
+No follow-up experiment has been or will be scheduled.
+{
+  "manual_review_required": true,
+  "automatic_followup": false,
+  "low_score_count_within_limit": false,
+  "timeout_count_within_limit": false,
+  "mean_length_within_limit": false,
+  "manual_criteria": [
+    "Against A42, material improvement requires combined mean reward at least 235.12 or solved count at least 124/150; the other primary metric should remain approximately non-inferior.",
+    "Maximum same-side-engine streak must be below 100.",
+    "Neither Benchmark A nor Benchmark B may contain a severe isolated regression hidden by the combined result.",
+    "A44 balanced-leader reference: mean reward 237.929; solved 134/150 (89.33%); low 0/150; mean length 283.11; timeouts 1/150.",
+    "A seed-42 challenger can only earn replication, never replace A44 directly. Eligibility requires either mean reward at least 242.929 with solved count at least 131/150, or solved count at least 142/150 with mean reward at least 235.929.",
+    "Replication eligibility additionally requires at most 1 negative episode, at most 3 timeouts, mean length at most 297.27, maximum same-side-engine streak below 100, and acceptable performance on both Benchmark A and Benchmark B.",
+    "All screening decisions are manual; no threshold authorizes automatic follow-up."
+  ]
+}

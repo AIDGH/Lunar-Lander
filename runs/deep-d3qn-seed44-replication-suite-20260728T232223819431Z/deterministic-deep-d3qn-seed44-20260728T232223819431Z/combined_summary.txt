@@ -1,0 +1,62 @@
+Experiment: deterministic-deep-d3qn-seed44
+Protocol: deterministic_harness
+Algorithm: deep_d3qn
+Training seed: 44
+
+benchmark_a:
+  seeds        = 1234-1283
+  episodes     = 50
+  mean reward  = 204.2186
+  solved       = 37/50 (74.00%)
+  low          = 0/50 (0.00%)
+  mean length  = 324.14
+  timeouts     = 3
+
+benchmark_b:
+  seeds        = 5000-5099
+  episodes     = 100
+  mean reward  = 211.2842
+  solved       = 75/100 (75.00%)
+  low          = 4/100 (4.00%)
+  mean length  = 350.45
+  timeouts     = 8
+
+Combined:
+  episodes     = 150
+  mean reward  = 208.9290
+  solved       = 112/150 (74.67%)
+  low          = 4/150 (2.67%)
+  mean length  = 341.68
+  timeouts     = 11
+  max side     = L=97, R=161
+  timeout rule = episode length 1000; truncation is not separate in game.py
+
+Approximate deltas against declared rounded reference:
+{
+  "mean_reward": -56.1147,
+  "solved_rate_percentage_points": -20.66,
+  "low_score_rate_percentage_points": 2.67,
+  "mean_length": 94.78,
+  "timeout_count": 8
+}
+
+Screening: manual review required.
+No follow-up experiment has been or will be scheduled.
+{
+  "manual_review_required": true,
+  "automatic_followup": false,
+  "low_score_count_within_limit": false,
+  "timeout_count_within_limit": false,
+  "mean_length_within_limit": false,
+  "manual_criteria": [
+    "Replication requires either combined mean reward at least 242.929 with solved count at least 131/150, or solved count at least 142/150 with combined mean reward at least 235.929.",
+    "Replication additionally requires at most 1 negative episode, at most 3 timeouts, mean length at most 297.27, and maximum same-side-engine streak below 100.",
+    "Performance must remain acceptable on both Benchmark A and Benchmark B, and the primary-performance direction must confirm the seed-42 result.",
+    "A44 Vanilla reference: mean reward 237.929; solved 134/150 (89.33%); low 0/150; mean length 283.11; timeouts 1/150.",
+    "If seed 44 passes the declared replication gate, the archived Deep D3QN seed-44 checkpoint becomes the frozen final candidate regardless of whether its development-set metrics are higher or lower than seed 42.",
+    "The seed-42 and seed-44 Deep D3QN checkpoints must not be compared adaptively for final checkpoint selection.",
+    "If seed 44 fails the replication gate, retain the archived Vanilla A44 checkpoint.",
+    "No additional training, rescue, tuning, or replication is permitted after this result.",
+    "All screening and final-candidate decisions are manual; automatic follow-up is disabled."
+  ]
+}

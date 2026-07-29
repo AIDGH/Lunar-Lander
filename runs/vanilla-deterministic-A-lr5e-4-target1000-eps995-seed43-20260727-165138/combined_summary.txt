@@ -1,0 +1,22 @@
+Benchmark A:
+  episodes     = 50
+  mean reward  = 238.12
+  solved       = 45/50 (90.00%)
+  low          = 0/50 (0.00%)
+  mean length  = 320.94
+  timeouts     = 1/50
+
+Benchmark B:
+  episodes     = 100
+  mean reward  = 231.85
+  solved       = 84/100 (84.00%)
+  low          = 1/100 (1.00%)
+  mean length  = 307.00
+  timeouts     = 2/100
+
+Combined:
+  mean reward  = 233.94
+  solved       = 129/150 (86.00%)
+  low          = 1/150 (0.67%)
+  mean length  = 311.65
+  timeouts     = 3/150

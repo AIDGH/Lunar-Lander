@@ -1,0 +1,32 @@
+Experiment: deterministic-vanilla-A-seed44
+Protocol: deterministic_harness
+Algorithm: vanilla
+Training seed: 44
+
+benchmark_a:
+  seeds        = 1234-1283
+  episodes     = 50
+  mean reward  = 231.5546
+  solved       = 43/50 (86.00%)
+  low          = 0/50 (0.00%)
+  mean length  = 259.08
+  timeouts     = 0
+
+benchmark_b:
+  seeds        = 5000-5099
+  episodes     = 100
+  mean reward  = 241.1162
+  solved       = 91/100 (91.00%)
+  low          = 0/100 (0.00%)
+  mean length  = 295.13
+  timeouts     = 1
+
+Combined:
+  episodes     = 150
+  mean reward  = 237.9290
+  solved       = 134/150 (89.33%)
+  low          = 0/150 (0.00%)
+  mean length  = 283.11
+  timeouts     = 1
+  max side     = L=116, R=30
+  timeout rule = episode length 1000; truncation is not separate in game.py

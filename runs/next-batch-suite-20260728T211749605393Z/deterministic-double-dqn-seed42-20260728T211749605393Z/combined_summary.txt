@@ -1,0 +1,55 @@
+Experiment: deterministic-double-dqn-seed42
+Protocol: deterministic_harness
+Algorithm: double_dqn
+Training seed: 42
+
+benchmark_a:
+  seeds        = 1234-1283
+  episodes     = 50
+  mean reward  = 227.9593
+  solved       = 40/50 (80.00%)
+  low          = 0/50 (0.00%)
+  mean length  = 314.08
+  timeouts     = 3
+
+benchmark_b:
+  seeds        = 5000-5099
+  episodes     = 100
+  mean reward  = 240.9299
+  solved       = 86/100 (86.00%)
+  low          = 3/100 (3.00%)
+  mean length  = 309.10
+  timeouts     = 4
+
+Combined:
+  episodes     = 150
+  mean reward  = 236.6064
+  solved       = 126/150 (84.00%)
+  low          = 3/150 (2.00%)
+  mean length  = 310.76
+  timeouts     = 7
+  max side     = L=65, R=502
+  timeout rule = episode length 1000; truncation is not separate in game.py
+
+Approximate deltas against declared rounded reference:
+{
+  "mean_reward": 6.4864,
+  "solved_rate_percentage_points": 6.67,
+  "low_score_rate_percentage_points": 2.0,
+  "mean_length": 66.17,
+  "timeout_count": -2
+}
+
+Screening: manual review required.
+No follow-up experiment has been or will be scheduled.
+{
+  "manual_review_required": true,
+  "automatic_followup": false,
+  "low_score_count_within_limit": false,
+  "timeout_count_within_limit": true,
+  "mean_length_within_limit": false,
+  "manual_criteria": [
+    "No several-hundred-step side-engine streak pathology.",
+    "Improvement must be visible in both Benchmark A and Benchmark B rather than only one set."
+  ]
+}
