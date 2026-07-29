@@ -1,0 +1,23 @@
+{
+  "runner_schema_version": 1,
+  "plan_id": "dueling-d3qn-seed42-batch",
+  "plan_digest": "7ff9c4c3387b4fe1a7356fd94578a80a44d8f91e8b7525ebbcefcf1e07864208",
+  "suite_directory": "/mnt/e/uni/ai/project/runs/dueling-d3qn-seed42-batch-suite-20260728T222305935637Z",
+  "created_at": "2026-07-28T22:23:05.948677+00:00",
+  "updated_at": "2026-07-28T22:42:27.991306+00:00",
+  "status": "completed",
+  "git_provenance": {
+    "root": "/mnt/e/uni/ai/project/Lunar-Lander",
+    "branch": "experiment/deterministic-vanilla-search",
+    "commit": "d40997c6b974141b8ce9c915af5503711a55e882",
+    "status": ""
+  },
+  "selected_experiment_ids": [
+    "deterministic-dueling-dqn-seed42",
+    "deterministic-d3qn-seed42"
+  ],
+  "run_directories": {
+    "deterministic-dueling-dqn-seed42": "deterministic-dueling-dqn-seed42-20260728T222305935637Z",
+    "deterministic-d3qn-seed42": "deterministic-d3qn-seed42-20260728T222305935637Z"
+  }
+}

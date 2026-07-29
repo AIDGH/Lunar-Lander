@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "plan_id": "deep-d3qn-seed44-replication",
+  "runs_root": "../runs",
+  "protocol": {
+    "name": "deterministic_harness",
+    "version": 1,
+    "training_env_seed_offset": 20000,
+    "training_action_space_seed_offset": 21000,
+    "holdout_env_seed_offset": 30000,
+    "holdout_action_space_seed_offset": 40000,
+    "validation": {
+      "validate_every": 50,
+      "episodes": 10,
+      "base_seed": 901,
+      "last_seed": 910,
+      "greedy": true,
+      "checkpoint_metric": "mean_reward",
+      "tie_breaker": "solved_rate"
+    },
+    "benchmarks": [
+      {
+        "id": "benchmark_a",
+        "episodes": 50,
+        "base_seed": 1234,
+        "last_seed": 1283,
+        "json_filename": "benchmark_a.json",
+        "log_filename": "benchmark_a.log",
+        "long_streak_threshold": 20
+      },
+      {
+        "id": "benchmark_b",
+        "episodes": 100,
+        "base_seed": 5000,
+        "last_seed": 5099,
+        "json_filename": "benchmark_b.json",
+        "log_filename": "benchmark_b.log",
+        "long_streak_threshold": 20
+      }
+    ],
+    "final_holdout": {
+      "base_seed": 10000,
+      "last_seed": 10099,
+      "reserved": true
+    }
+  },
+  "experiments": [
+    {
+      "id": "deterministic-deep-d3qn-seed44",
+      "enabled": true,
+      "purpose": "Run the exact Deep D3QN seed-44 replication without authorizing tuning, additional replication, or final-holdout evaluation.",
+      "configuration": {
+        "algorithm": "deep_d3qn",
+        "training_seed": 44,
+        "episodes": 1000,
+        "learning_rate": 0.0005,
+        "target_update_freq": 1000,
+        "target_update_unit": "learning_optimizer_updates",
+        "epsilon_start": 1.0,
+        "epsilon_min": 0.01,
+        "epsilon_decay": 0.995,
+        "epsilon_decay_unit": "episode",
+        "replay_capacity": 10000,
+        "batch_size": 64,
+        "gamma": 0.99
+      },
+      "reference": {
+        "id": "deterministic-deep-d3qn-seed42",
+        "description": "Confirmed deterministic Deep D3QN seed-42 reference. Its maximum same-side-engine streak was 28. Benchmark A mean/solved was 274.5898 / 98%; Benchmark B mean/solved was 260.2707 / 94%.",
+        "episodes": 150,
+        "mean_reward": 265.0437,
+        "solved_count": 143,
+        "solved_rate_pct": 95.33,
+        "low_score_count": 0,
+        "low_score_rate_pct": 0.0,
+        "mean_length": 246.9,
+        "timeout_count": 3
+      },
+      "screening_rule": {
+        "id": "deep-d3qn-seed44-manual-replication-screen",
+        "automatic_followup": false,
+        "description": "Manual seed-44 replication gate and frozen-candidate decision. No result or threshold schedules another run.",
+        "combined_constraints": {
+          "max_low_score_count": 1,
+          "max_timeout_count": 3,
+          "max_mean_length": 297.27
+        },
+        "manual_criteria": [
+          "Replication requires either combined mean reward at least 242.929 with solved count at least 131/150, or solved count at least 142/150 with combined mean reward at least 235.929.",
+          "Replication additionally requires at most 1 negative episode, at most 3 timeouts, mean length at most 297.27, and maximum same-side-engine streak below 100.",
+          "Performance must remain acceptable on both Benchmark A and Benchmark B, and the primary-performance direction must confirm the seed-42 result.",
+          "A44 Vanilla reference: mean reward 237.929; solved 134/150 (89.33%); low 0/150; mean length 283.11; timeouts 1/150.",
+          "If seed 44 passes the declared replication gate, the archived Deep D3QN seed-44 checkpoint becomes the frozen final candidate regardless of whether its development-set metrics are higher or lower than seed 42.",
+          "The seed-42 and seed-44 Deep D3QN checkpoints must not be compared adaptively for final checkpoint selection.",
+          "If seed 44 fails the replication gate, retain the archived Vanilla A44 checkpoint.",
+          "No additional training, rescue, tuning, or replication is permitted after this result.",
+          "All screening and final-candidate decisions are manual; automatic follow-up is disabled."
+        ]
+      }
+    }
+  ]
+}

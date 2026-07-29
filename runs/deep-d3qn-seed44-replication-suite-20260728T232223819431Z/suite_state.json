@@ -1,0 +1,21 @@
+{
+  "runner_schema_version": 1,
+  "plan_id": "deep-d3qn-seed44-replication",
+  "plan_digest": "0b17dce984af7d9cb9a05c267eed4c5219097a55a08a6a6d3333060230c8735f",
+  "suite_directory": "/mnt/e/uni/ai/project/runs/deep-d3qn-seed44-replication-suite-20260728T232223819431Z",
+  "created_at": "2026-07-28T23:22:23.825632+00:00",
+  "updated_at": "2026-07-28T23:34:20.530978+00:00",
+  "status": "completed",
+  "git_provenance": {
+    "root": "/mnt/e/uni/ai/project/Lunar-Lander",
+    "branch": "experiment/deterministic-vanilla-search",
+    "commit": "133b7c315f64eda25f798ec2cfbbec319041fe62",
+    "status": ""
+  },
+  "selected_experiment_ids": [
+    "deterministic-deep-d3qn-seed44"
+  ],
+  "run_directories": {
+    "deterministic-deep-d3qn-seed44": "deterministic-deep-d3qn-seed44-20260728T232223819431Z"
+  }
+}

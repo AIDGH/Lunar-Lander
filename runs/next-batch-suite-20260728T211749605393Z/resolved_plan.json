@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "plan_id": "next-batch",
+  "runs_root": "../runs",
+  "protocol": {
+    "name": "deterministic_harness",
+    "version": 1,
+    "training_env_seed_offset": 20000,
+    "training_action_space_seed_offset": 21000,
+    "holdout_env_seed_offset": 30000,
+    "holdout_action_space_seed_offset": 40000,
+    "validation": {
+      "validate_every": 50,
+      "episodes": 10,
+      "base_seed": 901,
+      "last_seed": 910,
+      "greedy": true,
+      "checkpoint_metric": "mean_reward",
+      "tie_breaker": "solved_rate"
+    },
+    "benchmarks": [
+      {
+        "id": "benchmark_a",
+        "episodes": 50,
+        "base_seed": 1234,
+        "last_seed": 1283,
+        "json_filename": "benchmark_a.json",
+        "log_filename": "benchmark_a.log",
+        "long_streak_threshold": 20
+      },
+      {
+        "id": "benchmark_b",
+        "episodes": 100,
+        "base_seed": 5000,
+        "last_seed": 5099,
+        "json_filename": "benchmark_b.json",
+        "log_filename": "benchmark_b.log",
+        "long_streak_threshold": 20
+      }
+    ],
+    "final_holdout": {
+      "base_seed": 10000,
+      "last_seed": 10099,
+      "reserved": true
+    }
+  },
+  "experiments": [
+    {
+      "id": "deterministic-double-dqn-seed42",
+      "enabled": true,
+      "purpose": "Screen deterministic Double DQN against the paired A42 reference without authorizing follow-up experiments.",
+      "configuration": {
+        "algorithm": "double_dqn",
+        "training_seed": 42,
+        "episodes": 1000,
+        "learning_rate": 0.0005,
+        "target_update_freq": 1000,
+        "target_update_unit": "learning_optimizer_updates",
+        "epsilon_start": 1.0,
+        "epsilon_min": 0.01,
+        "epsilon_decay": 0.995,
+        "epsilon_decay_unit": "episode",
+        "replay_capacity": 10000,
+        "batch_size": 64,
+        "gamma": 0.99
+      },
+      "reference": {
+        "id": "deterministic-vanilla-A-seed42",
+        "description": "Archived deterministic Vanilla DQN A42 reference.",
+        "episodes": 150,
+        "mean_reward": 230.12,
+        "solved_count": 116,
+        "solved_rate_pct": 77.33,
+        "low_score_count": 0,
+        "low_score_rate_pct": 0.0,
+        "mean_length": 244.59,
+        "timeout_count": 9
+      },
+      "screening_rule": {
+        "id": "double-dqn-seed42-manual-screen",
+        "automatic_followup": false,
+        "description": "Support for later replication requires a material mean-reward or solved-rate improvement without a material reduction in the other primary metric.",
+        "combined_constraints": {
+          "max_low_score_count": 1,
+          "max_timeout_count": 9,
+          "max_mean_length": 269.0
+        },
+        "manual_criteria": [
+          "No several-hundred-step side-engine streak pathology.",
+          "Improvement must be visible in both Benchmark A and Benchmark B rather than only one set."
+        ]
+      }
+    },
+    {
+      "id": "deterministic-vanilla-A-seed44",
+      "enabled": true,
+      "purpose": "Add a third deterministic training-seed replication of balanced Configuration A.",
+      "configuration": {
+        "algorithm": "vanilla",
+        "training_seed": 44,
+        "episodes": 1000,
+        "learning_rate": 0.0005,
+        "target_update_freq": 1000,
+        "target_update_unit": "learning_optimizer_updates",
+        "epsilon_start": 1.0,
+        "epsilon_min": 0.01,
+        "epsilon_decay": 0.995,
+        "epsilon_decay_unit": "episode",
+        "replay_capacity": 10000,
+        "batch_size": 64,
+        "gamma": 0.99
+      },
+      "reference": null,
+      "screening_rule": null
+    }
+  ]
+}

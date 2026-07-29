@@ -1,0 +1,610 @@
+Episode 10, Total Reward: -50.65, Average Max Q-Value: 1.5032, Epsilon: 0.9511
+Episode 20, Total Reward: -115.01, Average Max Q-Value: 2.2749, Epsilon: 0.9046
+Episode 30, Total Reward: -207.95, Average Max Q-Value: 3.1667, Epsilon: 0.8604
+Episode 40, Total Reward: -126.03, Average Max Q-Value: 3.9930, Epsilon: 0.8183
+Episode 50, Total Reward: -103.45, Average Max Q-Value: 4.8667, Epsilon: 0.7783
+[Validation @ ep 50] mean=-209.59 median=-205.19 std=16.33 solved=0%  <- NEW BEST (saved)
+Episode 60, Total Reward: -90.03, Average Max Q-Value: 6.2968, Epsilon: 0.7403
+Episode 70, Total Reward: -61.34, Average Max Q-Value: 6.7561, Epsilon: 0.7041
+Episode 80, Total Reward: -51.65, Average Max Q-Value: 7.5319, Epsilon: 0.6696
+Episode 90, Total Reward: -22.56, Average Max Q-Value: 8.0103, Epsilon: 0.6369
+Episode 100, Total Reward: -77.43, Average Max Q-Value: 10.4089, Epsilon: 0.6058
+[Validation @ ep 100] mean=-714.70 median=-738.66 std=108.77 solved=0%
+Episode 110, Total Reward: -247.85, Average Max Q-Value: 12.0865, Epsilon: 0.5762
+Episode 120, Total Reward: 26.91, Average Max Q-Value: 13.7412, Epsilon: 0.5480
+Episode 130, Total Reward: -4.58, Average Max Q-Value: 16.1144, Epsilon: 0.5212
+Episode 140, Total Reward: -3.24, Average Max Q-Value: 20.0757, Epsilon: 0.4957
+Episode 150, Total Reward: 36.65, Average Max Q-Value: 25.7828, Epsilon: 0.4715
+[Validation @ ep 150] mean=-50.26 median=-48.26 std=57.29 solved=0%  <- NEW BEST (saved)
+Episode 160, Total Reward: 12.16, Average Max Q-Value: 28.8340, Epsilon: 0.4484
+Episode 170, Total Reward: 102.59, Average Max Q-Value: 32.6480, Epsilon: 0.4265
+Episode 180, Total Reward: 107.71, Average Max Q-Value: 34.1877, Epsilon: 0.4057
+Episode 190, Total Reward: -17.86, Average Max Q-Value: 35.8616, Epsilon: 0.3858
+Episode 200, Total Reward: 47.42, Average Max Q-Value: 35.8571, Epsilon: 0.3670
+[Validation @ ep 200] mean=100.00 median=133.76 std=104.95 solved=10%  <- NEW BEST (saved)
+Episode 210, Total Reward: -18.21, Average Max Q-Value: 37.6067, Epsilon: 0.3490
+Episode 220, Total Reward: -22.65, Average Max Q-Value: 39.6938, Epsilon: 0.3320
+Episode 230, Total Reward: -10.45, Average Max Q-Value: 40.2974, Epsilon: 0.3157
+Episode 240, Total Reward: -57.52, Average Max Q-Value: 41.4450, Epsilon: 0.3003
+Episode 250, Total Reward: 31.30, Average Max Q-Value: 42.3752, Epsilon: 0.2856
+[Validation @ ep 250] mean=150.72 median=168.48 std=82.73 solved=30%  <- NEW BEST (saved)
+Episode 260, Total Reward: -5.99, Average Max Q-Value: 42.8944, Epsilon: 0.2716
+Episode 270, Total Reward: -165.97, Average Max Q-Value: 43.5480, Epsilon: 0.2584
+Episode 280, Total Reward: 24.52, Average Max Q-Value: 42.5095, Epsilon: 0.2457
+Episode 290, Total Reward: 129.93, Average Max Q-Value: 39.8696, Epsilon: 0.2337
+Episode 300, Total Reward: 200.69, Average Max Q-Value: 40.1830, Epsilon: 0.2223
+[Validation @ ep 300] mean=237.38 median=249.38 std=33.14 solved=90%  <- NEW BEST (saved)
+Episode 310, Total Reward: 98.29, Average Max Q-Value: 42.9335, Epsilon: 0.2114
+Episode 320, Total Reward: 108.65, Average Max Q-Value: 43.9666, Epsilon: 0.2011
+Episode 330, Total Reward: 120.58, Average Max Q-Value: 40.4747, Epsilon: 0.1913
+Episode 340, Total Reward: 118.04, Average Max Q-Value: 45.2796, Epsilon: 0.1819
+Episode 350, Total Reward: 258.09, Average Max Q-Value: 62.0066, Epsilon: 0.1730
+[Validation @ ep 350] mean=248.61 median=269.09 std=53.06 solved=80%  <- NEW BEST (saved)
+Episode 360, Total Reward: 164.59, Average Max Q-Value: 64.5333, Epsilon: 0.1646
+Episode 370, Total Reward: -15.59, Average Max Q-Value: 66.3370, Epsilon: 0.1565
+Episode 380, Total Reward: 156.75, Average Max Q-Value: 67.2559, Epsilon: 0.1489
+Episode 390, Total Reward: 14.44, Average Max Q-Value: 67.7455, Epsilon: 0.1416
+Episode 400, Total Reward: 96.14, Average Max Q-Value: 68.4755, Epsilon: 0.1347
+[Validation @ ep 400] mean=226.35 median=256.04 std=87.08 solved=80%
+Episode 410, Total Reward: 35.62, Average Max Q-Value: 70.8018, Epsilon: 0.1281
+Episode 420, Total Reward: 253.15, Average Max Q-Value: 72.1849, Epsilon: 0.1218
+Episode 430, Total Reward: 184.08, Average Max Q-Value: 74.9967, Epsilon: 0.1159
+Episode 440, Total Reward: 171.16, Average Max Q-Value: 74.6084, Epsilon: 0.1102
+Episode 450, Total Reward: 251.38, Average Max Q-Value: 75.9464, Epsilon: 0.1048
+[Validation @ ep 450] mean=235.99 median=261.90 std=78.71 solved=90%
+Episode 460, Total Reward: 302.46, Average Max Q-Value: 76.5155, Epsilon: 0.0997
+Episode 470, Total Reward: 177.09, Average Max Q-Value: 78.7238, Epsilon: 0.0948
+Episode 480, Total Reward: 262.54, Average Max Q-Value: 80.9942, Epsilon: 0.0902
+Episode 490, Total Reward: 268.17, Average Max Q-Value: 83.7123, Epsilon: 0.0858
+Episode 500, Total Reward: 279.83, Average Max Q-Value: 88.1624, Epsilon: 0.0816
+[Validation @ ep 500] mean=192.25 median=205.15 std=96.85 solved=50%
+Episode 510, Total Reward: 124.27, Average Max Q-Value: 90.7681, Epsilon: 0.0776
+Episode 520, Total Reward: 296.69, Average Max Q-Value: 91.6940, Epsilon: 0.0738
+Episode 530, Total Reward: 41.01, Average Max Q-Value: 92.6400, Epsilon: 0.0702
+Episode 540, Total Reward: 46.08, Average Max Q-Value: 94.8653, Epsilon: 0.0668
+Episode 550, Total Reward: 15.07, Average Max Q-Value: 95.3864, Epsilon: 0.0635
+[Validation @ ep 550] mean=148.55 median=142.21 std=125.11 solved=50%
+Episode 560, Total Reward: 266.09, Average Max Q-Value: 96.2685, Epsilon: 0.0604
+Episode 570, Total Reward: 265.31, Average Max Q-Value: 95.0878, Epsilon: 0.0574
+Episode 580, Total Reward: 298.71, Average Max Q-Value: 95.6233, Epsilon: 0.0546
+Episode 590, Total Reward: 282.07, Average Max Q-Value: 95.9189, Epsilon: 0.0520
+Episode 600, Total Reward: 16.10, Average Max Q-Value: 95.9272, Epsilon: 0.0494
+[Validation @ ep 600] mean=172.29 median=223.43 std=119.41 solved=50%
+Episode 610, Total Reward: 28.60, Average Max Q-Value: 96.9715, Epsilon: 0.0470
+Episode 620, Total Reward: 35.00, Average Max Q-Value: 97.1163, Epsilon: 0.0447
+Episode 630, Total Reward: 50.15, Average Max Q-Value: 97.6513, Epsilon: 0.0425
+Episode 640, Total Reward: 284.44, Average Max Q-Value: 98.2316, Epsilon: 0.0404
+Episode 650, Total Reward: 56.57, Average Max Q-Value: 98.0932, Epsilon: 0.0385
+[Validation @ ep 650] mean=185.75 median=247.22 std=111.54 solved=60%
+Episode 660, Total Reward: 282.25, Average Max Q-Value: 97.5330, Epsilon: 0.0366
+Episode 670, Total Reward: 284.13, Average Max Q-Value: 97.3790, Epsilon: 0.0348
+Episode 680, Total Reward: 264.65, Average Max Q-Value: 96.9607, Epsilon: 0.0331
+Episode 690, Total Reward: 290.62, Average Max Q-Value: 97.0099, Epsilon: 0.0315
+Episode 700, Total Reward: 305.04, Average Max Q-Value: 96.7513, Epsilon: 0.0299
+[Validation @ ep 700] mean=237.52 median=290.68 std=105.45 solved=80%
+Episode 710, Total Reward: 22.92, Average Max Q-Value: 96.2818, Epsilon: 0.0285
+Episode 720, Total Reward: 252.98, Average Max Q-Value: 95.0295, Epsilon: 0.0271
+Episode 730, Total Reward: 33.34, Average Max Q-Value: 95.6142, Epsilon: 0.0258
+Episode 740, Total Reward: 17.57, Average Max Q-Value: 96.0048, Epsilon: 0.0245
+Episode 750, Total Reward: 256.52, Average Max Q-Value: 95.3901, Epsilon: 0.0233
+[Validation @ ep 750] mean=130.23 median=45.74 std=124.75 solved=40%
+Episode 760, Total Reward: 243.13, Average Max Q-Value: 96.3667, Epsilon: 0.0222
+Episode 770, Total Reward: 267.02, Average Max Q-Value: 96.7245, Epsilon: 0.0211
+Episode 780, Total Reward: 263.15, Average Max Q-Value: 95.8053, Epsilon: 0.0200
+Episode 790, Total Reward: 4.88, Average Max Q-Value: 94.8262, Epsilon: 0.0191
+Episode 800, Total Reward: 248.38, Average Max Q-Value: 94.1433, Epsilon: 0.0181
+[Validation @ ep 800] mean=181.53 median=274.68 std=130.65 solved=60%
+Episode 810, Total Reward: 264.54, Average Max Q-Value: 94.7564, Epsilon: 0.0172
+Episode 820, Total Reward: 20.95, Average Max Q-Value: 94.5341, Epsilon: 0.0164
+Episode 830, Total Reward: 247.97, Average Max Q-Value: 96.6076, Epsilon: 0.0156
+Episode 840, Total Reward: 284.11, Average Max Q-Value: 98.3099, Epsilon: 0.0148
+Episode 850, Total Reward: 277.71, Average Max Q-Value: 98.7432, Epsilon: 0.0141
+[Validation @ ep 850] mean=116.33 median=245.54 std=201.04 solved=60%
+Episode 860, Total Reward: 283.05, Average Max Q-Value: 97.9604, Epsilon: 0.0134
+Episode 870, Total Reward: 310.16, Average Max Q-Value: 95.4967, Epsilon: 0.0128
+Episode 880, Total Reward: 255.87, Average Max Q-Value: 94.2791, Epsilon: 0.0121
+Episode 890, Total Reward: 33.58, Average Max Q-Value: 93.6753, Epsilon: 0.0115
+Episode 900, Total Reward: 245.24, Average Max Q-Value: 92.7736, Epsilon: 0.0110
+[Validation @ ep 900] mean=198.48 median=271.89 std=111.94 solved=60%
+Episode 910, Total Reward: 287.13, Average Max Q-Value: 92.2764, Epsilon: 0.0104
+Episode 920, Total Reward: 253.53, Average Max Q-Value: 92.4012, Epsilon: 0.0100
+Episode 930, Total Reward: 44.01, Average Max Q-Value: 93.5564, Epsilon: 0.0100
+Episode 940, Total Reward: 272.58, Average Max Q-Value: 92.9279, Epsilon: 0.0100
+Episode 950, Total Reward: 293.45, Average Max Q-Value: 92.4842, Epsilon: 0.0100
+[Validation @ ep 950] mean=277.95 median=279.33 std=19.75 solved=100%  <- NEW BEST (saved)
+Episode 960, Total Reward: 270.20, Average Max Q-Value: 91.4858, Epsilon: 0.0100
+Episode 970, Total Reward: 258.45, Average Max Q-Value: 91.7939, Epsilon: 0.0100
+Episode 980, Total Reward: 316.22, Average Max Q-Value: 92.0565, Epsilon: 0.0100
+Episode 990, Total Reward: 308.75, Average Max Q-Value: 91.4679, Epsilon: 0.0100
+Episode 1000, Total Reward: 261.15, Average Max Q-Value: 91.8963, Epsilon: 0.0100
+[Validation @ ep 1000] mean=263.85 median=284.55 std=74.03 solved=90%
+==============================
+Training Phase Completed!
+Total Episodes (Tests): 1000
+Mean Reward: 110.24
+Reward Variance: 23409.31
+Final Moving-Avg Reward (w=50): 253.27
+Final Epsilon: 0.0100
+==============================
+Training metrics saved to training_metrics.json.
+Training plot saved to training_plot.png.
+Starting diagnostic evaluation: 50 episodes, base seed 1234 (no rendering)...
+  Ep   1 [    ][   ] reward=    9.34  len= 152  streak(L,R)=(3,1)
+  Ep   2 [SOLVED][   ] reward=  253.04  len= 239  streak(L,R)=(2,3)
+  Ep   3 [SOLVED][   ] reward=  222.64  len= 354  streak(L,R)=(2,103)
+  Ep   4 [SOLVED][   ] reward=  259.07  len= 482  streak(L,R)=(1,144)
+  Ep   5 [SOLVED][   ] reward=  250.70  len= 189  streak(L,R)=(2,2)
+  Ep   6 [SOLVED][   ] reward=  287.67  len= 434  streak(L,R)=(26,10)
+  Ep   7 [SOLVED][   ] reward=  291.76  len= 441  streak(L,R)=(27,24)
+  Ep   8 [SOLVED][   ] reward=  296.70  len= 295  streak(L,R)=(19,6)
+  Ep   9 [    ][   ] reward=   17.11  len= 180  streak(L,R)=(6,1)
+  Ep  10 [    ][   ] reward=  192.94  len= 552  streak(L,R)=(8,69)
+  Ep  11 [    ][   ] reward=   15.70  len= 141  streak(L,R)=(5,1)
+  Ep  12 [SOLVED][   ] reward=  316.36  len= 206  streak(L,R)=(15,21)
+  Ep  13 [SOLVED][   ] reward=  252.49  len= 180  streak(L,R)=(15,4)
+  Ep  14 [    ][   ] reward=  135.61  len=1000  streak(L,R)=(3,13)
+  Ep  15 [    ][   ] reward=   30.32  len= 114  streak(L,R)=(2,3)
+  Ep  16 [    ][   ] reward=  126.17  len=1000  streak(L,R)=(59,84)
+  Ep  17 [SOLVED][   ] reward=  254.54  len= 142  streak(L,R)=(2,2)
+  Ep  18 [SOLVED][   ] reward=  242.60  len= 195  streak(L,R)=(3,4)
+  Ep  19 [SOLVED][   ] reward=  259.40  len= 178  streak(L,R)=(2,5)
+  Ep  20 [SOLVED][   ] reward=  317.22  len= 212  streak(L,R)=(10,21)
+  Ep  21 [SOLVED][   ] reward=  285.63  len= 286  streak(L,R)=(4,33)
+  Ep  22 [SOLVED][   ] reward=  306.92  len= 227  streak(L,R)=(4,23)
+  Ep  23 [SOLVED][   ] reward=  213.66  len= 514  streak(L,R)=(4,307)
+  Ep  24 [SOLVED][   ] reward=  302.16  len= 189  streak(L,R)=(9,14)
+  Ep  25 [SOLVED][   ] reward=  274.03  len= 183  streak(L,R)=(37,1)
+  Ep  26 [SOLVED][   ] reward=  295.64  len= 255  streak(L,R)=(5,36)
+  Ep  27 [    ][   ] reward=   45.34  len= 134  streak(L,R)=(9,8)
+  Ep  28 [SOLVED][   ] reward=  231.16  len= 275  streak(L,R)=(4,5)
+  Ep  29 [SOLVED][   ] reward=  239.89  len= 291  streak(L,R)=(3,15)
+  Ep  30 [SOLVED][   ] reward=  259.05  len= 281  streak(L,R)=(4,6)
+  Ep  31 [SOLVED][   ] reward=  286.00  len= 263  streak(L,R)=(3,28)
+  Ep  32 [SOLVED][   ] reward=  227.74  len= 429  streak(L,R)=(2,219)
+  Ep  33 [SOLVED][   ] reward=  269.46  len= 294  streak(L,R)=(3,7)
+  Ep  34 [SOLVED][   ] reward=  200.96  len= 289  streak(L,R)=(3,101)
+  Ep  35 [SOLVED][   ] reward=  290.82  len= 248  streak(L,R)=(8,18)
+  Ep  36 [SOLVED][   ] reward=  268.49  len= 136  streak(L,R)=(1,2)
+  Ep  37 [    ][   ] reward=   56.12  len= 142  streak(L,R)=(7,20)
+  Ep  38 [SOLVED][   ] reward=  293.47  len= 299  streak(L,R)=(4,53)
+  Ep  39 [SOLVED][   ] reward=  269.94  len= 322  streak(L,R)=(10,10)
+  Ep  40 [SOLVED][   ] reward=  262.71  len= 160  streak(L,R)=(3,2)
+  Ep  41 [    ][   ] reward=  113.05  len=1000  streak(L,R)=(3,9)
+  Ep  42 [SOLVED][   ] reward=  240.18  len= 406  streak(L,R)=(4,136)
+  Ep  43 [SOLVED][   ] reward=  260.49  len= 276  streak(L,R)=(2,2)
+  Ep  44 [SOLVED][   ] reward=  264.75  len= 281  streak(L,R)=(2,19)
+  Ep  45 [SOLVED][   ] reward=  249.03  len= 472  streak(L,R)=(4,153)
+  Ep  46 [SOLVED][   ] reward=  271.20  len= 284  streak(L,R)=(3,14)
+  Ep  47 [SOLVED][   ] reward=  259.90  len= 361  streak(L,R)=(5,4)
+  Ep  48 [SOLVED][   ] reward=  248.63  len= 350  streak(L,R)=(4,8)
+  Ep  49 [SOLVED][   ] reward=  293.01  len= 214  streak(L,R)=(9,16)
+  Ep  50 [SOLVED][   ] reward=  287.18  len= 157  streak(L,R)=(2,2)
+==============================
+Diagnostic Summary
+  Mean reward   : 227.96   Median: 259.06   Std: 84.99
+  Min / Max     : 9.34 / 317.22
+  Solved (>=200): 40/50 (80.0%)
+  Low (<0)      : 0/50 (0.0%)
+  Mean length   : 314.1
+  Action %      : no_op=26.0%, fire_left_orientation_engine=11.4%, fire_main_engine=33.4%, fire_right_orientation_engine=29.2%
+  Max side streak: L=59, R=307
+  Report saved  : benchmark_a.json
+==============================
+Starting diagnostic evaluation: 100 episodes, base seed 5000 (no rendering)...
+  Ep   1 [SOLVED][   ] reward=  272.00  len= 148  streak(L,R)=(3,2)
+  Ep   2 [SOLVED][   ] reward=  277.88  len= 161  streak(L,R)=(2,2)
+  Ep   3 [SOLVED][   ] reward=  251.25  len= 389  streak(L,R)=(3,120)
+  Ep   4 [SOLVED][   ] reward=  249.27  len= 343  streak(L,R)=(4,9)
+  Ep   5 [SOLVED][   ] reward=  250.16  len= 250  streak(L,R)=(4,6)
+  Ep   6 [SOLVED][   ] reward=  270.55  len= 293  streak(L,R)=(5,54)
+  Ep   7 [SOLVED][   ] reward=  274.51  len= 283  streak(L,R)=(3,20)
+  Ep   8 [SOLVED][   ] reward=  268.29  len= 180  streak(L,R)=(7,1)
+  Ep   9 [    ][   ] reward=  145.88  len=1000  streak(L,R)=(3,8)
+  Ep  10 [SOLVED][   ] reward=  267.32  len= 325  streak(L,R)=(10,18)
+  Ep  11 [SOLVED][   ] reward=  261.85  len= 565  streak(L,R)=(2,28)
+  Ep  12 [SOLVED][   ] reward=  263.87  len= 186  streak(L,R)=(2,3)
+  Ep  13 [SOLVED][   ] reward=  256.85  len= 755  streak(L,R)=(2,502)
+  Ep  14 [SOLVED][   ] reward=  231.07  len= 269  streak(L,R)=(4,6)
+  Ep  15 [SOLVED][   ] reward=  268.74  len= 282  streak(L,R)=(5,12)
+  Ep  16 [SOLVED][   ] reward=  222.36  len= 590  streak(L,R)=(2,289)
+  Ep  17 [SOLVED][   ] reward=  233.20  len= 439  streak(L,R)=(3,211)
+  Ep  18 [SOLVED][   ] reward=  286.71  len= 251  streak(L,R)=(6,16)
+  Ep  19 [SOLVED][   ] reward=  254.65  len= 154  streak(L,R)=(2,2)
+  Ep  20 [SOLVED][   ] reward=  276.53  len= 122  streak(L,R)=(1,1)
+  Ep  21 [SOLVED][   ] reward=  271.84  len= 319  streak(L,R)=(6,10)
+  Ep  22 [SOLVED][   ] reward=  301.76  len= 222  streak(L,R)=(5,31)
+  Ep  23 [SOLVED][   ] reward=  255.86  len= 186  streak(L,R)=(3,2)
+  Ep  24 [SOLVED][   ] reward=  260.25  len= 169  streak(L,R)=(3,3)
+  Ep  25 [    ][   ] reward=  178.56  len= 373  streak(L,R)=(4,110)
+  Ep  26 [SOLVED][   ] reward=  241.50  len= 333  streak(L,R)=(7,7)
+  Ep  27 [SOLVED][   ] reward=  235.26  len= 350  streak(L,R)=(13,7)
+  Ep  28 [SOLVED][   ] reward=  225.08  len= 240  streak(L,R)=(2,2)
+  Ep  29 [SOLVED][   ] reward=  238.71  len= 345  streak(L,R)=(11,3)
+  Ep  30 [SOLVED][   ] reward=  310.18  len= 225  streak(L,R)=(17,18)
+  Ep  31 [SOLVED][   ] reward=  244.54  len= 148  streak(L,R)=(2,2)
+  Ep  32 [SOLVED][   ] reward=  261.98  len= 323  streak(L,R)=(34,3)
+  Ep  33 [SOLVED][   ] reward=  235.51  len= 306  streak(L,R)=(14,27)
+  Ep  34 [    ][   ] reward=  152.80  len=1000  streak(L,R)=(4,16)
+  Ep  35 [SOLVED][   ] reward=  295.92  len= 206  streak(L,R)=(6,16)
+  Ep  36 [SOLVED][   ] reward=  215.48  len= 367  streak(L,R)=(1,39)
+  Ep  37 [    ][LOW] reward=  -29.07  len= 253  streak(L,R)=(2,11)
+  Ep  38 [SOLVED][   ] reward=  261.53  len= 265  streak(L,R)=(8,9)
+  Ep  39 [SOLVED][   ] reward=  311.34  len= 211  streak(L,R)=(11,18)
+  Ep  40 [    ][   ] reward=  192.87  len= 300  streak(L,R)=(2,82)
+  Ep  41 [    ][   ] reward=   59.12  len= 129  streak(L,R)=(13,13)
+  Ep  42 [SOLVED][   ] reward=  229.64  len= 321  streak(L,R)=(20,6)
+  Ep  43 [    ][LOW] reward=   -9.99  len= 290  streak(L,R)=(10,11)
+  Ep  44 [SOLVED][   ] reward=  284.18  len= 331  streak(L,R)=(9,11)
+  Ep  45 [    ][   ] reward=  174.27  len=1000  streak(L,R)=(4,11)
+  Ep  46 [SOLVED][   ] reward=  284.79  len= 168  streak(L,R)=(3,1)
+  Ep  47 [SOLVED][   ] reward=  272.55  len= 218  streak(L,R)=(2,4)
+  Ep  48 [    ][   ] reward=  168.32  len= 297  streak(L,R)=(2,56)
+  Ep  49 [SOLVED][   ] reward=  217.01  len= 354  streak(L,R)=(2,13)
+  Ep  50 [SOLVED][   ] reward=  244.35  len= 154  streak(L,R)=(4,1)
+  Ep  51 [SOLVED][   ] reward=  302.05  len= 212  streak(L,R)=(5,16)
+  Ep  52 [SOLVED][   ] reward=  316.00  len= 220  streak(L,R)=(13,18)
+  Ep  53 [SOLVED][   ] reward=  262.49  len= 161  streak(L,R)=(11,4)
+  Ep  54 [SOLVED][   ] reward=  263.40  len= 238  streak(L,R)=(2,3)
+  Ep  55 [SOLVED][   ] reward=  255.84  len= 146  streak(L,R)=(4,2)
+  Ep  56 [SOLVED][   ] reward=  262.21  len= 188  streak(L,R)=(22,3)
+  Ep  57 [SOLVED][   ] reward=  293.97  len= 193  streak(L,R)=(7,8)
+  Ep  58 [SOLVED][   ] reward=  247.90  len= 165  streak(L,R)=(1,31)
+  Ep  59 [SOLVED][   ] reward=  262.87  len= 136  streak(L,R)=(3,1)
+  Ep  60 [SOLVED][   ] reward=  262.92  len= 312  streak(L,R)=(4,7)
+  Ep  61 [SOLVED][   ] reward=  267.32  len= 311  streak(L,R)=(17,13)
+  Ep  62 [SOLVED][   ] reward=  275.53  len= 235  streak(L,R)=(5,6)
+  Ep  63 [SOLVED][   ] reward=  238.66  len= 292  streak(L,R)=(2,18)
+  Ep  64 [SOLVED][   ] reward=  245.88  len= 290  streak(L,R)=(3,5)
+  Ep  65 [SOLVED][   ] reward=  243.53  len= 423  streak(L,R)=(2,9)
+  Ep  66 [SOLVED][   ] reward=  247.01  len= 280  streak(L,R)=(6,64)
+  Ep  67 [SOLVED][   ] reward=  306.42  len= 213  streak(L,R)=(6,19)
+  Ep  68 [SOLVED][   ] reward=  241.92  len= 297  streak(L,R)=(3,56)
+  Ep  69 [    ][   ] reward=   17.43  len= 148  streak(L,R)=(7,1)
+  Ep  70 [SOLVED][   ] reward=  236.19  len= 537  streak(L,R)=(2,126)
+  Ep  71 [SOLVED][   ] reward=  247.28  len= 139  streak(L,R)=(1,2)
+  Ep  72 [SOLVED][   ] reward=  267.32  len= 270  streak(L,R)=(3,4)
+  Ep  73 [SOLVED][   ] reward=  279.18  len= 359  streak(L,R)=(10,2)
+  Ep  74 [SOLVED][   ] reward=  246.61  len= 395  streak(L,R)=(5,93)
+  Ep  75 [SOLVED][   ] reward=  268.32  len= 307  streak(L,R)=(4,13)
+  Ep  76 [SOLVED][   ] reward=  296.45  len= 202  streak(L,R)=(4,47)
+  Ep  77 [SOLVED][   ] reward=  267.54  len= 294  streak(L,R)=(26,3)
+  Ep  78 [    ][   ] reward=  171.85  len= 366  streak(L,R)=(3,65)
+  Ep  79 [SOLVED][   ] reward=  250.69  len= 136  streak(L,R)=(3,1)
+  Ep  80 [SOLVED][   ] reward=  241.29  len= 430  streak(L,R)=(5,121)
+  Ep  81 [    ][   ] reward=  198.77  len= 627  streak(L,R)=(47,2)
+  Ep  82 [SOLVED][   ] reward=  208.09  len= 424  streak(L,R)=(65,3)
+  Ep  83 [SOLVED][   ] reward=  261.23  len= 227  streak(L,R)=(21,3)
+  Ep  84 [SOLVED][   ] reward=  237.53  len= 471  streak(L,R)=(3,12)
+  Ep  85 [SOLVED][   ] reward=  299.93  len= 215  streak(L,R)=(2,12)
+  Ep  86 [    ][   ] reward=  137.48  len=1000  streak(L,R)=(3,22)
+  Ep  87 [SOLVED][   ] reward=  237.96  len= 312  streak(L,R)=(2,91)
+  Ep  88 [SOLVED][   ] reward=  305.64  len= 237  streak(L,R)=(2,17)
+  Ep  89 [SOLVED][   ] reward=  289.42  len= 226  streak(L,R)=(3,32)
+  Ep  90 [SOLVED][   ] reward=  303.27  len= 243  streak(L,R)=(11,36)
+  Ep  91 [SOLVED][   ] reward=  233.87  len= 250  streak(L,R)=(2,4)
+  Ep  92 [SOLVED][   ] reward=  278.95  len= 211  streak(L,R)=(38,2)
+  Ep  93 [SOLVED][   ] reward=  309.05  len= 213  streak(L,R)=(9,11)
+  Ep  94 [SOLVED][   ] reward=  310.90  len= 193  streak(L,R)=(17,18)
+  Ep  95 [SOLVED][   ] reward=  238.31  len= 384  streak(L,R)=(4,27)
+  Ep  96 [    ][LOW] reward=  -86.45  len= 425  streak(L,R)=(6,9)
+  Ep  97 [SOLVED][   ] reward=  296.75  len= 271  streak(L,R)=(4,40)
+  Ep  98 [SOLVED][   ] reward=  281.38  len= 187  streak(L,R)=(10,2)
+  Ep  99 [SOLVED][   ] reward=  224.63  len= 258  streak(L,R)=(2,28)
+  Ep 100 [SOLVED][   ] reward=  271.17  len= 253  streak(L,R)=(4,10)
+==============================
+Diagnostic Summary
+  Mean reward   : 240.93   Median: 256.36   Std: 68.84
+  Min / Max     : -86.45 / 316.00
+  Solved (>=200): 86/100 (86.0%)
+  Low (<0)      : 3/100 (3.0%)
+  Mean length   : 309.1
+  Action %      : no_op=27.1%, fire_left_orientation_engine=11.9%, fire_main_engine=34.9%, fire_right_orientation_engine=26.2%
+  Max side streak: L=65, R=502
+  Report saved  : benchmark_b.json
+==============================
+Episode 10, Total Reward: -140.06, Average Max Q-Value: -0.2113, Epsilon: 0.9511
+Episode 20, Total Reward: -118.10, Average Max Q-Value: 0.1592, Epsilon: 0.9046
+Episode 30, Total Reward: -125.27, Average Max Q-Value: 0.6693, Epsilon: 0.8604
+Episode 40, Total Reward: -59.16, Average Max Q-Value: 1.3196, Epsilon: 0.8183
+Episode 50, Total Reward: -57.38, Average Max Q-Value: 2.3932, Epsilon: 0.7783
+[Validation @ ep 50] mean=-152.76 median=-150.12 std=20.49 solved=0%  <- NEW BEST (saved)
+Episode 60, Total Reward: -102.88, Average Max Q-Value: 3.6333, Epsilon: 0.7403
+Episode 70, Total Reward: -63.15, Average Max Q-Value: 4.1415, Epsilon: 0.7041
+Episode 80, Total Reward: -7.94, Average Max Q-Value: 4.7901, Epsilon: 0.6696
+Episode 90, Total Reward: -116.96, Average Max Q-Value: 5.2706, Epsilon: 0.6369
+Episode 100, Total Reward: -78.84, Average Max Q-Value: 6.1593, Epsilon: 0.6058
+[Validation @ ep 100] mean=-188.06 median=-151.22 std=76.08 solved=0%
+Episode 110, Total Reward: -63.17, Average Max Q-Value: 7.9883, Epsilon: 0.5762
+Episode 120, Total Reward: -35.56, Average Max Q-Value: 10.2796, Epsilon: 0.5480
+Episode 130, Total Reward: -255.83, Average Max Q-Value: 12.1215, Epsilon: 0.5212
+Episode 140, Total Reward: -30.48, Average Max Q-Value: 13.3157, Epsilon: 0.4957
+Episode 150, Total Reward: -49.92, Average Max Q-Value: 15.4064, Epsilon: 0.4715
+[Validation @ ep 150] mean=-88.02 median=-79.80 std=19.97 solved=0%  <- NEW BEST (saved)
+Episode 160, Total Reward: -58.67, Average Max Q-Value: 17.0913, Epsilon: 0.4484
+Episode 170, Total Reward: -30.34, Average Max Q-Value: 20.9898, Epsilon: 0.4265
+Episode 180, Total Reward: 166.01, Average Max Q-Value: 22.8711, Epsilon: 0.4057
+Episode 190, Total Reward: 120.17, Average Max Q-Value: 21.9742, Epsilon: 0.3858
+Episode 200, Total Reward: 49.89, Average Max Q-Value: 20.6999, Epsilon: 0.3670
+[Validation @ ep 200] mean=-50.44 median=-52.07 std=109.69 solved=10%  <- NEW BEST (saved)
+Episode 210, Total Reward: 30.56, Average Max Q-Value: 19.6633, Epsilon: 0.3490
+Episode 220, Total Reward: 17.18, Average Max Q-Value: 18.0775, Epsilon: 0.3320
+Episode 230, Total Reward: 26.66, Average Max Q-Value: 21.6432, Epsilon: 0.3157
+Episode 240, Total Reward: -38.31, Average Max Q-Value: 23.9755, Epsilon: 0.3003
+Episode 250, Total Reward: -35.82, Average Max Q-Value: 21.8404, Epsilon: 0.2856
+[Validation @ ep 250] mean=112.01 median=177.20 std=222.56 solved=40%  <- NEW BEST (saved)
+Episode 260, Total Reward: 77.81, Average Max Q-Value: 27.8148, Epsilon: 0.2716
+Episode 270, Total Reward: 208.70, Average Max Q-Value: 22.5473, Epsilon: 0.2584
+Episode 280, Total Reward: -17.79, Average Max Q-Value: 22.3991, Epsilon: 0.2457
+Episode 290, Total Reward: 228.61, Average Max Q-Value: 27.8249, Epsilon: 0.2337
+Episode 300, Total Reward: 132.12, Average Max Q-Value: 33.2005, Epsilon: 0.2223
+[Validation @ ep 300] mean=-24.91 median=-80.77 std=178.68 solved=20%
+Episode 310, Total Reward: 57.37, Average Max Q-Value: 35.1975, Epsilon: 0.2114
+Episode 320, Total Reward: -18.11, Average Max Q-Value: 37.7306, Epsilon: 0.2011
+Episode 330, Total Reward: 93.20, Average Max Q-Value: 44.9876, Epsilon: 0.1913
+Episode 340, Total Reward: 109.19, Average Max Q-Value: 56.5488, Epsilon: 0.1819
+Episode 350, Total Reward: 264.30, Average Max Q-Value: 63.5365, Epsilon: 0.1730
+[Validation @ ep 350] mean=92.29 median=87.55 std=174.27 solved=40%
+Episode 360, Total Reward: 258.44, Average Max Q-Value: 66.8837, Epsilon: 0.1646
+Episode 370, Total Reward: 277.55, Average Max Q-Value: 74.6047, Epsilon: 0.1565
+Episode 380, Total Reward: -278.95, Average Max Q-Value: 73.9216, Epsilon: 0.1489
+Episode 390, Total Reward: 32.52, Average Max Q-Value: 71.6357, Epsilon: 0.1416
+Episode 400, Total Reward: 293.54, Average Max Q-Value: 72.9676, Epsilon: 0.1347
+[Validation @ ep 400] mean=187.32 median=237.26 std=85.85 solved=60%  <- NEW BEST (saved)
+Episode 410, Total Reward: 291.67, Average Max Q-Value: 71.9000, Epsilon: 0.1281
+Episode 420, Total Reward: -18.62, Average Max Q-Value: 70.0768, Epsilon: 0.1218
+Episode 430, Total Reward: 212.37, Average Max Q-Value: 71.1892, Epsilon: 0.1159
+Episode 440, Total Reward: 223.05, Average Max Q-Value: 77.1527, Epsilon: 0.1102
+Episode 450, Total Reward: -5.20, Average Max Q-Value: 80.8467, Epsilon: 0.1048
+[Validation @ ep 450] mean=188.96 median=251.02 std=118.52 solved=70%  <- NEW BEST (saved)
+Episode 460, Total Reward: -1.80, Average Max Q-Value: 79.8351, Epsilon: 0.0997
+Episode 470, Total Reward: 243.10, Average Max Q-Value: 81.3911, Epsilon: 0.0948
+Episode 480, Total Reward: 264.58, Average Max Q-Value: 82.3340, Epsilon: 0.0902
+Episode 490, Total Reward: 252.23, Average Max Q-Value: 88.1545, Epsilon: 0.0858
+Episode 500, Total Reward: 273.77, Average Max Q-Value: 88.6121, Epsilon: 0.0816
+[Validation @ ep 500] mean=186.69 median=240.98 std=104.29 solved=70%
+Episode 510, Total Reward: 267.60, Average Max Q-Value: 89.5368, Epsilon: 0.0776
+Episode 520, Total Reward: 264.85, Average Max Q-Value: 90.8024, Epsilon: 0.0738
+Episode 530, Total Reward: 113.76, Average Max Q-Value: 90.3038, Epsilon: 0.0702
+Episode 540, Total Reward: 39.12, Average Max Q-Value: 90.6026, Epsilon: 0.0668
+Episode 550, Total Reward: 279.22, Average Max Q-Value: 92.0072, Epsilon: 0.0635
+[Validation @ ep 550] mean=207.74 median=239.99 std=94.76 solved=70%  <- NEW BEST (saved)
+Episode 560, Total Reward: 271.23, Average Max Q-Value: 93.7643, Epsilon: 0.0604
+Episode 570, Total Reward: 284.69, Average Max Q-Value: 93.1349, Epsilon: 0.0574
+Episode 580, Total Reward: 263.02, Average Max Q-Value: 93.8327, Epsilon: 0.0546
+Episode 590, Total Reward: 264.33, Average Max Q-Value: 94.0246, Epsilon: 0.0520
+Episode 600, Total Reward: 271.28, Average Max Q-Value: 93.9470, Epsilon: 0.0494
+[Validation @ ep 600] mean=180.40 median=261.97 std=117.26 solved=60%
+Episode 610, Total Reward: 67.61, Average Max Q-Value: 100.3700, Epsilon: 0.0470
+Episode 620, Total Reward: 47.65, Average Max Q-Value: 101.6970, Epsilon: 0.0447
+Episode 630, Total Reward: 246.88, Average Max Q-Value: 102.9396, Epsilon: 0.0425
+Episode 640, Total Reward: 17.44, Average Max Q-Value: 105.4804, Epsilon: 0.0404
+Episode 650, Total Reward: 22.84, Average Max Q-Value: 105.9049, Epsilon: 0.0385
+[Validation @ ep 650] mean=176.59 median=279.17 std=133.88 solved=60%
+Episode 660, Total Reward: 323.87, Average Max Q-Value: 106.3324, Epsilon: 0.0366
+Episode 670, Total Reward: 9.38, Average Max Q-Value: 107.7246, Epsilon: 0.0348
+Episode 680, Total Reward: 255.13, Average Max Q-Value: 107.7799, Epsilon: 0.0331
+Episode 690, Total Reward: 28.61, Average Max Q-Value: 108.3950, Epsilon: 0.0315
+Episode 700, Total Reward: 28.79, Average Max Q-Value: 108.5629, Epsilon: 0.0299
+[Validation @ ep 700] mean=63.37 median=27.75 std=152.19 solved=20%
+Episode 710, Total Reward: -19.44, Average Max Q-Value: 108.0186, Epsilon: 0.0285
+Episode 720, Total Reward: 13.86, Average Max Q-Value: 107.7984, Epsilon: 0.0271
+Episode 730, Total Reward: 33.56, Average Max Q-Value: 108.1157, Epsilon: 0.0258
+Episode 740, Total Reward: 285.15, Average Max Q-Value: 108.6465, Epsilon: 0.0245
+Episode 750, Total Reward: 273.65, Average Max Q-Value: 108.2196, Epsilon: 0.0233
+[Validation @ ep 750] mean=88.79 median=96.36 std=142.43 solved=20%
+Episode 760, Total Reward: 21.22, Average Max Q-Value: 109.1217, Epsilon: 0.0222
+Episode 770, Total Reward: 274.00, Average Max Q-Value: 109.8772, Epsilon: 0.0211
+Episode 780, Total Reward: 318.52, Average Max Q-Value: 109.6917, Epsilon: 0.0200
+Episode 790, Total Reward: 287.45, Average Max Q-Value: 107.9928, Epsilon: 0.0191
+Episode 800, Total Reward: 38.68, Average Max Q-Value: 109.2125, Epsilon: 0.0181
+[Validation @ ep 800] mean=78.24 median=52.22 std=149.72 solved=30%
+Episode 810, Total Reward: 242.99, Average Max Q-Value: 109.2015, Epsilon: 0.0172
+Episode 820, Total Reward: 273.14, Average Max Q-Value: 109.0584, Epsilon: 0.0164
+Episode 830, Total Reward: 282.64, Average Max Q-Value: 108.6447, Epsilon: 0.0156
+Episode 840, Total Reward: 245.50, Average Max Q-Value: 107.4498, Epsilon: 0.0148
+Episode 850, Total Reward: 43.01, Average Max Q-Value: 105.9267, Epsilon: 0.0141
+[Validation @ ep 850] mean=200.57 median=258.05 std=111.39 solved=60%
+Episode 860, Total Reward: 30.05, Average Max Q-Value: 104.1045, Epsilon: 0.0134
+Episode 870, Total Reward: 26.70, Average Max Q-Value: 99.9967, Epsilon: 0.0128
+Episode 880, Total Reward: 255.17, Average Max Q-Value: 97.3345, Epsilon: 0.0121
+Episode 890, Total Reward: 299.80, Average Max Q-Value: 97.2429, Epsilon: 0.0115
+Episode 900, Total Reward: 250.55, Average Max Q-Value: 96.3968, Epsilon: 0.0110
+[Validation @ ep 900] mean=49.10 median=145.26 std=255.78 solved=50%
+Episode 910, Total Reward: 240.11, Average Max Q-Value: 95.0627, Epsilon: 0.0104
+Episode 920, Total Reward: 226.27, Average Max Q-Value: 95.3681, Epsilon: 0.0100
+Episode 930, Total Reward: 89.47, Average Max Q-Value: 94.6256, Epsilon: 0.0100
+Episode 940, Total Reward: 261.94, Average Max Q-Value: 95.0842, Epsilon: 0.0100
+Episode 950, Total Reward: 262.27, Average Max Q-Value: 95.6766, Epsilon: 0.0100
+[Validation @ ep 950] mean=273.88 median=277.53 std=21.90 solved=100%  <- NEW BEST (saved)
+Episode 960, Total Reward: 296.76, Average Max Q-Value: 95.2717, Epsilon: 0.0100
+Episode 970, Total Reward: 265.71, Average Max Q-Value: 94.6144, Epsilon: 0.0100
+Episode 980, Total Reward: 297.67, Average Max Q-Value: 93.6794, Epsilon: 0.0100
+Episode 990, Total Reward: 247.47, Average Max Q-Value: 92.5667, Epsilon: 0.0100
+Episode 1000, Total Reward: 44.43, Average Max Q-Value: 91.9236, Epsilon: 0.0100
+[Validation @ ep 1000] mean=110.30 median=93.64 std=70.62 solved=10%
+==============================
+Training Phase Completed!
+Total Episodes (Tests): 1000
+Mean Reward: 93.15
+Reward Variance: 24004.34
+Final Moving-Avg Reward (w=50): 202.55
+Final Epsilon: 0.0100
+==============================
+Training metrics saved to training_metrics.json.
+Training plot saved to training_plot.png.
+Starting diagnostic evaluation: 50 episodes, base seed 1234 (no rendering)...
+  Ep   1 [SOLVED][   ] reward=  287.42  len= 292  streak(L,R)=(12,2)
+  Ep   2 [SOLVED][   ] reward=  265.54  len= 211  streak(L,R)=(2,2)
+  Ep   3 [SOLVED][   ] reward=  234.01  len= 295  streak(L,R)=(4,2)
+  Ep   4 [SOLVED][   ] reward=  305.16  len= 193  streak(L,R)=(26,10)
+  Ep   5 [SOLVED][   ] reward=  256.29  len= 183  streak(L,R)=(1,1)
+  Ep   6 [SOLVED][   ] reward=  317.16  len= 172  streak(L,R)=(12,3)
+  Ep   7 [    ][   ] reward=   68.00  len= 116  streak(L,R)=(11,3)
+  Ep   8 [SOLVED][   ] reward=  297.89  len= 379  streak(L,R)=(12,25)
+  Ep   9 [SOLVED][   ] reward=  271.03  len= 388  streak(L,R)=(37,9)
+  Ep  10 [SOLVED][   ] reward=  285.84  len= 199  streak(L,R)=(10,3)
+  Ep  11 [SOLVED][   ] reward=  306.79  len= 180  streak(L,R)=(11,4)
+  Ep  12 [    ][   ] reward=   18.10  len= 282  streak(L,R)=(2,5)
+  Ep  13 [SOLVED][   ] reward=  236.05  len= 245  streak(L,R)=(3,1)
+  Ep  14 [SOLVED][   ] reward=  230.47  len= 335  streak(L,R)=(19,5)
+  Ep  15 [SOLVED][   ] reward=  236.53  len= 394  streak(L,R)=(21,2)
+  Ep  16 [SOLVED][   ] reward=  247.70  len= 365  streak(L,R)=(9,2)
+  Ep  17 [SOLVED][   ] reward=  226.38  len= 293  streak(L,R)=(6,2)
+  Ep  18 [SOLVED][   ] reward=  254.91  len= 177  streak(L,R)=(3,1)
+  Ep  19 [SOLVED][   ] reward=  229.46  len= 353  streak(L,R)=(2,2)
+  Ep  20 [    ][   ] reward=   35.24  len= 211  streak(L,R)=(12,6)
+  Ep  21 [SOLVED][   ] reward=  260.87  len= 286  streak(L,R)=(51,4)
+  Ep  22 [SOLVED][   ] reward=  259.91  len= 354  streak(L,R)=(7,6)
+  Ep  23 [SOLVED][   ] reward=  239.23  len= 347  streak(L,R)=(24,1)
+  Ep  24 [SOLVED][   ] reward=  257.32  len= 266  streak(L,R)=(6,27)
+  Ep  25 [SOLVED][   ] reward=  241.56  len= 279  streak(L,R)=(2,1)
+  Ep  26 [SOLVED][   ] reward=  284.44  len= 199  streak(L,R)=(8,6)
+  Ep  27 [SOLVED][   ] reward=  295.08  len= 192  streak(L,R)=(33,5)
+  Ep  28 [SOLVED][   ] reward=  269.61  len= 156  streak(L,R)=(3,2)
+  Ep  29 [SOLVED][   ] reward=  265.24  len= 174  streak(L,R)=(5,2)
+  Ep  30 [    ][   ] reward=   42.56  len=  99  streak(L,R)=(2,3)
+  Ep  31 [SOLVED][   ] reward=  273.17  len= 288  streak(L,R)=(18,3)
+  Ep  32 [SOLVED][   ] reward=  280.30  len= 176  streak(L,R)=(30,3)
+  Ep  33 [SOLVED][   ] reward=  250.52  len= 320  streak(L,R)=(16,5)
+  Ep  34 [SOLVED][   ] reward=  301.03  len= 147  streak(L,R)=(9,4)
+  Ep  35 [    ][   ] reward=   16.25  len= 212  streak(L,R)=(5,3)
+  Ep  36 [SOLVED][   ] reward=  266.33  len= 166  streak(L,R)=(5,1)
+  Ep  37 [    ][   ] reward=   20.41  len= 205  streak(L,R)=(2,6)
+  Ep  38 [SOLVED][   ] reward=  297.38  len= 227  streak(L,R)=(9,7)
+  Ep  39 [SOLVED][   ] reward=  287.56  len= 183  streak(L,R)=(10,17)
+  Ep  40 [SOLVED][   ] reward=  247.56  len= 252  streak(L,R)=(4,2)
+  Ep  41 [SOLVED][   ] reward=  250.72  len= 734  streak(L,R)=(13,1)
+  Ep  42 [SOLVED][   ] reward=  226.52  len= 350  streak(L,R)=(7,2)
+  Ep  43 [SOLVED][   ] reward=  255.17  len= 312  streak(L,R)=(6,1)
+  Ep  44 [SOLVED][   ] reward=  241.05  len= 282  streak(L,R)=(19,6)
+  Ep  45 [SOLVED][   ] reward=  258.55  len= 255  streak(L,R)=(16,5)
+  Ep  46 [    ][   ] reward=   53.25  len=  77  streak(L,R)=(1,4)
+  Ep  47 [SOLVED][   ] reward=  249.39  len= 331  streak(L,R)=(10,3)
+  Ep  48 [SOLVED][   ] reward=  253.70  len= 295  streak(L,R)=(6,1)
+  Ep  49 [SOLVED][   ] reward=  262.99  len= 243  streak(L,R)=(25,1)
+  Ep  50 [SOLVED][   ] reward=  260.08  len= 284  streak(L,R)=(1,2)
+==============================
+Diagnostic Summary
+  Mean reward   : 231.55   Median: 255.73   Std: 82.09
+  Min / Max     : 16.25 / 317.16
+  Solved (>=200): 43/50 (86.0%)
+  Low (<0)      : 0/50 (0.0%)
+  Mean length   : 259.1
+  Action %      : no_op=28.7%, fire_left_orientation_engine=14.8%, fire_main_engine=42.9%, fire_right_orientation_engine=13.6%
+  Max side streak: L=51, R=27
+  Report saved  : benchmark_a.json
+==============================
+Starting diagnostic evaluation: 100 episodes, base seed 5000 (no rendering)...
+  Ep   1 [SOLVED][   ] reward=  260.15  len= 205  streak(L,R)=(4,2)
+  Ep   2 [SOLVED][   ] reward=  275.71  len= 189  streak(L,R)=(3,3)
+  Ep   3 [SOLVED][   ] reward=  293.95  len= 139  streak(L,R)=(1,5)
+  Ep   4 [SOLVED][   ] reward=  293.76  len= 185  streak(L,R)=(34,3)
+  Ep   5 [SOLVED][   ] reward=  275.95  len= 166  streak(L,R)=(2,8)
+  Ep   6 [SOLVED][   ] reward=  287.02  len= 211  streak(L,R)=(41,7)
+  Ep   7 [SOLVED][   ] reward=  261.71  len= 341  streak(L,R)=(19,2)
+  Ep   8 [SOLVED][   ] reward=  227.60  len= 415  streak(L,R)=(2,1)
+  Ep   9 [SOLVED][   ] reward=  304.95  len= 169  streak(L,R)=(30,6)
+  Ep  10 [SOLVED][   ] reward=  305.84  len= 169  streak(L,R)=(10,9)
+  Ep  11 [SOLVED][   ] reward=  235.91  len= 432  streak(L,R)=(18,2)
+  Ep  12 [SOLVED][   ] reward=  243.93  len= 322  streak(L,R)=(2,1)
+  Ep  13 [SOLVED][   ] reward=  262.70  len= 310  streak(L,R)=(6,5)
+  Ep  14 [SOLVED][   ] reward=  259.12  len= 171  streak(L,R)=(9,1)
+  Ep  15 [SOLVED][   ] reward=  276.30  len= 211  streak(L,R)=(8,4)
+  Ep  16 [SOLVED][   ] reward=  276.45  len= 160  streak(L,R)=(11,2)
+  Ep  17 [SOLVED][   ] reward=  223.09  len= 316  streak(L,R)=(2,2)
+  Ep  18 [SOLVED][   ] reward=  257.90  len= 249  streak(L,R)=(14,4)
+  Ep  19 [SOLVED][   ] reward=  240.49  len= 227  streak(L,R)=(3,2)
+  Ep  20 [SOLVED][   ] reward=  258.15  len= 252  streak(L,R)=(5,1)
+  Ep  21 [SOLVED][   ] reward=  266.23  len= 239  streak(L,R)=(47,2)
+  Ep  22 [    ][   ] reward=   38.95  len= 106  streak(L,R)=(2,10)
+  Ep  23 [SOLVED][   ] reward=  266.62  len= 164  streak(L,R)=(3,2)
+  Ep  24 [SOLVED][   ] reward=  229.86  len= 314  streak(L,R)=(11,2)
+  Ep  25 [SOLVED][   ] reward=  245.36  len= 390  streak(L,R)=(17,2)
+  Ep  26 [SOLVED][   ] reward=  265.15  len= 242  streak(L,R)=(7,4)
+  Ep  27 [SOLVED][   ] reward=  230.69  len= 322  streak(L,R)=(4,2)
+  Ep  28 [    ][   ] reward=  174.16  len= 532  streak(L,R)=(3,2)
+  Ep  29 [SOLVED][   ] reward=  240.94  len= 368  streak(L,R)=(7,2)
+  Ep  30 [    ][   ] reward=    0.99  len= 204  streak(L,R)=(4,5)
+  Ep  31 [SOLVED][   ] reward=  225.47  len= 253  streak(L,R)=(4,2)
+  Ep  32 [SOLVED][   ] reward=  266.82  len= 278  streak(L,R)=(9,3)
+  Ep  33 [SOLVED][   ] reward=  268.49  len= 270  streak(L,R)=(21,3)
+  Ep  34 [SOLVED][   ] reward=  285.54  len= 198  streak(L,R)=(33,3)
+  Ep  35 [SOLVED][   ] reward=  261.56  len= 577  streak(L,R)=(31,3)
+  Ep  36 [SOLVED][   ] reward=  278.37  len= 193  streak(L,R)=(26,3)
+  Ep  37 [SOLVED][   ] reward=  286.70  len= 191  streak(L,R)=(3,6)
+  Ep  38 [SOLVED][   ] reward=  287.10  len= 200  streak(L,R)=(31,2)
+  Ep  39 [SOLVED][   ] reward=  275.31  len= 914  streak(L,R)=(53,6)
+  Ep  40 [SOLVED][   ] reward=  200.94  len= 441  streak(L,R)=(4,2)
+  Ep  41 [    ][   ] reward=   26.54  len= 196  streak(L,R)=(5,4)
+  Ep  42 [SOLVED][   ] reward=  265.91  len= 212  streak(L,R)=(1,1)
+  Ep  43 [    ][   ] reward=   48.93  len= 119  streak(L,R)=(1,2)
+  Ep  44 [    ][   ] reward=   35.14  len= 101  streak(L,R)=(11,3)
+  Ep  45 [SOLVED][   ] reward=  292.21  len= 218  streak(L,R)=(22,4)
+  Ep  46 [SOLVED][   ] reward=  287.81  len= 138  streak(L,R)=(3,1)
+  Ep  47 [SOLVED][   ] reward=  246.48  len= 304  streak(L,R)=(6,2)
+  Ep  48 [SOLVED][   ] reward=  272.01  len= 163  streak(L,R)=(1,2)
+  Ep  49 [SOLVED][   ] reward=  239.51  len= 250  streak(L,R)=(6,2)
+  Ep  50 [SOLVED][   ] reward=  231.70  len= 267  streak(L,R)=(5,2)
+  Ep  51 [SOLVED][   ] reward=  266.79  len= 689  streak(L,R)=(43,4)
+  Ep  52 [SOLVED][   ] reward=  287.25  len= 303  streak(L,R)=(36,6)
+  Ep  53 [SOLVED][   ] reward=  254.15  len= 176  streak(L,R)=(4,2)
+  Ep  54 [SOLVED][   ] reward=  234.00  len= 396  streak(L,R)=(15,2)
+  Ep  55 [SOLVED][   ] reward=  243.54  len= 215  streak(L,R)=(4,2)
+  Ep  56 [SOLVED][   ] reward=  230.09  len= 303  streak(L,R)=(4,2)
+  Ep  57 [SOLVED][   ] reward=  270.62  len= 949  streak(L,R)=(24,7)
+  Ep  58 [SOLVED][   ] reward=  252.25  len= 151  streak(L,R)=(1,2)
+  Ep  59 [SOLVED][   ] reward=  231.30  len= 311  streak(L,R)=(7,2)
+  Ep  60 [SOLVED][   ] reward=  272.82  len= 503  streak(L,R)=(6,3)
+  Ep  61 [SOLVED][   ] reward=  264.74  len= 314  streak(L,R)=(6,3)
+  Ep  62 [SOLVED][   ] reward=  280.89  len= 208  streak(L,R)=(17,3)
+  Ep  63 [SOLVED][   ] reward=  222.20  len= 273  streak(L,R)=(28,5)
+  Ep  64 [SOLVED][   ] reward=  268.65  len= 251  streak(L,R)=(4,1)
+  Ep  65 [SOLVED][   ] reward=  282.68  len= 190  streak(L,R)=(34,3)
+  Ep  66 [SOLVED][   ] reward=  245.73  len= 324  streak(L,R)=(1,2)
+  Ep  67 [SOLVED][   ] reward=  279.28  len= 319  streak(L,R)=(15,9)
+  Ep  68 [SOLVED][   ] reward=  249.68  len= 309  streak(L,R)=(4,2)
+  Ep  69 [SOLVED][   ] reward=  298.91  len= 238  streak(L,R)=(16,7)
+  Ep  70 [SOLVED][   ] reward=  274.20  len= 203  streak(L,R)=(2,2)
+  Ep  71 [SOLVED][   ] reward=  232.26  len= 240  streak(L,R)=(3,2)
+  Ep  72 [SOLVED][   ] reward=  238.98  len= 371  streak(L,R)=(14,6)
+  Ep  73 [SOLVED][   ] reward=  284.14  len= 273  streak(L,R)=(26,5)
+  Ep  74 [SOLVED][   ] reward=  225.42  len= 408  streak(L,R)=(15,5)
+  Ep  75 [SOLVED][   ] reward=  253.15  len= 227  streak(L,R)=(14,30)
+  Ep  76 [SOLVED][   ] reward=  287.27  len= 241  streak(L,R)=(28,11)
+  Ep  77 [    ][   ] reward=   52.17  len=  78  streak(L,R)=(1,8)
+  Ep  78 [SOLVED][   ] reward=  247.10  len= 332  streak(L,R)=(36,3)
+  Ep  79 [SOLVED][   ] reward=  229.21  len= 261  streak(L,R)=(4,2)
+  Ep  80 [SOLVED][   ] reward=  249.73  len= 355  streak(L,R)=(22,1)
+  Ep  81 [SOLVED][   ] reward=  232.95  len= 285  streak(L,R)=(2,1)
+  Ep  82 [SOLVED][   ] reward=  230.68  len= 356  streak(L,R)=(19,2)
+  Ep  83 [    ][   ] reward=   30.22  len=  82  streak(L,R)=(1,4)
+  Ep  84 [SOLVED][   ] reward=  236.45  len= 284  streak(L,R)=(5,2)
+  Ep  85 [SOLVED][   ] reward=  293.33  len= 260  streak(L,R)=(19,5)
+  Ep  86 [SOLVED][   ] reward=  236.10  len= 285  streak(L,R)=(15,5)
+  Ep  87 [SOLVED][   ] reward=  226.31  len= 521  streak(L,R)=(1,4)
+  Ep  88 [SOLVED][   ] reward=  274.85  len= 314  streak(L,R)=(85,6)
+  Ep  89 [SOLVED][   ] reward=  245.83  len= 360  streak(L,R)=(10,3)
+  Ep  90 [SOLVED][   ] reward=  282.83  len= 240  streak(L,R)=(11,4)
+  Ep  91 [SOLVED][   ] reward=  224.04  len= 285  streak(L,R)=(2,2)
+  Ep  92 [SOLVED][   ] reward=  273.23  len= 173  streak(L,R)=(2,2)
+  Ep  93 [SOLVED][   ] reward=  266.13  len= 300  streak(L,R)=(116,6)
+  Ep  94 [SOLVED][   ] reward=  261.92  len= 597  streak(L,R)=(40,5)
+  Ep  95 [SOLVED][   ] reward=  231.08  len= 349  streak(L,R)=(7,2)
+  Ep  96 [SOLVED][   ] reward=  283.89  len= 428  streak(L,R)=(7,7)
+  Ep  97 [    ][   ] reward=  159.47  len=1000  streak(L,R)=(18,2)
+  Ep  98 [SOLVED][   ] reward=  277.94  len= 172  streak(L,R)=(1,1)
+  Ep  99 [SOLVED][   ] reward=  209.05  len= 374  streak(L,R)=(15,2)
+  Ep 100 [SOLVED][   ] reward=  263.98  len= 234  streak(L,R)=(15,28)
+==============================
+Diagnostic Summary
+  Mean reward   : 241.12   Median: 258.64   Std: 62.77
+  Min / Max     : 0.99 / 305.84
+  Solved (>=200): 91/100 (91.0%)
+  Low (<0)      : 0/100 (0.0%)
+  Mean length   : 295.1
+  Action %      : no_op=31.1%, fire_left_orientation_engine=18.1%, fire_main_engine=39.6%, fire_right_orientation_engine=11.2%
+  Max side streak: L=116, R=30
+  Report saved  : benchmark_b.json
+==============================
+Suite status: completed
+Suite directory: /mnt/e/uni/ai/project/runs/next-batch-suite-20260728T211749605393Z

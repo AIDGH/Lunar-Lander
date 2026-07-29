@@ -1,0 +1,4300 @@
+{
+  "config": {
+    "weights": "weights.pth",
+    "algorithm": "deep_d3qn",
+    "architecture": "dueling_deep",
+    "target_strategy": "double",
+    "network_class": "DeepDuelingDQN",
+    "episodes": 100,
+    "base_seed": 5000,
+    "long_streak_threshold": 20,
+    "solved_threshold": 200.0,
+    "low_score_threshold": 0.0,
+    "greedy_epsilon": 0.0
+  },
+  "summary": {
+    "mean_reward": 260.2707,
+    "median_reward": 272.5095,
+    "std_reward": 53.2538,
+    "min_reward": 26.464,
+    "max_reward": 316.8545,
+    "solved_count": 94,
+    "solved_rate_pct": 94.0,
+    "low_score_count": 0,
+    "low_score_rate_pct": 0.0,
+    "mean_length": 243.97,
+    "aggregate_action_counts": {
+      "0": 7368,
+      "1": 3479,
+      "2": 9583,
+      "3": 3967
+    },
+    "aggregate_action_pct": {
+      "no_op": 30.2,
+      "fire_left_orientation_engine": 14.26,
+      "fire_main_engine": 39.28,
+      "fire_right_orientation_engine": 16.26
+    },
+    "side_engine_overall_pct": 30.52,
+    "max_side_engine_streak": {
+      "fire_left_orientation_engine": 23,
+      "fire_right_orientation_engine": 28
+    }
+  },
+  "rewards": [
+    259.4327,
+    268.9268,
+    281.3087,
+    286.1077,
+    268.1554,
+    281.0933,
+    277.4607,
+    240.6778,
+    296.0616,
+    303.6523,
+    277.2092,
+    266.9878,
+    298.2377,
+    250.6476,
+    271.7173,
+    271.653,
+    249.4329,
+    282.1847,
+    244.5393,
+    268.8423,
+    294.3575,
+    46.3771,
+    263.9638,
+    270.891,
+    286.1771,
+    284.956,
+    267.3984,
+    224.6246,
+    279.1652,
+    289.9263,
+    229.2928,
+    298.5586,
+    30.9418,
+    292.46,
+    298.0066,
+    243.2805,
+    280.7487,
+    285.5378,
+    300.852,
+    238.452,
+    265.7433,
+    264.8154,
+    293.2034,
+    316.8545,
+    287.9775,
+    287.9788,
+    268.8585,
+    267.1452,
+    241.3769,
+    233.8486,
+    285.6056,
+    26.464,
+    253.6573,
+    252.5742,
+    248.0806,
+    212.0881,
+    285.6267,
+    250.7496,
+    239.2504,
+    288.6424,
+    288.7734,
+    289.9298,
+    244.0165,
+    273.3016,
+    283.4894,
+    268.3199,
+    299.8777,
+    289.8715,
+    296.4125,
+    274.0785,
+    240.1302,
+    263.4492,
+    305.8329,
+    273.9504,
+    286.7421,
+    304.3863,
+    154.7568,
+    282.6707,
+    229.8263,
+    267.5255,
+    256.3118,
+    229.1787,
+    284.6821,
+    267.5669,
+    299.1583,
+    243.1965,
+    280.2454,
+    287.3197,
+    296.0286,
+    51.1793,
+    236.2988,
+    251.4323,
+    297.8727,
+    293.3117,
+    141.6478,
+    283.1608,
+    305.8335,
+    259.5986,
+    228.6756,
+    296.1877
+  ],
+  "per_episode": [
+    {
+      "episode": 1,
+      "seed": 5000,
+      "total_reward": 259.4327,
+      "length": 199,
+      "action_counts": {
+        "0": 83,
+        "1": 19,
+        "2": 84,
+        "3": 13
+      },
+      "action_pct": {
+        "no_op": 41.71,
+        "fire_left_orientation_engine": 9.55,
+        "fire_main_engine": 42.21,
+        "fire_right_orientation_engine": 6.53
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 41,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 16.08,
+      "side_engine_final_phase_pct": 20.0,
+      "final_state": {
+        "x": 0.0610930435359478,
+        "y": -0.0009033942478708923,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0008368549169972539,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 2,
+      "seed": 5001,
+      "total_reward": 268.9268,
+      "length": 225,
+      "action_counts": {
+        "0": 87,
+        "1": 29,
+        "2": 96,
+        "3": 13
+      },
+      "action_pct": {
+        "no_op": 38.67,
+        "fire_left_orientation_engine": 12.89,
+        "fire_main_engine": 42.67,
+        "fire_right_orientation_engine": 5.78
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 11,
+        "fire_main_engine": 44,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 18.67,
+      "side_engine_final_phase_pct": 24.44,
+      "final_state": {
+        "x": 0.012512874789536,
+        "y": 0.00012213944864924997,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.003313591005280614,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 3,
+      "seed": 5002,
+      "total_reward": 281.3087,
+      "length": 179,
+      "action_counts": {
+        "0": 56,
+        "1": 16,
+        "2": 92,
+        "3": 15
+      },
+      "action_pct": {
+        "no_op": 31.28,
+        "fire_left_orientation_engine": 8.94,
+        "fire_main_engine": 51.4,
+        "fire_right_orientation_engine": 8.38
+      },
+      "longest_streak_per_action": {
+        "no_op": 32,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 19,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 17.32,
+      "side_engine_final_phase_pct": 5.56,
+      "final_state": {
+        "x": -0.07720069587230682,
+        "y": -0.00037482022889889777,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0003394049999769777,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 4,
+      "seed": 5003,
+      "total_reward": 286.1077,
+      "length": 270,
+      "action_counts": {
+        "0": 64,
+        "1": 37,
+        "2": 85,
+        "3": 84
+      },
+      "action_pct": {
+        "no_op": 23.7,
+        "fire_left_orientation_engine": 13.7,
+        "fire_main_engine": 31.48,
+        "fire_right_orientation_engine": 31.11
+      },
+      "longest_streak_per_action": {
+        "no_op": 44,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 15,
+        "fire_right_orientation_engine": 13
+      },
+      "side_engine_overall_pct": 44.81,
+      "side_engine_final_phase_pct": 18.52,
+      "final_state": {
+        "x": -0.003926181700080633,
+        "y": -0.0010086798574775457,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0005373351159505546,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 5,
+      "seed": 5004,
+      "total_reward": 268.1554,
+      "length": 159,
+      "action_counts": {
+        "0": 80,
+        "1": 15,
+        "2": 54,
+        "3": 10
+      },
+      "action_pct": {
+        "no_op": 50.31,
+        "fire_left_orientation_engine": 9.43,
+        "fire_main_engine": 33.96,
+        "fire_right_orientation_engine": 6.29
+      },
+      "longest_streak_per_action": {
+        "no_op": 55,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 29,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 15.72,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.09735946357250214,
+        "y": -0.0014558577677235007,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0001354841806460172,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 6,
+      "seed": 5005,
+      "total_reward": 281.0933,
+      "length": 250,
+      "action_counts": {
+        "0": 106,
+        "1": 24,
+        "2": 93,
+        "3": 27
+      },
+      "action_pct": {
+        "no_op": 42.4,
+        "fire_left_orientation_engine": 9.6,
+        "fire_main_engine": 37.2,
+        "fire_right_orientation_engine": 10.8
+      },
+      "longest_streak_per_action": {
+        "no_op": 68,
+        "fire_left_orientation_engine": 8,
+        "fire_main_engine": 26,
+        "fire_right_orientation_engine": 13
+      },
+      "side_engine_overall_pct": 20.4,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.11013088375329971,
+        "y": -0.000600519182626158,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.006717113312333822,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 7,
+      "seed": 5006,
+      "total_reward": 277.4607,
+      "length": 268,
+      "action_counts": {
+        "0": 92,
+        "1": 20,
+        "2": 137,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 34.33,
+        "fire_left_orientation_engine": 7.46,
+        "fire_main_engine": 51.12,
+        "fire_right_orientation_engine": 7.09
+      },
+      "longest_streak_per_action": {
+        "no_op": 40,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 14.55,
+      "side_engine_final_phase_pct": 9.26,
+      "final_state": {
+        "x": 0.009531212039291859,
+        "y": -0.0009782814886420965,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.002950419904664159,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 8,
+      "seed": 5007,
+      "total_reward": 240.6778,
+      "length": 294,
+      "action_counts": {
+        "0": 61,
+        "1": 40,
+        "2": 153,
+        "3": 40
+      },
+      "action_pct": {
+        "no_op": 20.75,
+        "fire_left_orientation_engine": 13.61,
+        "fire_main_engine": 52.04,
+        "fire_right_orientation_engine": 13.61
+      },
+      "longest_streak_per_action": {
+        "no_op": 32,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 27.21,
+      "side_engine_final_phase_pct": 16.95,
+      "final_state": {
+        "x": -0.08058309555053711,
+        "y": -0.0004067921545356512,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.005415949039161205,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 9,
+      "seed": 5008,
+      "total_reward": 296.0616,
+      "length": 224,
+      "action_counts": {
+        "0": 66,
+        "1": 43,
+        "2": 91,
+        "3": 24
+      },
+      "action_pct": {
+        "no_op": 29.46,
+        "fire_left_orientation_engine": 19.2,
+        "fire_main_engine": 40.62,
+        "fire_right_orientation_engine": 10.71
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 23,
+        "fire_main_engine": 43,
+        "fire_right_orientation_engine": 5
+      },
+      "side_engine_overall_pct": 29.91,
+      "side_engine_final_phase_pct": 33.33,
+      "final_state": {
+        "x": -0.013538360595703125,
+        "y": -0.001116397324949503,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.001540138153359294,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 171,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 23,
+          "q_values_at_start": {
+            "no_op": 37.85670852661133,
+            "fire_left_orientation_engine": 39.31634521484375,
+            "fire_main_engine": 37.04725646972656,
+            "fire_right_orientation_engine": 38.07304763793945
+          },
+          "top1_minus_top2_margin": 1.2433,
+          "state_at_start": {
+            "x": -0.06124534457921982,
+            "y": -0.0013967418344691396,
+            "vx": 0.3875291645526886,
+            "vy": -0.004802369046956301,
+            "angle": -0.003993991296738386,
+            "angular_velocity": -0.013576311990618706,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 10,
+      "seed": 5009,
+      "total_reward": 303.6523,
+      "length": 212,
+      "action_counts": {
+        "0": 92,
+        "1": 18,
+        "2": 85,
+        "3": 17
+      },
+      "action_pct": {
+        "no_op": 43.4,
+        "fire_left_orientation_engine": 8.49,
+        "fire_main_engine": 40.09,
+        "fire_right_orientation_engine": 8.02
+      },
+      "longest_streak_per_action": {
+        "no_op": 68,
+        "fire_left_orientation_engine": 8,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 16.51,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.04801635816693306,
+        "y": -0.0008222127216868103,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.000770173326600343,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 11,
+      "seed": 5010,
+      "total_reward": 277.2092,
+      "length": 199,
+      "action_counts": {
+        "0": 86,
+        "1": 13,
+        "2": 86,
+        "3": 14
+      },
+      "action_pct": {
+        "no_op": 43.22,
+        "fire_left_orientation_engine": 6.53,
+        "fire_main_engine": 43.22,
+        "fire_right_orientation_engine": 7.04
+      },
+      "longest_streak_per_action": {
+        "no_op": 53,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 13.57,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.06383323669433594,
+        "y": -0.0004711651708930731,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.001506193308159709,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 12,
+      "seed": 5011,
+      "total_reward": 266.9878,
+      "length": 180,
+      "action_counts": {
+        "0": 78,
+        "1": 17,
+        "2": 75,
+        "3": 10
+      },
+      "action_pct": {
+        "no_op": 43.33,
+        "fire_left_orientation_engine": 9.44,
+        "fire_main_engine": 41.67,
+        "fire_right_orientation_engine": 5.56
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 40,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 15.0,
+      "side_engine_final_phase_pct": 16.67,
+      "final_state": {
+        "x": 0.025229359045624733,
+        "y": -0.0009641194483265281,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0030908575281500816,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 13,
+      "seed": 5012,
+      "total_reward": 298.2377,
+      "length": 208,
+      "action_counts": {
+        "0": 77,
+        "1": 12,
+        "2": 100,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 37.02,
+        "fire_left_orientation_engine": 5.77,
+        "fire_main_engine": 48.08,
+        "fire_right_orientation_engine": 9.13
+      },
+      "longest_streak_per_action": {
+        "no_op": 42,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 23,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 14.9,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": 0.0215180404484272,
+        "y": -0.0009108328958973289,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0034633819013834,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 14,
+      "seed": 5013,
+      "total_reward": 250.6476,
+      "length": 197,
+      "action_counts": {
+        "0": 108,
+        "1": 18,
+        "2": 54,
+        "3": 17
+      },
+      "action_pct": {
+        "no_op": 54.82,
+        "fire_left_orientation_engine": 9.14,
+        "fire_main_engine": 27.41,
+        "fire_right_orientation_engine": 8.63
+      },
+      "longest_streak_per_action": {
+        "no_op": 75,
+        "fire_left_orientation_engine": 11,
+        "fire_main_engine": 27,
+        "fire_right_orientation_engine": 10
+      },
+      "side_engine_overall_pct": 17.77,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.025097275152802467,
+        "y": -0.0010044240625575185,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.003634090768173337,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 15,
+      "seed": 5014,
+      "total_reward": 271.7173,
+      "length": 224,
+      "action_counts": {
+        "0": 105,
+        "1": 18,
+        "2": 77,
+        "3": 24
+      },
+      "action_pct": {
+        "no_op": 46.88,
+        "fire_left_orientation_engine": 8.04,
+        "fire_main_engine": 34.38,
+        "fire_right_orientation_engine": 10.71
+      },
+      "longest_streak_per_action": {
+        "no_op": 45,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 31,
+        "fire_right_orientation_engine": 5
+      },
+      "side_engine_overall_pct": 18.75,
+      "side_engine_final_phase_pct": 17.78,
+      "final_state": {
+        "x": -0.11417913436889648,
+        "y": -0.00015838384570088238,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.004427994601428509,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 16,
+      "seed": 5015,
+      "total_reward": 271.653,
+      "length": 162,
+      "action_counts": {
+        "0": 58,
+        "1": 15,
+        "2": 75,
+        "3": 14
+      },
+      "action_pct": {
+        "no_op": 35.8,
+        "fire_left_orientation_engine": 9.26,
+        "fire_main_engine": 46.3,
+        "fire_right_orientation_engine": 8.64
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 36,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 17.9,
+      "side_engine_final_phase_pct": 6.06,
+      "final_state": {
+        "x": -0.042252637445926666,
+        "y": -0.0006485843914560974,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0027563581243157387,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 17,
+      "seed": 5016,
+      "total_reward": 249.4329,
+      "length": 283,
+      "action_counts": {
+        "0": 94,
+        "1": 35,
+        "2": 125,
+        "3": 29
+      },
+      "action_pct": {
+        "no_op": 33.22,
+        "fire_left_orientation_engine": 12.37,
+        "fire_main_engine": 44.17,
+        "fire_right_orientation_engine": 10.25
+      },
+      "longest_streak_per_action": {
+        "no_op": 37,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 19,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 22.61,
+      "side_engine_final_phase_pct": 21.05,
+      "final_state": {
+        "x": -0.03456725925207138,
+        "y": -0.0012119555613026023,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.001164898625575006,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 18,
+      "seed": 5017,
+      "total_reward": 282.1847,
+      "length": 200,
+      "action_counts": {
+        "0": 60,
+        "1": 31,
+        "2": 78,
+        "3": 31
+      },
+      "action_pct": {
+        "no_op": 30.0,
+        "fire_left_orientation_engine": 15.5,
+        "fire_main_engine": 39.0,
+        "fire_right_orientation_engine": 15.5
+      },
+      "longest_streak_per_action": {
+        "no_op": 40,
+        "fire_left_orientation_engine": 19,
+        "fire_main_engine": 36,
+        "fire_right_orientation_engine": 18
+      },
+      "side_engine_overall_pct": 31.0,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.07954110950231552,
+        "y": -0.0005496287485584617,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0016143989050760865,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 19,
+      "seed": 5018,
+      "total_reward": 244.5393,
+      "length": 191,
+      "action_counts": {
+        "0": 77,
+        "1": 15,
+        "2": 81,
+        "3": 18
+      },
+      "action_pct": {
+        "no_op": 40.31,
+        "fire_left_orientation_engine": 7.85,
+        "fire_main_engine": 42.41,
+        "fire_right_orientation_engine": 9.42
+      },
+      "longest_streak_per_action": {
+        "no_op": 35,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 32,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 17.28,
+      "side_engine_final_phase_pct": 7.69,
+      "final_state": {
+        "x": 0.058997441083192825,
+        "y": -0.0005252385162748396,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0007013885187916458,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 20,
+      "seed": 5019,
+      "total_reward": 268.8423,
+      "length": 190,
+      "action_counts": {
+        "0": 72,
+        "1": 12,
+        "2": 94,
+        "3": 12
+      },
+      "action_pct": {
+        "no_op": 37.89,
+        "fire_left_orientation_engine": 6.32,
+        "fire_main_engine": 49.47,
+        "fire_right_orientation_engine": 6.32
+      },
+      "longest_streak_per_action": {
+        "no_op": 39,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 36,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 12.63,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.054816246032714844,
+        "y": -0.000640895392280072,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.003292769193649292,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 21,
+      "seed": 5020,
+      "total_reward": 294.3575,
+      "length": 236,
+      "action_counts": {
+        "0": 85,
+        "1": 25,
+        "2": 103,
+        "3": 23
+      },
+      "action_pct": {
+        "no_op": 36.02,
+        "fire_left_orientation_engine": 10.59,
+        "fire_main_engine": 43.64,
+        "fire_right_orientation_engine": 9.75
+      },
+      "longest_streak_per_action": {
+        "no_op": 46,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 20,
+        "fire_right_orientation_engine": 8
+      },
+      "side_engine_overall_pct": 20.34,
+      "side_engine_final_phase_pct": 2.08,
+      "final_state": {
+        "x": -0.038193605840206146,
+        "y": -0.00031903028138913214,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0007020901539362967,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 22,
+      "seed": 5021,
+      "total_reward": 46.3771,
+      "length": 139,
+      "action_counts": {
+        "0": 22,
+        "1": 6,
+        "2": 91,
+        "3": 20
+      },
+      "action_pct": {
+        "no_op": 15.83,
+        "fire_left_orientation_engine": 4.32,
+        "fire_main_engine": 65.47,
+        "fire_right_orientation_engine": 14.39
+      },
+      "longest_streak_per_action": {
+        "no_op": 15,
+        "fire_left_orientation_engine": 1,
+        "fire_main_engine": 63,
+        "fire_right_orientation_engine": 6
+      },
+      "side_engine_overall_pct": 18.71,
+      "side_engine_final_phase_pct": 39.29,
+      "final_state": {
+        "x": -0.26882404088974,
+        "y": -0.06418994069099426,
+        "vx": 0.2140638828277588,
+        "vy": -0.0020457180216908455,
+        "angle": 0.20640289783477783,
+        "angular_velocity": 0.24676740169525146,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 23,
+      "seed": 5022,
+      "total_reward": 263.9638,
+      "length": 162,
+      "action_counts": {
+        "0": 57,
+        "1": 25,
+        "2": 70,
+        "3": 10
+      },
+      "action_pct": {
+        "no_op": 35.19,
+        "fire_left_orientation_engine": 15.43,
+        "fire_main_engine": 43.21,
+        "fire_right_orientation_engine": 6.17
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 8,
+        "fire_main_engine": 21,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 21.6,
+      "side_engine_final_phase_pct": 12.12,
+      "final_state": {
+        "x": -0.02008199691772461,
+        "y": -0.0011337065370753407,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0003461303422227502,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 24,
+      "seed": 5023,
+      "total_reward": 270.891,
+      "length": 202,
+      "action_counts": {
+        "0": 80,
+        "1": 13,
+        "2": 90,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 39.6,
+        "fire_left_orientation_engine": 6.44,
+        "fire_main_engine": 44.55,
+        "fire_right_orientation_engine": 9.41
+      },
+      "longest_streak_per_action": {
+        "no_op": 49,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 13,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 15.84,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.04387369006872177,
+        "y": -0.0009342217235825956,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0007959184003993869,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 25,
+      "seed": 5024,
+      "total_reward": 286.1771,
+      "length": 220,
+      "action_counts": {
+        "0": 96,
+        "1": 17,
+        "2": 88,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 43.64,
+        "fire_left_orientation_engine": 7.73,
+        "fire_main_engine": 40.0,
+        "fire_right_orientation_engine": 8.64
+      },
+      "longest_streak_per_action": {
+        "no_op": 39,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 20,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 16.36,
+      "side_engine_final_phase_pct": 4.55,
+      "final_state": {
+        "x": -0.003510379698127508,
+        "y": -0.00036577225546352565,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0025320942513644695,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 26,
+      "seed": 5025,
+      "total_reward": 284.956,
+      "length": 216,
+      "action_counts": {
+        "0": 93,
+        "1": 17,
+        "2": 83,
+        "3": 23
+      },
+      "action_pct": {
+        "no_op": 43.06,
+        "fire_left_orientation_engine": 7.87,
+        "fire_main_engine": 38.43,
+        "fire_right_orientation_engine": 10.65
+      },
+      "longest_streak_per_action": {
+        "no_op": 39,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 5
+      },
+      "side_engine_overall_pct": 18.52,
+      "side_engine_final_phase_pct": 2.27,
+      "final_state": {
+        "x": -0.012576770968735218,
+        "y": -0.0008636260172352195,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.00044044878450222313,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 27,
+      "seed": 5026,
+      "total_reward": 267.3984,
+      "length": 229,
+      "action_counts": {
+        "0": 105,
+        "1": 13,
+        "2": 97,
+        "3": 14
+      },
+      "action_pct": {
+        "no_op": 45.85,
+        "fire_left_orientation_engine": 5.68,
+        "fire_main_engine": 42.36,
+        "fire_right_orientation_engine": 6.11
+      },
+      "longest_streak_per_action": {
+        "no_op": 43,
+        "fire_left_orientation_engine": 1,
+        "fire_main_engine": 18,
+        "fire_right_orientation_engine": 6
+      },
+      "side_engine_overall_pct": 11.79,
+      "side_engine_final_phase_pct": 2.17,
+      "final_state": {
+        "x": -0.04024810716509819,
+        "y": -0.0008511090418323874,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0031988341361284256,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 28,
+      "seed": 5027,
+      "total_reward": 224.6246,
+      "length": 269,
+      "action_counts": {
+        "0": 73,
+        "1": 38,
+        "2": 127,
+        "3": 31
+      },
+      "action_pct": {
+        "no_op": 27.14,
+        "fire_left_orientation_engine": 14.13,
+        "fire_main_engine": 47.21,
+        "fire_right_orientation_engine": 11.52
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 32,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 25.65,
+      "side_engine_final_phase_pct": 22.22,
+      "final_state": {
+        "x": 0.005546474363654852,
+        "y": -0.000960686185862869,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.003444973612204194,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 29,
+      "seed": 5028,
+      "total_reward": 279.1652,
+      "length": 231,
+      "action_counts": {
+        "0": 101,
+        "1": 14,
+        "2": 104,
+        "3": 12
+      },
+      "action_pct": {
+        "no_op": 43.72,
+        "fire_left_orientation_engine": 6.06,
+        "fire_main_engine": 45.02,
+        "fire_right_orientation_engine": 5.19
+      },
+      "longest_streak_per_action": {
+        "no_op": 42,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 33,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 11.26,
+      "side_engine_final_phase_pct": 2.13,
+      "final_state": {
+        "x": -0.0018916130065917969,
+        "y": -0.0009243869571946561,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.004095976706594229,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 30,
+      "seed": 5029,
+      "total_reward": 289.9263,
+      "length": 215,
+      "action_counts": {
+        "0": 70,
+        "1": 20,
+        "2": 88,
+        "3": 37
+      },
+      "action_pct": {
+        "no_op": 32.56,
+        "fire_left_orientation_engine": 9.3,
+        "fire_main_engine": 40.93,
+        "fire_right_orientation_engine": 17.21
+      },
+      "longest_streak_per_action": {
+        "no_op": 47,
+        "fire_left_orientation_engine": 20,
+        "fire_main_engine": 20,
+        "fire_right_orientation_engine": 18
+      },
+      "side_engine_overall_pct": 26.51,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.1867666244506836,
+        "y": -0.007063891738653183,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.04315416142344475,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 35,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 20,
+          "q_values_at_start": {
+            "no_op": 85.05970764160156,
+            "fire_left_orientation_engine": 85.49610137939453,
+            "fire_main_engine": 85.11556243896484,
+            "fire_right_orientation_engine": 83.84315490722656
+          },
+          "top1_minus_top2_margin": 0.3805,
+          "state_at_start": {
+            "x": -0.20209288597106934,
+            "y": 1.3115184307098389,
+            "vx": -0.09214545786380768,
+            "vy": -0.029986649751663208,
+            "angle": -0.6464173197746277,
+            "angular_velocity": -0.5285509824752808,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 31,
+      "seed": 5030,
+      "total_reward": 229.2928,
+      "length": 205,
+      "action_counts": {
+        "0": 72,
+        "1": 26,
+        "2": 91,
+        "3": 16
+      },
+      "action_pct": {
+        "no_op": 35.12,
+        "fire_left_orientation_engine": 12.68,
+        "fire_main_engine": 44.39,
+        "fire_right_orientation_engine": 7.8
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 43,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 20.49,
+      "side_engine_final_phase_pct": 24.39,
+      "final_state": {
+        "x": 0.06975650787353516,
+        "y": -0.0002905988658312708,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0063835554756224155,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 32,
+      "seed": 5031,
+      "total_reward": 298.5586,
+      "length": 202,
+      "action_counts": {
+        "0": 76,
+        "1": 10,
+        "2": 101,
+        "3": 15
+      },
+      "action_pct": {
+        "no_op": 37.62,
+        "fire_left_orientation_engine": 4.95,
+        "fire_main_engine": 50.0,
+        "fire_right_orientation_engine": 7.43
+      },
+      "longest_streak_per_action": {
+        "no_op": 35,
+        "fire_left_orientation_engine": 4,
+        "fire_main_engine": 22,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 12.38,
+      "side_engine_final_phase_pct": 2.44,
+      "final_state": {
+        "x": 0.02980947494506836,
+        "y": -0.0005258464952930808,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0020087463781237602,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 33,
+      "seed": 5032,
+      "total_reward": 30.9418,
+      "length": 159,
+      "action_counts": {
+        "0": 48,
+        "1": 16,
+        "2": 77,
+        "3": 18
+      },
+      "action_pct": {
+        "no_op": 30.19,
+        "fire_left_orientation_engine": 10.06,
+        "fire_main_engine": 48.43,
+        "fire_right_orientation_engine": 11.32
+      },
+      "longest_streak_per_action": {
+        "no_op": 19,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 28,
+        "fire_right_orientation_engine": 7
+      },
+      "side_engine_overall_pct": 21.38,
+      "side_engine_final_phase_pct": 46.88,
+      "final_state": {
+        "x": -0.030182933434844017,
+        "y": -0.02962806448340416,
+        "vx": -0.44582995772361755,
+        "vy": 0.011002027429640293,
+        "angle": 0.17089684307575226,
+        "angular_velocity": 0.06796522438526154,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 34,
+      "seed": 5033,
+      "total_reward": 292.46,
+      "length": 183,
+      "action_counts": {
+        "0": 57,
+        "1": 35,
+        "2": 73,
+        "3": 18
+      },
+      "action_pct": {
+        "no_op": 31.15,
+        "fire_left_orientation_engine": 19.13,
+        "fire_main_engine": 39.89,
+        "fire_right_orientation_engine": 9.84
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 22,
+        "fire_main_engine": 15,
+        "fire_right_orientation_engine": 9
+      },
+      "side_engine_overall_pct": 28.96,
+      "side_engine_final_phase_pct": 18.92,
+      "final_state": {
+        "x": -0.03018169477581978,
+        "y": -0.0012311958707869053,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0017164081800729036,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 131,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 22,
+          "q_values_at_start": {
+            "no_op": 37.8548698425293,
+            "fire_left_orientation_engine": 39.38737106323242,
+            "fire_main_engine": 36.94393539428711,
+            "fire_right_orientation_engine": 38.03114700317383
+          },
+          "top1_minus_top2_margin": 1.3562,
+          "state_at_start": {
+            "x": -0.07368612289428711,
+            "y": -0.0031469727400690317,
+            "vx": 0.37408211827278137,
+            "vy": -0.002639221725985408,
+            "angle": -0.01423358079046011,
+            "angular_velocity": -0.19285251200199127,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 35,
+      "seed": 5034,
+      "total_reward": 298.0066,
+      "length": 222,
+      "action_counts": {
+        "0": 54,
+        "1": 41,
+        "2": 74,
+        "3": 53
+      },
+      "action_pct": {
+        "no_op": 24.32,
+        "fire_left_orientation_engine": 18.47,
+        "fire_main_engine": 33.33,
+        "fire_right_orientation_engine": 23.87
+      },
+      "longest_streak_per_action": {
+        "no_op": 32,
+        "fire_left_orientation_engine": 21,
+        "fire_main_engine": 33,
+        "fire_right_orientation_engine": 18
+      },
+      "side_engine_overall_pct": 42.34,
+      "side_engine_final_phase_pct": 28.89,
+      "final_state": {
+        "x": -0.05630435794591904,
+        "y": -0.0007404947536997497,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0025828969664871693,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 34,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 92.38850402832031,
+            "fire_left_orientation_engine": 92.95682525634766,
+            "fire_main_engine": 91.75676727294922,
+            "fire_right_orientation_engine": 90.84162902832031
+          },
+          "top1_minus_top2_margin": 0.5683,
+          "state_at_start": {
+            "x": -0.14001579582691193,
+            "y": 1.4130498170852661,
+            "vx": -0.05088203400373459,
+            "vy": -0.06337437033653259,
+            "angle": -0.6759265661239624,
+            "angular_velocity": -0.5011783242225647,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 36,
+      "seed": 5035,
+      "total_reward": 243.2805,
+      "length": 349,
+      "action_counts": {
+        "0": 67,
+        "1": 54,
+        "2": 71,
+        "3": 157
+      },
+      "action_pct": {
+        "no_op": 19.2,
+        "fire_left_orientation_engine": 15.47,
+        "fire_main_engine": 20.34,
+        "fire_right_orientation_engine": 44.99
+      },
+      "longest_streak_per_action": {
+        "no_op": 11,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 15,
+        "fire_right_orientation_engine": 26
+      },
+      "side_engine_overall_pct": 60.46,
+      "side_engine_final_phase_pct": 100.0,
+      "final_state": {
+        "x": -0.18811550736427307,
+        "y": -0.025899114087224007,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.19311951100826263,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 323,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 26,
+          "q_values_at_start": {
+            "no_op": 16.41698455810547,
+            "fire_left_orientation_engine": 16.587890625,
+            "fire_main_engine": 13.35840892791748,
+            "fire_right_orientation_engine": 16.684274673461914
+          },
+          "top1_minus_top2_margin": 0.0964,
+          "state_at_start": {
+            "x": -0.18808594346046448,
+            "y": -0.02588573843240738,
+            "vx": -0.014059935696423054,
+            "vy": -0.0021577426232397556,
+            "angle": 0.19302423298358917,
+            "angular_velocity": 0.006891141179949045,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 37,
+      "seed": 5036,
+      "total_reward": 280.7487,
+      "length": 196,
+      "action_counts": {
+        "0": 78,
+        "1": 24,
+        "2": 77,
+        "3": 17
+      },
+      "action_pct": {
+        "no_op": 39.8,
+        "fire_left_orientation_engine": 12.24,
+        "fire_main_engine": 39.29,
+        "fire_right_orientation_engine": 8.67
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 8,
+        "fire_main_engine": 57,
+        "fire_right_orientation_engine": 6
+      },
+      "side_engine_overall_pct": 20.92,
+      "side_engine_final_phase_pct": 22.5,
+      "final_state": {
+        "x": -0.040734004229307175,
+        "y": -0.0010014199651777744,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.002666034735739231,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 38,
+      "seed": 5037,
+      "total_reward": 285.5378,
+      "length": 252,
+      "action_counts": {
+        "0": 71,
+        "1": 37,
+        "2": 83,
+        "3": 61
+      },
+      "action_pct": {
+        "no_op": 28.17,
+        "fire_left_orientation_engine": 14.68,
+        "fire_main_engine": 32.94,
+        "fire_right_orientation_engine": 24.21
+      },
+      "longest_streak_per_action": {
+        "no_op": 44,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 13,
+        "fire_right_orientation_engine": 13
+      },
+      "side_engine_overall_pct": 38.89,
+      "side_engine_final_phase_pct": 13.73,
+      "final_state": {
+        "x": -0.008922481909394264,
+        "y": -0.0007200026302598417,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0006778797833248973,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 39,
+      "seed": 5038,
+      "total_reward": 300.852,
+      "length": 280,
+      "action_counts": {
+        "0": 56,
+        "1": 52,
+        "2": 85,
+        "3": 87
+      },
+      "action_pct": {
+        "no_op": 20.0,
+        "fire_left_orientation_engine": 18.57,
+        "fire_main_engine": 30.36,
+        "fire_right_orientation_engine": 31.07
+      },
+      "longest_streak_per_action": {
+        "no_op": 43,
+        "fire_left_orientation_engine": 21,
+        "fire_main_engine": 36,
+        "fire_right_orientation_engine": 20
+      },
+      "side_engine_overall_pct": 49.64,
+      "side_engine_final_phase_pct": 23.21,
+      "final_state": {
+        "x": -0.006218337919563055,
+        "y": -0.0006350302719511092,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0013856160221621394,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 0,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 20,
+          "q_values_at_start": {
+            "no_op": 67.94176483154297,
+            "fire_left_orientation_engine": 66.72265625,
+            "fire_main_engine": 66.78861236572266,
+            "fire_right_orientation_engine": 68.7694091796875
+          },
+          "top1_minus_top2_margin": 0.8276,
+          "state_at_start": {
+            "x": -0.006771850399672985,
+            "y": 1.4195308685302734,
+            "vx": -0.6859293580055237,
+            "vy": 0.38267743587493896,
+            "angle": 0.00785365141928196,
+            "angular_velocity": 0.1553732454776764,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        },
+        {
+          "step": 37,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 108.96977233886719,
+            "fire_left_orientation_engine": 109.71862030029297,
+            "fire_main_engine": 109.09172821044922,
+            "fire_right_orientation_engine": 107.33070373535156
+          },
+          "top1_minus_top2_margin": 0.6269,
+          "state_at_start": {
+            "x": -0.1882953643798828,
+            "y": 1.407059907913208,
+            "vx": -0.1641589254140854,
+            "vy": -0.1866573840379715,
+            "angle": -0.817526638507843,
+            "angular_velocity": -0.5680794715881348,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 40,
+      "seed": 5039,
+      "total_reward": 238.452,
+      "length": 268,
+      "action_counts": {
+        "0": 73,
+        "1": 31,
+        "2": 135,
+        "3": 29
+      },
+      "action_pct": {
+        "no_op": 27.24,
+        "fire_left_orientation_engine": 11.57,
+        "fire_main_engine": 50.37,
+        "fire_right_orientation_engine": 10.82
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 4,
+        "fire_main_engine": 15,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 22.39,
+      "side_engine_final_phase_pct": 14.81,
+      "final_state": {
+        "x": -0.008738135918974876,
+        "y": -0.0010815644636750221,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0006037003477104008,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 41,
+      "seed": 5040,
+      "total_reward": 265.7433,
+      "length": 460,
+      "action_counts": {
+        "0": 66,
+        "1": 85,
+        "2": 88,
+        "3": 221
+      },
+      "action_pct": {
+        "no_op": 14.35,
+        "fire_left_orientation_engine": 18.48,
+        "fire_main_engine": 19.13,
+        "fire_right_orientation_engine": 48.04
+      },
+      "longest_streak_per_action": {
+        "no_op": 16,
+        "fire_left_orientation_engine": 14,
+        "fire_main_engine": 22,
+        "fire_right_orientation_engine": 28
+      },
+      "side_engine_overall_pct": 66.52,
+      "side_engine_final_phase_pct": 100.0,
+      "final_state": {
+        "x": -0.19980831444263458,
+        "y": -0.026642050594091415,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.19183951616287231,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 432,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 28,
+          "q_values_at_start": {
+            "no_op": 16.111356735229492,
+            "fire_left_orientation_engine": 16.342172622680664,
+            "fire_main_engine": 12.913867950439453,
+            "fire_right_orientation_engine": 16.408828735351562
+          },
+          "top1_minus_top2_margin": 0.0667,
+          "state_at_start": {
+            "x": -0.1998538076877594,
+            "y": -0.02665889449417591,
+            "vx": -0.008854147046804428,
+            "vy": -0.001115527469664812,
+            "angle": 0.19192706048488617,
+            "angular_velocity": 0.0038013518787920475,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 42,
+      "seed": 5041,
+      "total_reward": 264.8154,
+      "length": 194,
+      "action_counts": {
+        "0": 71,
+        "1": 18,
+        "2": 86,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 36.6,
+        "fire_left_orientation_engine": 9.28,
+        "fire_main_engine": 44.33,
+        "fire_right_orientation_engine": 9.79
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 27,
+        "fire_right_orientation_engine": 7
+      },
+      "side_engine_overall_pct": 19.07,
+      "side_engine_final_phase_pct": 7.69,
+      "final_state": {
+        "x": -0.036856651306152344,
+        "y": -0.0008303666254505515,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.000652122893370688,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 43,
+      "seed": 5042,
+      "total_reward": 293.2034,
+      "length": 179,
+      "action_counts": {
+        "0": 73,
+        "1": 29,
+        "2": 64,
+        "3": 13
+      },
+      "action_pct": {
+        "no_op": 40.78,
+        "fire_left_orientation_engine": 16.2,
+        "fire_main_engine": 35.75,
+        "fire_right_orientation_engine": 7.26
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 12,
+        "fire_main_engine": 22,
+        "fire_right_orientation_engine": 9
+      },
+      "side_engine_overall_pct": 23.46,
+      "side_engine_final_phase_pct": 16.67,
+      "final_state": {
+        "x": -0.04189939424395561,
+        "y": -0.0009132290142588317,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0018052264349535108,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 44,
+      "seed": 5043,
+      "total_reward": 316.8545,
+      "length": 200,
+      "action_counts": {
+        "0": 67,
+        "1": 19,
+        "2": 92,
+        "3": 22
+      },
+      "action_pct": {
+        "no_op": 33.5,
+        "fire_left_orientation_engine": 9.5,
+        "fire_main_engine": 46.0,
+        "fire_right_orientation_engine": 11.0
+      },
+      "longest_streak_per_action": {
+        "no_op": 38,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 31,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 20.5,
+      "side_engine_final_phase_pct": 5.0,
+      "final_state": {
+        "x": -0.007402229122817516,
+        "y": -0.001097586122341454,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0002817471686284989,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 45,
+      "seed": 5044,
+      "total_reward": 287.9775,
+      "length": 221,
+      "action_counts": {
+        "0": 74,
+        "1": 30,
+        "2": 91,
+        "3": 26
+      },
+      "action_pct": {
+        "no_op": 33.48,
+        "fire_left_orientation_engine": 13.57,
+        "fire_main_engine": 41.18,
+        "fire_right_orientation_engine": 11.76
+      },
+      "longest_streak_per_action": {
+        "no_op": 52,
+        "fire_left_orientation_engine": 11,
+        "fire_main_engine": 25,
+        "fire_right_orientation_engine": 12
+      },
+      "side_engine_overall_pct": 25.34,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.13039645552635193,
+        "y": -0.0030666852835565805,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.025102663785219193,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 46,
+      "seed": 5045,
+      "total_reward": 287.9788,
+      "length": 147,
+      "action_counts": {
+        "0": 56,
+        "1": 10,
+        "2": 74,
+        "3": 7
+      },
+      "action_pct": {
+        "no_op": 38.1,
+        "fire_left_orientation_engine": 6.8,
+        "fire_main_engine": 50.34,
+        "fire_right_orientation_engine": 4.76
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 52,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 11.56,
+      "side_engine_final_phase_pct": 3.33,
+      "final_state": {
+        "x": 0.007150173187255859,
+        "y": -0.0008659148006699979,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.002837659325450659,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 47,
+      "seed": 5046,
+      "total_reward": 268.8585,
+      "length": 218,
+      "action_counts": {
+        "0": 100,
+        "1": 14,
+        "2": 91,
+        "3": 13
+      },
+      "action_pct": {
+        "no_op": 45.87,
+        "fire_left_orientation_engine": 6.42,
+        "fire_main_engine": 41.74,
+        "fire_right_orientation_engine": 5.96
+      },
+      "longest_streak_per_action": {
+        "no_op": 62,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 21,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 12.39,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.05805320665240288,
+        "y": -0.001121118082664907,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.001527732121758163,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 48,
+      "seed": 5047,
+      "total_reward": 267.1452,
+      "length": 151,
+      "action_counts": {
+        "0": 56,
+        "1": 21,
+        "2": 65,
+        "3": 9
+      },
+      "action_pct": {
+        "no_op": 37.09,
+        "fire_left_orientation_engine": 13.91,
+        "fire_main_engine": 43.05,
+        "fire_right_orientation_engine": 5.96
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 12,
+        "fire_main_engine": 28,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 19.87,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.027966786175966263,
+        "y": -0.001327540841884911,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0004083477542735636,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 49,
+      "seed": 5048,
+      "total_reward": 241.3769,
+      "length": 239,
+      "action_counts": {
+        "0": 73,
+        "1": 34,
+        "2": 106,
+        "3": 26
+      },
+      "action_pct": {
+        "no_op": 30.54,
+        "fire_left_orientation_engine": 14.23,
+        "fire_main_engine": 44.35,
+        "fire_right_orientation_engine": 10.88
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 38,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 25.1,
+      "side_engine_final_phase_pct": 18.75,
+      "final_state": {
+        "x": 0.019663523882627487,
+        "y": -0.0010281348368152976,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0002490295155439526,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 50,
+      "seed": 5049,
+      "total_reward": 233.8486,
+      "length": 274,
+      "action_counts": {
+        "0": 64,
+        "1": 46,
+        "2": 129,
+        "3": 35
+      },
+      "action_pct": {
+        "no_op": 23.36,
+        "fire_left_orientation_engine": 16.79,
+        "fire_main_engine": 47.08,
+        "fire_right_orientation_engine": 12.77
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 29.56,
+      "side_engine_final_phase_pct": 23.64,
+      "final_state": {
+        "x": -0.04142198711633682,
+        "y": -0.0005707645323127508,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0025064118672162294,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 51,
+      "seed": 5050,
+      "total_reward": 285.6056,
+      "length": 197,
+      "action_counts": {
+        "0": 66,
+        "1": 25,
+        "2": 75,
+        "3": 31
+      },
+      "action_pct": {
+        "no_op": 33.5,
+        "fire_left_orientation_engine": 12.69,
+        "fire_main_engine": 38.07,
+        "fire_right_orientation_engine": 15.74
+      },
+      "longest_streak_per_action": {
+        "no_op": 45,
+        "fire_left_orientation_engine": 22,
+        "fire_main_engine": 38,
+        "fire_right_orientation_engine": 18
+      },
+      "side_engine_overall_pct": 28.43,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.20392389595508575,
+        "y": -0.003330507315695286,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.016686294227838516,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 35,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 22,
+          "q_values_at_start": {
+            "no_op": 92.89402770996094,
+            "fire_left_orientation_engine": 93.20609283447266,
+            "fire_main_engine": 92.46711730957031,
+            "fire_right_orientation_engine": 91.6155014038086
+          },
+          "top1_minus_top2_margin": 0.3121,
+          "state_at_start": {
+            "x": -0.14606313407421112,
+            "y": 1.4308446645736694,
+            "vx": -0.07247912138700485,
+            "vy": -0.03738463670015335,
+            "angle": -0.6888627409934998,
+            "angular_velocity": -0.5305501222610474,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 52,
+      "seed": 5051,
+      "total_reward": 26.464,
+      "length": 234,
+      "action_counts": {
+        "0": 33,
+        "1": 36,
+        "2": 109,
+        "3": 56
+      },
+      "action_pct": {
+        "no_op": 14.1,
+        "fire_left_orientation_engine": 15.38,
+        "fire_main_engine": 46.58,
+        "fire_right_orientation_engine": 23.93
+      },
+      "longest_streak_per_action": {
+        "no_op": 5,
+        "fire_left_orientation_engine": 22,
+        "fire_main_engine": 42,
+        "fire_right_orientation_engine": 21
+      },
+      "side_engine_overall_pct": 39.32,
+      "side_engine_final_phase_pct": 55.32,
+      "final_state": {
+        "x": -0.2410011738538742,
+        "y": -0.06406841427087784,
+        "vx": -0.15604574978351593,
+        "vy": -0.06253485381603241,
+        "angle": 0.4231093227863312,
+        "angular_velocity": -0.07878217846155167,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 0,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 68.38446807861328,
+            "fire_left_orientation_engine": 67.12665557861328,
+            "fire_main_engine": 67.28426361083984,
+            "fire_right_orientation_engine": 69.30522155761719
+          },
+          "top1_minus_top2_margin": 0.9208,
+          "state_at_start": {
+            "x": -0.006752586457878351,
+            "y": 1.4217604398727417,
+            "vx": -0.6839766502380371,
+            "vy": 0.48176145553588867,
+            "angle": 0.007831329479813576,
+            "angular_velocity": 0.15493103861808777,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        },
+        {
+          "step": 35,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 22,
+          "q_values_at_start": {
+            "no_op": 100.85020446777344,
+            "fire_left_orientation_engine": 101.23705291748047,
+            "fire_main_engine": 100.54939270019531,
+            "fire_right_orientation_engine": 99.4510498046875
+          },
+          "top1_minus_top2_margin": 0.3868,
+          "state_at_start": {
+            "x": -0.182013601064682,
+            "y": 1.4808533191680908,
+            "vx": -0.11513938754796982,
+            "vy": -0.07868604362010956,
+            "angle": -0.7571789622306824,
+            "angular_velocity": -0.5930450558662415,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 53,
+      "seed": 5052,
+      "total_reward": 253.6573,
+      "length": 182,
+      "action_counts": {
+        "0": 59,
+        "1": 24,
+        "2": 87,
+        "3": 12
+      },
+      "action_pct": {
+        "no_op": 32.42,
+        "fire_left_orientation_engine": 13.19,
+        "fire_main_engine": 47.8,
+        "fire_right_orientation_engine": 6.59
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 10,
+        "fire_main_engine": 45,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 19.78,
+      "side_engine_final_phase_pct": 24.32,
+      "final_state": {
+        "x": 0.022746944800019264,
+        "y": -0.00042152643436565995,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0005458846571855247,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 54,
+      "seed": 5053,
+      "total_reward": 252.5742,
+      "length": 280,
+      "action_counts": {
+        "0": 79,
+        "1": 34,
+        "2": 138,
+        "3": 29
+      },
+      "action_pct": {
+        "no_op": 28.21,
+        "fire_left_orientation_engine": 12.14,
+        "fire_main_engine": 49.29,
+        "fire_right_orientation_engine": 10.36
+      },
+      "longest_streak_per_action": {
+        "no_op": 37,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 22.5,
+      "side_engine_final_phase_pct": 14.29,
+      "final_state": {
+        "x": 0.03918199613690376,
+        "y": -0.0006411814829334617,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.005476231686770916,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 55,
+      "seed": 5054,
+      "total_reward": 248.0806,
+      "length": 208,
+      "action_counts": {
+        "0": 84,
+        "1": 17,
+        "2": 91,
+        "3": 16
+      },
+      "action_pct": {
+        "no_op": 40.38,
+        "fire_left_orientation_engine": 8.17,
+        "fire_main_engine": 43.75,
+        "fire_right_orientation_engine": 7.69
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 40,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 15.87,
+      "side_engine_final_phase_pct": 16.67,
+      "final_state": {
+        "x": 0.0381007194519043,
+        "y": -0.001188495196402073,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0010108602000400424,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 56,
+      "seed": 5055,
+      "total_reward": 212.0881,
+      "length": 279,
+      "action_counts": {
+        "0": 80,
+        "1": 38,
+        "2": 137,
+        "3": 24
+      },
+      "action_pct": {
+        "no_op": 28.67,
+        "fire_left_orientation_engine": 13.62,
+        "fire_main_engine": 49.1,
+        "fire_right_orientation_engine": 8.6
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 27,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 22.22,
+      "side_engine_final_phase_pct": 23.21,
+      "final_state": {
+        "x": -0.19791945815086365,
+        "y": 0.0088026262819767,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.07985830307006836,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 57,
+      "seed": 5056,
+      "total_reward": 285.6267,
+      "length": 237,
+      "action_counts": {
+        "0": 63,
+        "1": 30,
+        "2": 114,
+        "3": 30
+      },
+      "action_pct": {
+        "no_op": 26.58,
+        "fire_left_orientation_engine": 12.66,
+        "fire_main_engine": 48.1,
+        "fire_right_orientation_engine": 12.66
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 53,
+        "fire_right_orientation_engine": 6
+      },
+      "side_engine_overall_pct": 25.32,
+      "side_engine_final_phase_pct": 31.25,
+      "final_state": {
+        "x": -0.172450453042984,
+        "y": -0.005105235613882542,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.040817372500896454,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 58,
+      "seed": 5057,
+      "total_reward": 250.7496,
+      "length": 167,
+      "action_counts": {
+        "0": 71,
+        "1": 15,
+        "2": 71,
+        "3": 10
+      },
+      "action_pct": {
+        "no_op": 42.51,
+        "fire_left_orientation_engine": 8.98,
+        "fire_main_engine": 42.51,
+        "fire_right_orientation_engine": 5.99
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 8,
+        "fire_main_engine": 48,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 14.97,
+      "side_engine_final_phase_pct": 8.82,
+      "final_state": {
+        "x": 0.0352177619934082,
+        "y": -0.0005080723785795271,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.004296514205634594,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 59,
+      "seed": 5058,
+      "total_reward": 239.2504,
+      "length": 316,
+      "action_counts": {
+        "0": 73,
+        "1": 44,
+        "2": 162,
+        "3": 37
+      },
+      "action_pct": {
+        "no_op": 23.1,
+        "fire_left_orientation_engine": 13.92,
+        "fire_main_engine": 51.27,
+        "fire_right_orientation_engine": 11.71
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 34,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 25.63,
+      "side_engine_final_phase_pct": 26.56,
+      "final_state": {
+        "x": 0.007357788272202015,
+        "y": -0.0013666653539985418,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00013379371375776827,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 60,
+      "seed": 5059,
+      "total_reward": 288.6424,
+      "length": 182,
+      "action_counts": {
+        "0": 64,
+        "1": 21,
+        "2": 78,
+        "3": 19
+      },
+      "action_pct": {
+        "no_op": 35.16,
+        "fire_left_orientation_engine": 11.54,
+        "fire_main_engine": 42.86,
+        "fire_right_orientation_engine": 10.44
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 12,
+        "fire_main_engine": 48,
+        "fire_right_orientation_engine": 14
+      },
+      "side_engine_overall_pct": 21.98,
+      "side_engine_final_phase_pct": 13.51,
+      "final_state": {
+        "x": 0.0007520675426349044,
+        "y": -0.0009570026304572821,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.004134017508476973,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 61,
+      "seed": 5060,
+      "total_reward": 288.7734,
+      "length": 230,
+      "action_counts": {
+        "0": 101,
+        "1": 16,
+        "2": 87,
+        "3": 26
+      },
+      "action_pct": {
+        "no_op": 43.91,
+        "fire_left_orientation_engine": 6.96,
+        "fire_main_engine": 37.83,
+        "fire_right_orientation_engine": 11.3
+      },
+      "longest_streak_per_action": {
+        "no_op": 40,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 29,
+        "fire_right_orientation_engine": 7
+      },
+      "side_engine_overall_pct": 18.26,
+      "side_engine_final_phase_pct": 13.04,
+      "final_state": {
+        "x": -0.005966663360595703,
+        "y": -0.0005343222874216735,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0011572345392778516,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 62,
+      "seed": 5061,
+      "total_reward": 289.9298,
+      "length": 182,
+      "action_counts": {
+        "0": 64,
+        "1": 34,
+        "2": 66,
+        "3": 18
+      },
+      "action_pct": {
+        "no_op": 35.16,
+        "fire_left_orientation_engine": 18.68,
+        "fire_main_engine": 36.26,
+        "fire_right_orientation_engine": 9.89
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 13,
+        "fire_main_engine": 33,
+        "fire_right_orientation_engine": 13
+      },
+      "side_engine_overall_pct": 28.57,
+      "side_engine_final_phase_pct": 21.62,
+      "final_state": {
+        "x": 0.013962745666503906,
+        "y": 0.00014248848310671747,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.002374111209064722,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 63,
+      "seed": 5062,
+      "total_reward": 244.0165,
+      "length": 250,
+      "action_counts": {
+        "0": 78,
+        "1": 26,
+        "2": 126,
+        "3": 20
+      },
+      "action_pct": {
+        "no_op": 31.2,
+        "fire_left_orientation_engine": 10.4,
+        "fire_main_engine": 50.4,
+        "fire_right_orientation_engine": 8.0
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 14,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 18.4,
+      "side_engine_final_phase_pct": 14.0,
+      "final_state": {
+        "x": -0.0054454803466796875,
+        "y": -0.0014475607313215733,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.000192998893908225,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 64,
+      "seed": 5063,
+      "total_reward": 273.3016,
+      "length": 243,
+      "action_counts": {
+        "0": 63,
+        "1": 32,
+        "2": 123,
+        "3": 25
+      },
+      "action_pct": {
+        "no_op": 25.93,
+        "fire_left_orientation_engine": 13.17,
+        "fire_main_engine": 50.62,
+        "fire_right_orientation_engine": 10.29
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 32,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 23.46,
+      "side_engine_final_phase_pct": 24.49,
+      "final_state": {
+        "x": 0.011759186163544655,
+        "y": -0.0005423689144663513,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.002031554700806737,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 65,
+      "seed": 5064,
+      "total_reward": 283.4894,
+      "length": 209,
+      "action_counts": {
+        "0": 59,
+        "1": 37,
+        "2": 73,
+        "3": 40
+      },
+      "action_pct": {
+        "no_op": 28.23,
+        "fire_left_orientation_engine": 17.7,
+        "fire_main_engine": 34.93,
+        "fire_right_orientation_engine": 19.14
+      },
+      "longest_streak_per_action": {
+        "no_op": 32,
+        "fire_left_orientation_engine": 17,
+        "fire_main_engine": 11,
+        "fire_right_orientation_engine": 12
+      },
+      "side_engine_overall_pct": 36.84,
+      "side_engine_final_phase_pct": 23.81,
+      "final_state": {
+        "x": -0.056674957275390625,
+        "y": -0.0014316821470856667,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00023911637254059315,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 66,
+      "seed": 5065,
+      "total_reward": 268.3199,
+      "length": 167,
+      "action_counts": {
+        "0": 69,
+        "1": 13,
+        "2": 80,
+        "3": 5
+      },
+      "action_pct": {
+        "no_op": 41.32,
+        "fire_left_orientation_engine": 7.78,
+        "fire_main_engine": 47.9,
+        "fire_right_orientation_engine": 2.99
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 4,
+        "fire_main_engine": 43,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 10.78,
+      "side_engine_final_phase_pct": 11.76,
+      "final_state": {
+        "x": 0.06381597369909286,
+        "y": -0.0008842253591865301,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.004357659257948399,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 67,
+      "seed": 5066,
+      "total_reward": 299.8777,
+      "length": 279,
+      "action_counts": {
+        "0": 57,
+        "1": 55,
+        "2": 79,
+        "3": 88
+      },
+      "action_pct": {
+        "no_op": 20.43,
+        "fire_left_orientation_engine": 19.71,
+        "fire_main_engine": 28.32,
+        "fire_right_orientation_engine": 31.54
+      },
+      "longest_streak_per_action": {
+        "no_op": 44,
+        "fire_left_orientation_engine": 23,
+        "fire_main_engine": 26,
+        "fire_right_orientation_engine": 20
+      },
+      "side_engine_overall_pct": 51.25,
+      "side_engine_final_phase_pct": 21.43,
+      "final_state": {
+        "x": -0.007467937655746937,
+        "y": -0.0009306454448960721,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0006605962407775223,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 0,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 20,
+          "q_values_at_start": {
+            "no_op": 67.2944564819336,
+            "fire_left_orientation_engine": 66.10566711425781,
+            "fire_main_engine": 66.15253448486328,
+            "fire_right_orientation_engine": 68.06764221191406
+          },
+          "top1_minus_top2_margin": 0.7732,
+          "state_at_start": {
+            "x": -0.0067650796845555305,
+            "y": 1.4183502197265625,
+            "vx": -0.6852402687072754,
+            "vy": 0.33020591735839844,
+            "angle": 0.007845777086913586,
+            "angular_velocity": 0.15521711111068726,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        },
+        {
+          "step": 34,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 23,
+          "q_values_at_start": {
+            "no_op": 94.13079833984375,
+            "fire_left_orientation_engine": 94.5103530883789,
+            "fire_main_engine": 94.29010009765625,
+            "fire_right_orientation_engine": 92.95523834228516
+          },
+          "top1_minus_top2_margin": 0.2203,
+          "state_at_start": {
+            "x": -0.17364224791526794,
+            "y": 1.4040250778198242,
+            "vx": -0.12452809512615204,
+            "vy": -0.06872593611478806,
+            "angle": -0.6875597834587097,
+            "angular_velocity": -0.5677291750907898,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 68,
+      "seed": 5067,
+      "total_reward": 289.8715,
+      "length": 232,
+      "action_counts": {
+        "0": 116,
+        "1": 14,
+        "2": 88,
+        "3": 14
+      },
+      "action_pct": {
+        "no_op": 50.0,
+        "fire_left_orientation_engine": 6.03,
+        "fire_main_engine": 37.93,
+        "fire_right_orientation_engine": 6.03
+      },
+      "longest_streak_per_action": {
+        "no_op": 51,
+        "fire_left_orientation_engine": 4,
+        "fire_main_engine": 14,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 12.07,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.01869792863726616,
+        "y": -0.0008614087128080428,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.00026459855143912137,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 69,
+      "seed": 5068,
+      "total_reward": 296.4125,
+      "length": 313,
+      "action_counts": {
+        "0": 79,
+        "1": 47,
+        "2": 113,
+        "3": 74
+      },
+      "action_pct": {
+        "no_op": 25.24,
+        "fire_left_orientation_engine": 15.02,
+        "fire_main_engine": 36.1,
+        "fire_right_orientation_engine": 23.64
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 25,
+        "fire_right_orientation_engine": 11
+      },
+      "side_engine_overall_pct": 38.66,
+      "side_engine_final_phase_pct": 47.62,
+      "final_state": {
+        "x": -0.05572519451379776,
+        "y": -7.115840708138421e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0020306077785789967,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 70,
+      "seed": 5069,
+      "total_reward": 274.0785,
+      "length": 168,
+      "action_counts": {
+        "0": 60,
+        "1": 21,
+        "2": 75,
+        "3": 12
+      },
+      "action_pct": {
+        "no_op": 35.71,
+        "fire_left_orientation_engine": 12.5,
+        "fire_main_engine": 44.64,
+        "fire_right_orientation_engine": 7.14
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 18,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 19.64,
+      "side_engine_final_phase_pct": 2.94,
+      "final_state": {
+        "x": -0.044512175023555756,
+        "y": 6.255865446291864e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00917725171893835,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 71,
+      "seed": 5070,
+      "total_reward": 240.1302,
+      "length": 193,
+      "action_counts": {
+        "0": 71,
+        "1": 19,
+        "2": 89,
+        "3": 14
+      },
+      "action_pct": {
+        "no_op": 36.79,
+        "fire_left_orientation_engine": 9.84,
+        "fire_main_engine": 46.11,
+        "fire_right_orientation_engine": 7.25
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 46,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 17.1,
+      "side_engine_final_phase_pct": 15.38,
+      "final_state": {
+        "x": 0.0174695011228323,
+        "y": -6.379127444233745e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.009480602107942104,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 72,
+      "seed": 5071,
+      "total_reward": 263.4492,
+      "length": 341,
+      "action_counts": {
+        "0": 108,
+        "1": 32,
+        "2": 164,
+        "3": 37
+      },
+      "action_pct": {
+        "no_op": 31.67,
+        "fire_left_orientation_engine": 9.38,
+        "fire_main_engine": 48.09,
+        "fire_right_orientation_engine": 10.85
+      },
+      "longest_streak_per_action": {
+        "no_op": 31,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 12,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 20.23,
+      "side_engine_final_phase_pct": 20.29,
+      "final_state": {
+        "x": 0.005736160092055798,
+        "y": -6.468534411396831e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.00307760969735682,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 73,
+      "seed": 5072,
+      "total_reward": 305.8329,
+      "length": 248,
+      "action_counts": {
+        "0": 98,
+        "1": 27,
+        "2": 93,
+        "3": 30
+      },
+      "action_pct": {
+        "no_op": 39.52,
+        "fire_left_orientation_engine": 10.89,
+        "fire_main_engine": 37.5,
+        "fire_right_orientation_engine": 12.1
+      },
+      "longest_streak_per_action": {
+        "no_op": 66,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 23,
+        "fire_right_orientation_engine": 13
+      },
+      "side_engine_overall_pct": 22.98,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.05917825549840927,
+        "y": -0.0010753774549812078,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0022573822643607855,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 74,
+      "seed": 5073,
+      "total_reward": 273.9504,
+      "length": 225,
+      "action_counts": {
+        "0": 99,
+        "1": 14,
+        "2": 100,
+        "3": 12
+      },
+      "action_pct": {
+        "no_op": 44.0,
+        "fire_left_orientation_engine": 6.22,
+        "fire_main_engine": 44.44,
+        "fire_right_orientation_engine": 5.33
+      },
+      "longest_streak_per_action": {
+        "no_op": 34,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 22,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 11.56,
+      "side_engine_final_phase_pct": 6.67,
+      "final_state": {
+        "x": -0.03793935850262642,
+        "y": -0.00045067310566082597,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.007938206195831299,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 75,
+      "seed": 5074,
+      "total_reward": 286.7421,
+      "length": 198,
+      "action_counts": {
+        "0": 49,
+        "1": 37,
+        "2": 81,
+        "3": 31
+      },
+      "action_pct": {
+        "no_op": 24.75,
+        "fire_left_orientation_engine": 18.69,
+        "fire_main_engine": 40.91,
+        "fire_right_orientation_engine": 15.66
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 19,
+        "fire_main_engine": 24,
+        "fire_right_orientation_engine": 15
+      },
+      "side_engine_overall_pct": 34.34,
+      "side_engine_final_phase_pct": 25.0,
+      "final_state": {
+        "x": -0.037827588617801666,
+        "y": -0.0006838107365183532,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0016960576176643372,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 76,
+      "seed": 5075,
+      "total_reward": 304.3863,
+      "length": 215,
+      "action_counts": {
+        "0": 52,
+        "1": 41,
+        "2": 98,
+        "3": 24
+      },
+      "action_pct": {
+        "no_op": 24.19,
+        "fire_left_orientation_engine": 19.07,
+        "fire_main_engine": 45.58,
+        "fire_right_orientation_engine": 11.16
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 20,
+        "fire_main_engine": 32,
+        "fire_right_orientation_engine": 7
+      },
+      "side_engine_overall_pct": 30.23,
+      "side_engine_final_phase_pct": 30.23,
+      "final_state": {
+        "x": 0.0192139632999897,
+        "y": -0.0006453299429267645,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0016338624991476536,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 165,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 20,
+          "q_values_at_start": {
+            "no_op": 35.84108352661133,
+            "fire_left_orientation_engine": 36.923255920410156,
+            "fire_main_engine": 36.613563537597656,
+            "fire_right_orientation_engine": 36.07579803466797
+          },
+          "top1_minus_top2_margin": 0.3097,
+          "state_at_start": {
+            "x": -0.018377017229795456,
+            "y": -0.003553559770807624,
+            "vx": 0.35758498311042786,
+            "vy": -0.038753408938646317,
+            "angle": -0.020648645237088203,
+            "angular_velocity": -0.30748337507247925,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 77,
+      "seed": 5076,
+      "total_reward": 154.7568,
+      "length": 1000,
+      "action_counts": {
+        "0": 22,
+        "1": 281,
+        "2": 78,
+        "3": 619
+      },
+      "action_pct": {
+        "no_op": 2.2,
+        "fire_left_orientation_engine": 28.1,
+        "fire_main_engine": 7.8,
+        "fire_right_orientation_engine": 61.9
+      },
+      "longest_streak_per_action": {
+        "no_op": 7,
+        "fire_left_orientation_engine": 21,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 90.0,
+      "side_engine_final_phase_pct": 100.0,
+      "final_state": {
+        "x": -0.02626628801226616,
+        "y": -0.0005015278002247214,
+        "vx": 0.004051761236041784,
+        "vy": 7.585119601571932e-05,
+        "angle": 0.004087911918759346,
+        "angular_velocity": -0.0002849182055797428,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 0.0
+      },
+      "suspicious_events": [
+        {
+          "step": 134,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 45.246978759765625,
+            "fire_left_orientation_engine": 46.82343292236328,
+            "fire_main_engine": 42.116512298583984,
+            "fire_right_orientation_engine": 45.89522171020508
+          },
+          "top1_minus_top2_margin": 0.9282,
+          "state_at_start": {
+            "x": -0.08301019668579102,
+            "y": -0.001920023001730442,
+            "vx": 0.3047218918800354,
+            "vy": 0.03448214381933212,
+            "angle": -0.008949542418122292,
+            "angular_velocity": 0.08284265547990799,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 78,
+      "seed": 5077,
+      "total_reward": 282.6707,
+      "length": 249,
+      "action_counts": {
+        "0": 111,
+        "1": 18,
+        "2": 102,
+        "3": 18
+      },
+      "action_pct": {
+        "no_op": 44.58,
+        "fire_left_orientation_engine": 7.23,
+        "fire_main_engine": 40.96,
+        "fire_right_orientation_engine": 7.23
+      },
+      "longest_streak_per_action": {
+        "no_op": 41,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 27,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 14.46,
+      "side_engine_final_phase_pct": 4.0,
+      "final_state": {
+        "x": -0.004900550935417414,
+        "y": -0.0009996676817536354,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.00024326799029950052,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 79,
+      "seed": 5078,
+      "total_reward": 229.8263,
+      "length": 275,
+      "action_counts": {
+        "0": 62,
+        "1": 40,
+        "2": 128,
+        "3": 45
+      },
+      "action_pct": {
+        "no_op": 22.55,
+        "fire_left_orientation_engine": 14.55,
+        "fire_main_engine": 46.55,
+        "fire_right_orientation_engine": 16.36
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 23,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 30.91,
+      "side_engine_final_phase_pct": 32.73,
+      "final_state": {
+        "x": -0.05680389329791069,
+        "y": -0.0010601782705634832,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.001263309852220118,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 80,
+      "seed": 5079,
+      "total_reward": 267.5255,
+      "length": 257,
+      "action_counts": {
+        "0": 98,
+        "1": 18,
+        "2": 119,
+        "3": 22
+      },
+      "action_pct": {
+        "no_op": 38.13,
+        "fire_left_orientation_engine": 7.0,
+        "fire_main_engine": 46.3,
+        "fire_right_orientation_engine": 8.56
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 1,
+        "fire_main_engine": 21,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 15.56,
+      "side_engine_final_phase_pct": 13.46,
+      "final_state": {
+        "x": 0.025647258386015892,
+        "y": -0.0008894109632819891,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.002120993798598647,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 81,
+      "seed": 5080,
+      "total_reward": 256.3118,
+      "length": 254,
+      "action_counts": {
+        "0": 64,
+        "1": 29,
+        "2": 131,
+        "3": 30
+      },
+      "action_pct": {
+        "no_op": 25.2,
+        "fire_left_orientation_engine": 11.42,
+        "fire_main_engine": 51.57,
+        "fire_right_orientation_engine": 11.81
+      },
+      "longest_streak_per_action": {
+        "no_op": 30,
+        "fire_left_orientation_engine": 3,
+        "fire_main_engine": 17,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 23.23,
+      "side_engine_final_phase_pct": 13.73,
+      "final_state": {
+        "x": -0.0004982948303222656,
+        "y": -0.0010662222048267722,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.001991158351302147,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 82,
+      "seed": 5081,
+      "total_reward": 229.1787,
+      "length": 244,
+      "action_counts": {
+        "0": 71,
+        "1": 27,
+        "2": 121,
+        "3": 25
+      },
+      "action_pct": {
+        "no_op": 29.1,
+        "fire_left_orientation_engine": 11.07,
+        "fire_main_engine": 49.59,
+        "fire_right_orientation_engine": 10.25
+      },
+      "longest_streak_per_action": {
+        "no_op": 28,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 21.31,
+      "side_engine_final_phase_pct": 14.29,
+      "final_state": {
+        "x": -0.18868598341941833,
+        "y": 0.00560013996437192,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.055392831563949585,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 83,
+      "seed": 5082,
+      "total_reward": 284.6821,
+      "length": 162,
+      "action_counts": {
+        "0": 53,
+        "1": 23,
+        "2": 73,
+        "3": 13
+      },
+      "action_pct": {
+        "no_op": 32.72,
+        "fire_left_orientation_engine": 14.2,
+        "fire_main_engine": 45.06,
+        "fire_right_orientation_engine": 8.02
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 22.22,
+      "side_engine_final_phase_pct": 9.09,
+      "final_state": {
+        "x": -0.03427248075604439,
+        "y": -3.178358019795269e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0005652991239912808,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 84,
+      "seed": 5083,
+      "total_reward": 267.5669,
+      "length": 222,
+      "action_counts": {
+        "0": 105,
+        "1": 13,
+        "2": 93,
+        "3": 11
+      },
+      "action_pct": {
+        "no_op": 47.3,
+        "fire_left_orientation_engine": 5.86,
+        "fire_main_engine": 41.89,
+        "fire_right_orientation_engine": 4.95
+      },
+      "longest_streak_per_action": {
+        "no_op": 52,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 17,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 10.81,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.04289092868566513,
+        "y": -0.0006284856935963035,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0020246021449565887,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 85,
+      "seed": 5084,
+      "total_reward": 299.1583,
+      "length": 253,
+      "action_counts": {
+        "0": 66,
+        "1": 37,
+        "2": 82,
+        "3": 68
+      },
+      "action_pct": {
+        "no_op": 26.09,
+        "fire_left_orientation_engine": 14.62,
+        "fire_main_engine": 32.41,
+        "fire_right_orientation_engine": 26.88
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 23,
+        "fire_main_engine": 41,
+        "fire_right_orientation_engine": 18
+      },
+      "side_engine_overall_pct": 41.5,
+      "side_engine_final_phase_pct": 35.29,
+      "final_state": {
+        "x": -0.05652446672320366,
+        "y": -0.0005286359810270369,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0018995264545083046,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 34,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 23,
+          "q_values_at_start": {
+            "no_op": 99.28459167480469,
+            "fire_left_orientation_engine": 99.80332946777344,
+            "fire_main_engine": 98.63688659667969,
+            "fire_right_orientation_engine": 97.70841979980469
+          },
+          "top1_minus_top2_margin": 0.5187,
+          "state_at_start": {
+            "x": -0.1280113160610199,
+            "y": 1.4793860912322998,
+            "vx": -0.08031708747148514,
+            "vy": -0.08241261541843414,
+            "angle": -0.7384976744651794,
+            "angular_velocity": -0.579915463924408,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 86,
+      "seed": 5085,
+      "total_reward": 243.1965,
+      "length": 303,
+      "action_counts": {
+        "0": 77,
+        "1": 33,
+        "2": 162,
+        "3": 31
+      },
+      "action_pct": {
+        "no_op": 25.41,
+        "fire_left_orientation_engine": 10.89,
+        "fire_main_engine": 53.47,
+        "fire_right_orientation_engine": 10.23
+      },
+      "longest_streak_per_action": {
+        "no_op": 25,
+        "fire_left_orientation_engine": 2,
+        "fire_main_engine": 18,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 21.12,
+      "side_engine_final_phase_pct": 19.67,
+      "final_state": {
+        "x": 0.039351366460323334,
+        "y": -0.000618650927208364,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00046186044346541166,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 87,
+      "seed": 5086,
+      "total_reward": 280.2454,
+      "length": 180,
+      "action_counts": {
+        "0": 60,
+        "1": 29,
+        "2": 74,
+        "3": 17
+      },
+      "action_pct": {
+        "no_op": 33.33,
+        "fire_left_orientation_engine": 16.11,
+        "fire_main_engine": 41.11,
+        "fire_right_orientation_engine": 9.44
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 15,
+        "fire_main_engine": 15,
+        "fire_right_orientation_engine": 3
+      },
+      "side_engine_overall_pct": 25.56,
+      "side_engine_final_phase_pct": 8.33,
+      "final_state": {
+        "x": -0.07623291015625,
+        "y": -0.0009366536396555603,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0004537524073384702,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 88,
+      "seed": 5087,
+      "total_reward": 287.3197,
+      "length": 380,
+      "action_counts": {
+        "0": 69,
+        "1": 55,
+        "2": 127,
+        "3": 129
+      },
+      "action_pct": {
+        "no_op": 18.16,
+        "fire_left_orientation_engine": 14.47,
+        "fire_main_engine": 33.42,
+        "fire_right_orientation_engine": 33.95
+      },
+      "longest_streak_per_action": {
+        "no_op": 44,
+        "fire_left_orientation_engine": 21,
+        "fire_main_engine": 16,
+        "fire_right_orientation_engine": 20
+      },
+      "side_engine_overall_pct": 48.42,
+      "side_engine_final_phase_pct": 42.11,
+      "final_state": {
+        "x": -0.008627223782241344,
+        "y": -9.72652414930053e-05,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.003785471199080348,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 34,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 93.42980194091797,
+            "fire_left_orientation_engine": 93.7176284790039,
+            "fire_main_engine": 92.97492980957031,
+            "fire_right_orientation_engine": 92.17163848876953
+          },
+          "top1_minus_top2_margin": 0.2878,
+          "state_at_start": {
+            "x": -0.16389398276805878,
+            "y": 1.464219093322754,
+            "vx": -0.0536491796374321,
+            "vy": -0.036420226097106934,
+            "angle": -0.6738513112068176,
+            "angular_velocity": -0.5240460634231567,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        },
+        {
+          "step": 254,
+          "action": 3,
+          "action_name": "fire_right_orientation_engine",
+          "streak_length": 20,
+          "q_values_at_start": {
+            "no_op": 8.521986961364746,
+            "fire_left_orientation_engine": 8.403655052185059,
+            "fire_main_engine": 7.18339204788208,
+            "fire_right_orientation_engine": 8.53270149230957
+          },
+          "top1_minus_top2_margin": 0.0107,
+          "state_at_start": {
+            "x": -0.11340198665857315,
+            "y": -9.097099245991558e-05,
+            "vx": 0.03555069863796234,
+            "vy": 0.017979199066758156,
+            "angle": 0.0037467293441295624,
+            "angular_velocity": 0.06283536553382874,
+            "left_leg_contact": 1.0,
+            "right_leg_contact": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 89,
+      "seed": 5088,
+      "total_reward": 296.0286,
+      "length": 227,
+      "action_counts": {
+        "0": 109,
+        "1": 11,
+        "2": 85,
+        "3": 22
+      },
+      "action_pct": {
+        "no_op": 48.02,
+        "fire_left_orientation_engine": 4.85,
+        "fire_main_engine": 37.44,
+        "fire_right_orientation_engine": 9.69
+      },
+      "longest_streak_per_action": {
+        "no_op": 40,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 5
+      },
+      "side_engine_overall_pct": 14.54,
+      "side_engine_final_phase_pct": 10.87,
+      "final_state": {
+        "x": -0.005095100495964289,
+        "y": -0.0010530257131904364,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00046828799531795084,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 90,
+      "seed": 5089,
+      "total_reward": 51.1793,
+      "length": 144,
+      "action_counts": {
+        "0": 19,
+        "1": 23,
+        "2": 79,
+        "3": 23
+      },
+      "action_pct": {
+        "no_op": 13.19,
+        "fire_left_orientation_engine": 15.97,
+        "fire_main_engine": 54.86,
+        "fire_right_orientation_engine": 15.97
+      },
+      "longest_streak_per_action": {
+        "no_op": 9,
+        "fire_left_orientation_engine": 10,
+        "fire_main_engine": 30,
+        "fire_right_orientation_engine": 6
+      },
+      "side_engine_overall_pct": 31.94,
+      "side_engine_final_phase_pct": 34.48,
+      "final_state": {
+        "x": -0.04468565061688423,
+        "y": -0.029055751860141754,
+        "vx": -0.38432392477989197,
+        "vy": -0.023552564904093742,
+        "angle": 0.17169083654880524,
+        "angular_velocity": -0.1460832953453064,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 91,
+      "seed": 5090,
+      "total_reward": 236.2988,
+      "length": 252,
+      "action_counts": {
+        "0": 68,
+        "1": 34,
+        "2": 122,
+        "3": 28
+      },
+      "action_pct": {
+        "no_op": 26.98,
+        "fire_left_orientation_engine": 13.49,
+        "fire_main_engine": 48.41,
+        "fire_right_orientation_engine": 11.11
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 17,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 24.6,
+      "side_engine_final_phase_pct": 15.69,
+      "final_state": {
+        "x": -0.01641864702105522,
+        "y": -0.0008882308029569685,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.00444382568821311,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 92,
+      "seed": 5091,
+      "total_reward": 251.4323,
+      "length": 291,
+      "action_counts": {
+        "0": 81,
+        "1": 42,
+        "2": 141,
+        "3": 27
+      },
+      "action_pct": {
+        "no_op": 27.84,
+        "fire_left_orientation_engine": 14.43,
+        "fire_main_engine": 48.45,
+        "fire_right_orientation_engine": 9.28
+      },
+      "longest_streak_per_action": {
+        "no_op": 29,
+        "fire_left_orientation_engine": 9,
+        "fire_main_engine": 61,
+        "fire_right_orientation_engine": 1
+      },
+      "side_engine_overall_pct": 23.71,
+      "side_engine_final_phase_pct": 32.2,
+      "final_state": {
+        "x": -0.03226661682128906,
+        "y": -0.00120902294293046,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0006829779595136642,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 93,
+      "seed": 5092,
+      "total_reward": 297.8727,
+      "length": 302,
+      "action_counts": {
+        "0": 64,
+        "1": 43,
+        "2": 106,
+        "3": 89
+      },
+      "action_pct": {
+        "no_op": 21.19,
+        "fire_left_orientation_engine": 14.24,
+        "fire_main_engine": 35.1,
+        "fire_right_orientation_engine": 29.47
+      },
+      "longest_streak_per_action": {
+        "no_op": 45,
+        "fire_left_orientation_engine": 14,
+        "fire_main_engine": 22,
+        "fire_right_orientation_engine": 16
+      },
+      "side_engine_overall_pct": 43.71,
+      "side_engine_final_phase_pct": 26.23,
+      "final_state": {
+        "x": -0.0072723389603197575,
+        "y": -0.0004947686102241278,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.0052222879603505135,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 94,
+      "seed": 5093,
+      "total_reward": 293.3117,
+      "length": 217,
+      "action_counts": {
+        "0": 59,
+        "1": 37,
+        "2": 83,
+        "3": 38
+      },
+      "action_pct": {
+        "no_op": 27.19,
+        "fire_left_orientation_engine": 17.05,
+        "fire_main_engine": 38.25,
+        "fire_right_orientation_engine": 17.51
+      },
+      "longest_streak_per_action": {
+        "no_op": 43,
+        "fire_left_orientation_engine": 21,
+        "fire_main_engine": 18,
+        "fire_right_orientation_engine": 19
+      },
+      "side_engine_overall_pct": 34.56,
+      "side_engine_final_phase_pct": 2.27,
+      "final_state": {
+        "x": -0.07273425906896591,
+        "y": -0.0010672593489289284,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0006270126905292273,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": [
+        {
+          "step": 39,
+          "action": 1,
+          "action_name": "fire_left_orientation_engine",
+          "streak_length": 21,
+          "q_values_at_start": {
+            "no_op": 85.04680633544922,
+            "fire_left_orientation_engine": 85.60514831542969,
+            "fire_main_engine": 84.36861419677734,
+            "fire_right_orientation_engine": 83.46823120117188
+          },
+          "top1_minus_top2_margin": 0.5583,
+          "state_at_start": {
+            "x": -0.20095863938331604,
+            "y": 1.3036258220672607,
+            "vx": -0.055811505764722824,
+            "vy": -0.017171109095215797,
+            "angle": -0.6831192374229431,
+            "angular_velocity": -0.5121757984161377,
+            "left_leg_contact": 0.0,
+            "right_leg_contact": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "episode": 95,
+      "seed": 5094,
+      "total_reward": 141.6478,
+      "length": 1000,
+      "action_counts": {
+        "0": 63,
+        "1": 537,
+        "2": 66,
+        "3": 334
+      },
+      "action_pct": {
+        "no_op": 6.3,
+        "fire_left_orientation_engine": 53.7,
+        "fire_main_engine": 6.6,
+        "fire_right_orientation_engine": 33.4
+      },
+      "longest_streak_per_action": {
+        "no_op": 12,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 17,
+        "fire_right_orientation_engine": 10
+      },
+      "side_engine_overall_pct": 87.1,
+      "side_engine_final_phase_pct": 100.0,
+      "final_state": {
+        "x": -0.01792583428323269,
+        "y": -0.0008597993873991072,
+        "vx": 0.0044214604422450066,
+        "vy": -4.076290224475088e-06,
+        "angle": -0.002740823430940509,
+        "angular_velocity": -0.001297465292736888,
+        "left_leg_contact": 0.0,
+        "right_leg_contact": 0.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 96,
+      "seed": 5095,
+      "total_reward": 283.1608,
+      "length": 202,
+      "action_counts": {
+        "0": 54,
+        "1": 28,
+        "2": 96,
+        "3": 24
+      },
+      "action_pct": {
+        "no_op": 26.73,
+        "fire_left_orientation_engine": 13.86,
+        "fire_main_engine": 47.52,
+        "fire_right_orientation_engine": 11.88
+      },
+      "longest_streak_per_action": {
+        "no_op": 27,
+        "fire_left_orientation_engine": 6,
+        "fire_main_engine": 33,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 25.74,
+      "side_engine_final_phase_pct": 14.63,
+      "final_state": {
+        "x": -0.09868021309375763,
+        "y": -0.0010351443197578192,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 0.000589844596106559,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 97,
+      "seed": 5096,
+      "total_reward": 305.8335,
+      "length": 251,
+      "action_counts": {
+        "0": 143,
+        "1": 13,
+        "2": 78,
+        "3": 17
+      },
+      "action_pct": {
+        "no_op": 56.97,
+        "fire_left_orientation_engine": 5.18,
+        "fire_main_engine": 31.08,
+        "fire_right_orientation_engine": 6.77
+      },
+      "longest_streak_per_action": {
+        "no_op": 79,
+        "fire_left_orientation_engine": 4,
+        "fire_main_engine": 25,
+        "fire_right_orientation_engine": 8
+      },
+      "side_engine_overall_pct": 11.95,
+      "side_engine_final_phase_pct": 0.0,
+      "final_state": {
+        "x": -0.032822418957948685,
+        "y": -0.0009842896834015846,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": 5.2502753533190116e-05,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 98,
+      "seed": 5097,
+      "total_reward": 259.5986,
+      "length": 253,
+      "action_counts": {
+        "0": 86,
+        "1": 26,
+        "2": 116,
+        "3": 25
+      },
+      "action_pct": {
+        "no_op": 33.99,
+        "fire_left_orientation_engine": 10.28,
+        "fire_main_engine": 45.85,
+        "fire_right_orientation_engine": 9.88
+      },
+      "longest_streak_per_action": {
+        "no_op": 35,
+        "fire_left_orientation_engine": 5,
+        "fire_main_engine": 40,
+        "fire_right_orientation_engine": 4
+      },
+      "side_engine_overall_pct": 20.16,
+      "side_engine_final_phase_pct": 17.65,
+      "final_state": {
+        "x": -0.048386573791503906,
+        "y": -0.0007638120441697538,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0027911742217838764,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 99,
+      "seed": 5098,
+      "total_reward": 228.6756,
+      "length": 259,
+      "action_counts": {
+        "0": 81,
+        "1": 30,
+        "2": 120,
+        "3": 28
+      },
+      "action_pct": {
+        "no_op": 31.27,
+        "fire_left_orientation_engine": 11.58,
+        "fire_main_engine": 46.33,
+        "fire_right_orientation_engine": 10.81
+      },
+      "longest_streak_per_action": {
+        "no_op": 33,
+        "fire_left_orientation_engine": 7,
+        "fire_main_engine": 13,
+        "fire_right_orientation_engine": 2
+      },
+      "side_engine_overall_pct": 22.39,
+      "side_engine_final_phase_pct": 15.38,
+      "final_state": {
+        "x": 0.04797220230102539,
+        "y": -0.0013310456415638328,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0010857967427000403,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    },
+    {
+      "episode": 100,
+      "seed": 5099,
+      "total_reward": 296.1877,
+      "length": 213,
+      "action_counts": {
+        "0": 52,
+        "1": 36,
+        "2": 95,
+        "3": 30
+      },
+      "action_pct": {
+        "no_op": 24.41,
+        "fire_left_orientation_engine": 16.9,
+        "fire_main_engine": 44.6,
+        "fire_right_orientation_engine": 14.08
+      },
+      "longest_streak_per_action": {
+        "no_op": 32,
+        "fire_left_orientation_engine": 18,
+        "fire_main_engine": 23,
+        "fire_right_orientation_engine": 11
+      },
+      "side_engine_overall_pct": 30.99,
+      "side_engine_final_phase_pct": 25.58,
+      "final_state": {
+        "x": -0.04938459396362305,
+        "y": -0.001167323556728661,
+        "vx": 0.0,
+        "vy": 0.0,
+        "angle": -0.0011390690924599767,
+        "angular_velocity": 0.0,
+        "left_leg_contact": 1.0,
+        "right_leg_contact": 1.0
+      },
+      "suspicious_events": []
+    }
+  ]
+}

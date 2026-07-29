@@ -1,0 +1,1233 @@
+{
+  "runner_schema_version": 1,
+  "experiment_id": "deterministic-d3qn-seed42",
+  "status": "succeeded",
+  "phase": "completed",
+  "created_at": "2026-07-28T22:33:09.092574+00:00",
+  "updated_at": "2026-07-28T22:42:27.333244+00:00",
+  "run_directory": "/mnt/e/uni/ai/project/runs/dueling-d3qn-seed42-batch-suite-20260728T222305935637Z/deterministic-d3qn-seed42-20260728T222305935637Z",
+  "artifacts": {
+    "manifest": "experiment_manifest.txt",
+    "resolved_config": "resolved_config.json",
+    "run_status": "run_status.json",
+    "source_branch": "source_branch.txt",
+    "source_commit": "source_commit.txt",
+    "source_status": "source_status.txt",
+    "source_snapshot": "source_snapshot",
+    "training_log": "training.log",
+    "weights": "weights.pth",
+    "training_metrics": "training_metrics.json",
+    "training_plot": "training_plot.png",
+    "benchmark_a_log": "benchmark_a.log",
+    "benchmark_a_json": "benchmark_a.json",
+    "benchmark_b_log": "benchmark_b.log",
+    "benchmark_b_json": "benchmark_b.json",
+    "combined_summary": "combined_summary.txt"
+  },
+  "result": {
+    "training": {
+      "best_validation_episode": 800,
+      "best_validation_mean_reward": 268.73306406689494,
+      "best_validation_solved_rate": 0.9,
+      "mean_training_reward": 93.05271918440954,
+      "final_moving_average_reward": 147.86412519326623,
+      "final_epsilon": 0.01,
+      "actual_holdout_env_seed_last": 30043
+    },
+    "benchmark_a": {
+      "benchmark_id": "benchmark_a",
+      "algorithm": "d3qn",
+      "architecture": "dueling",
+      "target_strategy": "double",
+      "network_class": "DuelingDQN",
+      "episodes": 50,
+      "base_seed": 1234,
+      "last_seed": 1283,
+      "mean_reward": 225.6037,
+      "solved_count": 39,
+      "solved_rate_pct": 78.0,
+      "low_score_count": 0,
+      "low_score_rate_pct": 0.0,
+      "mean_length": 276.26,
+      "timeout_count": 3,
+      "timeout_inference": "per_episode.length == 1000; game wrapper does not expose truncation separately",
+      "side_engine_overall_pct": 26.08,
+      "max_side_engine_streak": {
+        "fire_left_orientation_engine": 46,
+        "fire_right_orientation_engine": 260
+      },
+      "records": [
+        {
+          "benchmark": "benchmark_a",
+          "episode": 1,
+          "seed": 1234,
+          "reward": 61.6516,
+          "length": 165
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 2,
+          "seed": 1235,
+          "reward": 265.519,
+          "length": 264
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 3,
+          "seed": 1236,
+          "reward": 253.2924,
+          "length": 172
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 4,
+          "seed": 1237,
+          "reward": 260.1363,
+          "length": 485
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 5,
+          "seed": 1238,
+          "reward": 2.4521,
+          "length": 82
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 6,
+          "seed": 1239,
+          "reward": 170.9737,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 7,
+          "seed": 1240,
+          "reward": 308.1672,
+          "length": 255
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 8,
+          "seed": 1241,
+          "reward": 33.97,
+          "length": 151
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 9,
+          "seed": 1242,
+          "reward": 315.5633,
+          "length": 261
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 10,
+          "seed": 1243,
+          "reward": 285.2944,
+          "length": 247
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 11,
+          "seed": 1244,
+          "reward": 280.6931,
+          "length": 217
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 12,
+          "seed": 1245,
+          "reward": 299.3635,
+          "length": 268
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 13,
+          "seed": 1246,
+          "reward": 15.9731,
+          "length": 94
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 14,
+          "seed": 1247,
+          "reward": 256.5237,
+          "length": 211
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 15,
+          "seed": 1248,
+          "reward": 133.3445,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 16,
+          "seed": 1249,
+          "reward": 142.3624,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 17,
+          "seed": 1250,
+          "reward": 251.1798,
+          "length": 165
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 18,
+          "seed": 1251,
+          "reward": 248.4817,
+          "length": 166
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 19,
+          "seed": 1252,
+          "reward": 259.7237,
+          "length": 141
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 20,
+          "seed": 1253,
+          "reward": 280.7066,
+          "length": 358
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 21,
+          "seed": 1254,
+          "reward": 271.4981,
+          "length": 225
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 22,
+          "seed": 1255,
+          "reward": 306.8442,
+          "length": 244
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 23,
+          "seed": 1256,
+          "reward": 258.0439,
+          "length": 180
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 24,
+          "seed": 1257,
+          "reward": 253.4887,
+          "length": 459
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 25,
+          "seed": 1258,
+          "reward": 50.9159,
+          "length": 81
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 26,
+          "seed": 1259,
+          "reward": 36.8302,
+          "length": 159
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 27,
+          "seed": 1260,
+          "reward": 287.8747,
+          "length": 358
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 28,
+          "seed": 1261,
+          "reward": 269.1671,
+          "length": 142
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 29,
+          "seed": 1262,
+          "reward": 20.7315,
+          "length": 106
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 30,
+          "seed": 1263,
+          "reward": 261.5288,
+          "length": 238
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 31,
+          "seed": 1264,
+          "reward": 270.8237,
+          "length": 231
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 32,
+          "seed": 1265,
+          "reward": 250.2934,
+          "length": 285
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 33,
+          "seed": 1266,
+          "reward": 264.3846,
+          "length": 237
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 34,
+          "seed": 1267,
+          "reward": 262.8256,
+          "length": 250
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 35,
+          "seed": 1268,
+          "reward": 266.0836,
+          "length": 495
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 36,
+          "seed": 1269,
+          "reward": 27.5657,
+          "length": 84
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 37,
+          "seed": 1270,
+          "reward": 255.8484,
+          "length": 327
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 38,
+          "seed": 1271,
+          "reward": 302.4035,
+          "length": 230
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 39,
+          "seed": 1272,
+          "reward": 296.192,
+          "length": 197
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 40,
+          "seed": 1273,
+          "reward": 253.0346,
+          "length": 188
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 41,
+          "seed": 1274,
+          "reward": 205.0383,
+          "length": 402
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 42,
+          "seed": 1275,
+          "reward": 262.6454,
+          "length": 216
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 43,
+          "seed": 1276,
+          "reward": 282.7637,
+          "length": 163
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 44,
+          "seed": 1277,
+          "reward": 251.0703,
+          "length": 202
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 45,
+          "seed": 1278,
+          "reward": 272.7746,
+          "length": 219
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 46,
+          "seed": 1279,
+          "reward": 277.6514,
+          "length": 237
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 47,
+          "seed": 1280,
+          "reward": 276.6419,
+          "length": 207
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 48,
+          "seed": 1281,
+          "reward": 295.2768,
+          "length": 233
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 49,
+          "seed": 1282,
+          "reward": 278.4838,
+          "length": 307
+        },
+        {
+          "benchmark": "benchmark_a",
+          "episode": 50,
+          "seed": 1283,
+          "reward": 286.0864,
+          "length": 209
+        }
+      ]
+    },
+    "benchmark_b": {
+      "benchmark_id": "benchmark_b",
+      "algorithm": "d3qn",
+      "architecture": "dueling",
+      "target_strategy": "double",
+      "network_class": "DuelingDQN",
+      "episodes": 100,
+      "base_seed": 5000,
+      "last_seed": 5099,
+      "mean_reward": 199.5313,
+      "solved_count": 69,
+      "solved_rate_pct": 69.0,
+      "low_score_count": 1,
+      "low_score_rate_pct": 1.0,
+      "mean_length": 265.81,
+      "timeout_count": 5,
+      "timeout_inference": "per_episode.length == 1000; game wrapper does not expose truncation separately",
+      "side_engine_overall_pct": 32.06,
+      "max_side_engine_streak": {
+        "fire_left_orientation_engine": 80,
+        "fire_right_orientation_engine": 491
+      },
+      "records": [
+        {
+          "benchmark": "benchmark_b",
+          "episode": 1,
+          "seed": 5000,
+          "reward": 273.4858,
+          "length": 206
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 2,
+          "seed": 5001,
+          "reward": 9.6153,
+          "length": 110
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 3,
+          "seed": 5002,
+          "reward": 279.1724,
+          "length": 217
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 4,
+          "seed": 5003,
+          "reward": 255.3396,
+          "length": 352
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 5,
+          "seed": 5004,
+          "reward": 241.3685,
+          "length": 140
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 6,
+          "seed": 5005,
+          "reward": 22.7461,
+          "length": 147
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 7,
+          "seed": 5006,
+          "reward": 286.6297,
+          "length": 170
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 8,
+          "seed": 5007,
+          "reward": 259.9034,
+          "length": 141
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 9,
+          "seed": 5008,
+          "reward": 263.9558,
+          "length": 246
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 10,
+          "seed": 5009,
+          "reward": 286.9634,
+          "length": 207
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 11,
+          "seed": 5010,
+          "reward": 273.5933,
+          "length": 177
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 12,
+          "seed": 5011,
+          "reward": 268.9535,
+          "length": 163
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 13,
+          "seed": 5012,
+          "reward": 298.8607,
+          "length": 186
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 14,
+          "seed": 5013,
+          "reward": 244.1938,
+          "length": 166
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 15,
+          "seed": 5014,
+          "reward": 292.1041,
+          "length": 213
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 16,
+          "seed": 5015,
+          "reward": 221.0289,
+          "length": 969
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 17,
+          "seed": 5016,
+          "reward": 258.9822,
+          "length": 186
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 18,
+          "seed": 5017,
+          "reward": 257.1565,
+          "length": 336
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 19,
+          "seed": 5018,
+          "reward": 253.7081,
+          "length": 139
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 20,
+          "seed": 5019,
+          "reward": 282.85,
+          "length": 151
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 21,
+          "seed": 5020,
+          "reward": 46.1941,
+          "length": 173
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 22,
+          "seed": 5021,
+          "reward": 263.0272,
+          "length": 266
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 23,
+          "seed": 5022,
+          "reward": 250.8548,
+          "length": 177
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 24,
+          "seed": 5023,
+          "reward": 256.9495,
+          "length": 187
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 25,
+          "seed": 5024,
+          "reward": 142.3256,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 26,
+          "seed": 5025,
+          "reward": 268.8558,
+          "length": 222
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 27,
+          "seed": 5026,
+          "reward": 253.2239,
+          "length": 219
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 28,
+          "seed": 5027,
+          "reward": 4.9663,
+          "length": 97
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 29,
+          "seed": 5028,
+          "reward": 276.8106,
+          "length": 188
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 30,
+          "seed": 5029,
+          "reward": 277.2352,
+          "length": 306
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 31,
+          "seed": 5030,
+          "reward": 6.5436,
+          "length": 97
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 32,
+          "seed": 5031,
+          "reward": 292.7957,
+          "length": 179
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 33,
+          "seed": 5032,
+          "reward": 42.5732,
+          "length": 158
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 34,
+          "seed": 5033,
+          "reward": 233.3058,
+          "length": 377
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 35,
+          "seed": 5034,
+          "reward": -2.5893,
+          "length": 222
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 36,
+          "seed": 5035,
+          "reward": 20.9197,
+          "length": 151
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 37,
+          "seed": 5036,
+          "reward": 23.0287,
+          "length": 114
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 38,
+          "seed": 5037,
+          "reward": 267.1349,
+          "length": 352
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 39,
+          "seed": 5038,
+          "reward": 161.5891,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 40,
+          "seed": 5039,
+          "reward": 237.3534,
+          "length": 216
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 41,
+          "seed": 5040,
+          "reward": 46.0944,
+          "length": 178
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 42,
+          "seed": 5041,
+          "reward": 267.7909,
+          "length": 232
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 43,
+          "seed": 5042,
+          "reward": 273.355,
+          "length": 251
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 44,
+          "seed": 5043,
+          "reward": 301.6271,
+          "length": 167
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 45,
+          "seed": 5044,
+          "reward": 256.6685,
+          "length": 727
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 46,
+          "seed": 5045,
+          "reward": 38.6215,
+          "length": 74
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 47,
+          "seed": 5046,
+          "reward": 265.4087,
+          "length": 187
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 48,
+          "seed": 5047,
+          "reward": 216.2518,
+          "length": 333
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 49,
+          "seed": 5048,
+          "reward": 242.1251,
+          "length": 150
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 50,
+          "seed": 5049,
+          "reward": 260.4823,
+          "length": 164
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 51,
+          "seed": 5050,
+          "reward": 280.9754,
+          "length": 408
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 52,
+          "seed": 5051,
+          "reward": 198.1171,
+          "length": 403
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 53,
+          "seed": 5052,
+          "reward": 34.6387,
+          "length": 86
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 54,
+          "seed": 5053,
+          "reward": 117.7562,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 55,
+          "seed": 5054,
+          "reward": 15.0149,
+          "length": 97
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 56,
+          "seed": 5055,
+          "reward": 263.7443,
+          "length": 195
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 57,
+          "seed": 5056,
+          "reward": 287.9483,
+          "length": 395
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 58,
+          "seed": 5057,
+          "reward": 20.2575,
+          "length": 97
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 59,
+          "seed": 5058,
+          "reward": 259.5285,
+          "length": 148
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 60,
+          "seed": 5059,
+          "reward": 236.9827,
+          "length": 357
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 61,
+          "seed": 5060,
+          "reward": 272.2711,
+          "length": 210
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 62,
+          "seed": 5061,
+          "reward": 233.8913,
+          "length": 367
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 63,
+          "seed": 5062,
+          "reward": 236.9116,
+          "length": 198
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 64,
+          "seed": 5063,
+          "reward": 74.8332,
+          "length": 82
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 65,
+          "seed": 5064,
+          "reward": 256.4106,
+          "length": 210
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 66,
+          "seed": 5065,
+          "reward": 20.1803,
+          "length": 83
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 67,
+          "seed": 5066,
+          "reward": 262.5388,
+          "length": 329
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 68,
+          "seed": 5067,
+          "reward": 282.0992,
+          "length": 204
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 69,
+          "seed": 5068,
+          "reward": 35.0896,
+          "length": 159
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 70,
+          "seed": 5069,
+          "reward": 268.7452,
+          "length": 183
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 71,
+          "seed": 5070,
+          "reward": 153.2897,
+          "length": 422
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 72,
+          "seed": 5071,
+          "reward": 277.8293,
+          "length": 207
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 73,
+          "seed": 5072,
+          "reward": 69.7982,
+          "length": 171
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 74,
+          "seed": 5073,
+          "reward": 257.785,
+          "length": 233
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 75,
+          "seed": 5074,
+          "reward": 254.718,
+          "length": 400
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 76,
+          "seed": 5075,
+          "reward": 35.0779,
+          "length": 216
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 77,
+          "seed": 5076,
+          "reward": 269.8978,
+          "length": 216
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 78,
+          "seed": 5077,
+          "reward": 275.3688,
+          "length": 220
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 79,
+          "seed": 5078,
+          "reward": 28.9803,
+          "length": 91
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 80,
+          "seed": 5079,
+          "reward": 262.1872,
+          "length": 206
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 81,
+          "seed": 5080,
+          "reward": 122.5215,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 82,
+          "seed": 5081,
+          "reward": 258.5411,
+          "length": 188
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 83,
+          "seed": 5082,
+          "reward": 260.8598,
+          "length": 166
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 84,
+          "seed": 5083,
+          "reward": 220.6217,
+          "length": 298
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 85,
+          "seed": 5084,
+          "reward": 273.1849,
+          "length": 305
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 86,
+          "seed": 5085,
+          "reward": 245.7748,
+          "length": 220
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 87,
+          "seed": 5086,
+          "reward": 270.1542,
+          "length": 257
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 88,
+          "seed": 5087,
+          "reward": 226.9458,
+          "length": 354
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 89,
+          "seed": 5088,
+          "reward": 293.1669,
+          "length": 229
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 90,
+          "seed": 5089,
+          "reward": 46.6448,
+          "length": 141
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 91,
+          "seed": 5090,
+          "reward": 245.4618,
+          "length": 157
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 92,
+          "seed": 5091,
+          "reward": 32.6069,
+          "length": 107
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 93,
+          "seed": 5092,
+          "reward": 285.1709,
+          "length": 263
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 94,
+          "seed": 5093,
+          "reward": 156.5473,
+          "length": 1000
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 95,
+          "seed": 5094,
+          "reward": 260.4543,
+          "length": 601
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 96,
+          "seed": 5095,
+          "reward": 35.5395,
+          "length": 135
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 97,
+          "seed": 5096,
+          "reward": 305.0352,
+          "length": 227
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 98,
+          "seed": 5097,
+          "reward": 35.9309,
+          "length": 107
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 99,
+          "seed": 5098,
+          "reward": 243.8417,
+          "length": 166
+        },
+        {
+          "benchmark": "benchmark_b",
+          "episode": 100,
+          "seed": 5099,
+          "reward": 269.1226,
+          "length": 281
+        }
+      ]
+    },
+    "combined": {
+      "episodes": 150,
+      "mean_reward": 208.2221,
+      "solved_count": 108,
+      "solved_rate_pct": 72.0,
+      "low_score_count": 1,
+      "low_score_rate_pct": 0.67,
+      "mean_length": 269.29,
+      "timeout_count": 8,
+      "timeout_inference": "per_episode.length == 1000; truncation and termination are combined by game.py",
+      "max_side_engine_streak": {
+        "fire_left_orientation_engine": 80,
+        "fire_right_orientation_engine": 491
+      },
+      "declared_reference": {
+        "id": "deterministic-double-dqn-seed42",
+        "description": "Archived deterministic Double DQN seed-42 reference; its maximum same-side-engine streak was 502.",
+        "episodes": 150,
+        "mean_reward": 236.6064,
+        "solved_count": 126,
+        "solved_rate_pct": 84.0,
+        "low_score_count": 3,
+        "low_score_rate_pct": 2.0,
+        "mean_length": 310.76,
+        "timeout_count": 7
+      },
+      "reference_deltas_approximate": {
+        "mean_reward": -28.3843,
+        "solved_rate_percentage_points": -12.0,
+        "low_score_rate_percentage_points": -1.33,
+        "mean_length": -41.47,
+        "timeout_count": 1
+      },
+      "screening_observations": {
+        "manual_review_required": true,
+        "automatic_followup": false,
+        "low_score_count_within_limit": true,
+        "timeout_count_within_limit": false,
+        "mean_length_within_limit": false,
+        "manual_criteria": [
+          "Against Double42, combined mean reward must be at least approximately 234.61 and solved count must be at least 123/150.",
+          "Maximum same-side-engine streak must be below 100; the Double42 reference maximum was 502.",
+          "Performance must remain acceptable on both Benchmark A and Benchmark B rather than relying on one benchmark set.",
+          "A44 balanced-leader reference: mean reward 237.929; solved 134/150 (89.33%); low 0/150; mean length 283.11; timeouts 1/150.",
+          "A seed-42 challenger can only earn replication, never replace A44 directly. Eligibility requires either mean reward at least 242.929 with solved count at least 131/150, or solved count at least 142/150 with mean reward at least 235.929.",
+          "Replication eligibility additionally requires at most 1 negative episode, at most 3 timeouts, mean length at most 297.27, maximum same-side-engine streak below 100, and acceptable performance on both Benchmark A and Benchmark B.",
+          "All screening decisions are manual; no threshold authorizes automatic follow-up."
+        ]
+      }
+    },
+    "screening_decision": "manual_review_required",
+    "automatic_followup": false
+  },
+  "error": null,
+  "history": [
+    {
+      "at": "2026-07-28T22:33:09.095562+00:00",
+      "phase": "prepared",
+      "message": "Source snapshot and pre-execution metadata created."
+    },
+    {
+      "at": "2026-07-28T22:33:09.676884+00:00",
+      "phase": "training_running",
+      "message": "Launching: /root/venvs/lunar-lander/bin/python -u /mnt/e/uni/ai/project/runs/dueling-d3qn-seed42-batch-suite-20260728T222305935637Z/deterministic-d3qn-seed42-20260728T222305935637Z/source_snapshot/train.py --algorithm d3qn --seed 42 --episodes 1000 --learning-rate 0.0005 --target-update-freq 1000 --epsilon-start 1.0 --epsilon-min 0.01 --epsilon-decay 0.995 --replay-capacity 10000 --batch-size 64 --gamma 0.99"
+    },
+    {
+      "at": "2026-07-28T22:42:15.814789+00:00",
+      "phase": "training_succeeded",
+      "message": "Training completed and required artifacts were verified."
+    },
+    {
+      "at": "2026-07-28T22:42:15.942517+00:00",
+      "phase": "benchmark_a_running",
+      "message": "Launching: /root/venvs/lunar-lander/bin/python -u /mnt/e/uni/ai/project/runs/dueling-d3qn-seed42-batch-suite-20260728T222305935637Z/deterministic-d3qn-seed42-20260728T222305935637Z/source_snapshot/test.py --diagnostic --algorithm d3qn --episodes 50 --seed 1234 --output benchmark_a.json --long-streak 20"
+    },
+    {
+      "at": "2026-07-28T22:42:20.737216+00:00",
+      "phase": "benchmark_a_succeeded",
+      "message": "Benchmark A completed and its JSON report was verified."
+    },
+    {
+      "at": "2026-07-28T22:42:20.882737+00:00",
+      "phase": "benchmark_b_running",
+      "message": "Launching: /root/venvs/lunar-lander/bin/python -u /mnt/e/uni/ai/project/runs/dueling-d3qn-seed42-batch-suite-20260728T222305935637Z/deterministic-d3qn-seed42-20260728T222305935637Z/source_snapshot/test.py --diagnostic --algorithm d3qn --episodes 100 --seed 5000 --output benchmark_b.json --long-streak 20"
+    },
+    {
+      "at": "2026-07-28T22:42:27.145739+00:00",
+      "phase": "benchmark_b_succeeded",
+      "message": "Benchmark B completed and its JSON report was verified."
+    },
+    {
+      "at": "2026-07-28T22:42:27.333281+00:00",
+      "phase": "completed",
+      "message": "Both benchmarks and combined summary completed. No follow-up was scheduled."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "runner_schema_version": 1,
+  "plan_id": "deep-d3qn-seed42-rescue",
+  "plan_digest": "a5cf5e136f86eaa842222dcf95c71c99d120882f7b01a3b0fef0cf8f416c1871",
+  "suite_directory": "/mnt/e/uni/ai/project/runs/deep-d3qn-seed42-rescue-suite-20260728T230445902051Z",
+  "created_at": "2026-07-28T23:04:46.014216+00:00",
+  "updated_at": "2026-07-28T23:17:12.097400+00:00",
+  "status": "completed",
+  "git_provenance": {
+    "root": "/mnt/e/uni/ai/project/Lunar-Lander",
+    "branch": "experiment/deterministic-vanilla-search",
+    "commit": "8ada1525507738fd2e9460a86e359b8a09c78457",
+    "status": ""
+  },
+  "selected_experiment_ids": [
+    "deterministic-deep-d3qn-seed42"
+  ],
+  "run_directories": {
+    "deterministic-deep-d3qn-seed42": "deterministic-deep-d3qn-seed42-20260728T230445902051Z"
+  }
+}

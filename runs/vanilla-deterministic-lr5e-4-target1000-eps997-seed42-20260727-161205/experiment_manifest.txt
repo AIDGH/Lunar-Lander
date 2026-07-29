@@ -1,0 +1,116 @@
+Experiment: Deterministic Vanilla DQN — Epsilon Decay 0.997
+
+Algorithm: Vanilla DQN
+Training seed: 42
+Training episode seeds: 20042–21041
+Episodes: 1000
+
+Learning rate: 5e-4
+Target update frequency: 1000 optimizer updates
+Replay capacity: 10000
+Batch size: 64
+Gamma: 0.99
+Epsilon start: 1.0
+Epsilon minimum: 0.01
+Epsilon decay: 0.997 per episode
+Expected epsilon after 1000 episodes: approximately 0.050
+
+Paired control:
+Vanilla DQN, lr=5e-4, target_update_freq=1000,
+epsilon_decay=0.995, episodes=1000,
+same deterministic harness and seeds.
+
+Archived paired-control results:
+- Combined mean reward: 230.12
+- Solved: 116/150 (77.33%)
+- Low below zero: 0/150
+- Mean episode length: 244.57
+- Timeouts: 9/150
+
+Only intended experimental change:
+- Epsilon decay: 0.995 -> 0.997
+
+Benchmark A: seeds 1234–1283
+Benchmark B: seeds 5000–5099
+
+Reserved final holdout:
+seeds 10000–10099 — DO NOT RUN
+
+Interpretation caveats:
+- This run tests sustained exploration.
+- Epsilon does not reach the 0.01 minimum during the 1000 episodes.
+- Benchmark evaluation remains fully greedy with epsilon=0.
+- Comparison currently uses one deterministic training seed.
+- Policy episode lengths can change the total number of optimizer updates.
+- Timeout truncation remains treated as done.
+
+Observed results:
+
+Benchmark A:
+- Mean reward: 194.78
+- Solved: 32/50 (64.00%)
+- Low below zero: 0/50
+- Mean length: 218.64
+- Timeouts: 2/50
+
+Benchmark B:
+- Mean reward: 208.16
+- Solved: 72/100 (72.00%)
+- Low below zero: 1/100 (1.00%)
+- Mean length: 269.52
+- Timeouts: 5/100
+
+Combined:
+- Mean reward: 203.70
+- Solved: 104/150 (69.33%)
+- Low below zero: 1/150 (0.67%)
+- Mean length: 252.56
+- Timeouts: 7/150
+
+Paired comparison against epsilon_decay=0.995:
+- Mean reward: -26.42
+- Solved rate: -8.00 percentage points
+- Low rate: +0.67 percentage points, worse
+- Mean length: +7.99 steps, worse
+- Timeouts: -2, better
+
+Decision:
+Rejected as a standalone 1000-episode configuration. Slower epsilon decay
+reduced timeouts slightly but substantially reduced reward and solved rate.
+A later 1500-episode schedule test is retained because epsilon remained near
+0.05 at the end of this run.
+
+Observed results:
+
+Benchmark A:
+- Mean reward: 194.78
+- Solved: 32/50 (64.00%)
+- Low below zero: 0/50
+- Mean length: 218.64
+- Timeouts: 2/50
+
+Benchmark B:
+- Mean reward: 208.16
+- Solved: 72/100 (72.00%)
+- Low below zero: 1/100 (1.00%)
+- Mean length: 269.52
+- Timeouts: 5/100
+
+Combined:
+- Mean reward: 203.70
+- Solved: 104/150 (69.33%)
+- Low below zero: 1/150 (0.67%)
+- Mean length: 252.56
+- Timeouts: 7/150
+
+Paired comparison against epsilon_decay=0.995:
+- Mean reward: -26.42
+- Solved rate: -8.00 percentage points
+- Low rate: +0.67 percentage points, worse
+- Mean length: +7.99 steps, worse
+- Timeouts: -2, better
+
+Decision:
+Rejected as a 1000-episode configuration. Sustained exploration reduced
+timeouts slightly but produced a less mature greedy checkpoint. Further
+schedule experiments are deferred until training-seed variance is measured.
