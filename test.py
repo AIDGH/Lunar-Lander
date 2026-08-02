@@ -1,6 +1,5 @@
 import argparse
 import json
-import time
 import numpy as np
 import torch
 from game import LunarLanderEnv
@@ -62,7 +61,6 @@ def run_rendered(episodes=1000, algorithm="vanilla"):
             next_state, reward, done = env.step(action)
             state = next_state
             total_reward += reward
-            # time.sleep(0.02)  # make rendering watchable
         if total_reward >= 200.0:
             total_wins += 1
         eval_rewards.append(total_reward)
@@ -72,7 +70,10 @@ def run_rendered(episodes=1000, algorithm="vanilla"):
     print(f"Mean Evaluation Reward (over {len(eval_rewards)} episodes): "
           f"{np.mean(eval_rewards):.2f}")
     print(f"Standard Deviation of Reward: {np.std(eval_rewards):.2f}")
-    print(f"Win rate: {total_wins}/{len(eval_rewards)} ({total_wins/len(eval_rewards)*100:.2f}%)")
+    print(
+        f"Win rate: {total_wins}/{len(eval_rewards)} "
+        f"({total_wins / len(eval_rewards) * 100:.2f}%)"
+    )
     print("==============================")
 
     env.close()

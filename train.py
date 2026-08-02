@@ -19,6 +19,10 @@ torch.manual_seed(SEED)
 
 # Number of training episodes
 NUM_EPISODES = 1000
+REPLAY_BUFFER_CAPACITY = 100000
+TAU = 0.005
+ALGORITHM = "double_dqn"
+TARGET_UPDATE_STRATEGY = "soft"
 # Window used for the moving-average reward curve (training metric).
 MOVING_AVG_WINDOW = 50
 # Evaluate average max Q-value on the hold-out states every N episodes.
@@ -99,7 +103,9 @@ action_size = env.action_space.n
 # Initialize the agent with standard hyperparameters
 agent = Agent(action_size=action_size,
               state_size=state_size,
-              batch_size=64)
+              batch_size=64,
+              replay_buffer_capacity=REPLAY_BUFFER_CAPACITY,
+              tau=TAU)
 
 # --- Hold-out States Collection ---
 # Collect a set of random states to track Q-value stability during training.
@@ -203,6 +209,10 @@ print("==============================")
 # --- Persist metrics for later analysis / report ---
 metrics = {
     "seed": SEED,
+    "algorithm": ALGORITHM,
+    "replay_buffer_capacity": REPLAY_BUFFER_CAPACITY,
+    "target_update_strategy": TARGET_UPDATE_STRATEGY,
+    "tau": TAU,
     "num_episodes": total_tests,
     "moving_avg_window": MOVING_AVG_WINDOW,
     "q_eval_every": Q_EVAL_EVERY,

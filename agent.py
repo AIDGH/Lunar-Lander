@@ -27,11 +27,12 @@ class Agent:
                  action_size,
                  state_size,
                  batch_size,
-                 replay_buffer_capacity=10000,
+                 replay_buffer_capacity=100000,
                  gamma=0.99,
                  epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.995,
                  lr=1e-3,
-                 target_update_freq=1000):
+                 target_update_freq=1000,
+                 tau=0.005):
         
         # Core hyperparameters
         self.action_size = action_size
@@ -42,6 +43,10 @@ class Agent:
         self.epsilon_end = epsilon_end
         self.epsilon_decay = epsilon_decay
         self.lr = lr
+        if not 0.0 < tau <= 1.0:
+            raise ValueError("tau must be in the interval (0, 1]")
+        self.tau = tau
+        # Legacy compatibility only; soft updates do not use this value.
         self.target_update_freq = target_update_freq
 
         # Initialize experience replay memory
@@ -60,9 +65,6 @@ class Agent:
         # Setup the optimizer for the Policy Network
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=self.lr)
         
-        # Counter to track when to update the target network
-        self.steps_done = 0
-
     def act(self, state):
         # Epsilon-greedy action selection to balance exploration and exploitation
         if random.random() < self.epsilon:
@@ -97,10 +99,12 @@ class Agent:
         # Compute Q-values for current states using the policy network
         current_q_values = self.policy_net(states).gather(1, actions)
 
-        # Compute Q-values for next states using the target network
+        # Double DQN: select the next action with the policy network, then
+        # evaluate that action with the target network.
         with torch.no_grad():
-            max_next_q_values = self.target_net(next_states).max(1)[0].unsqueeze(1)
-            target_q_values = rewards + (self.gamma * max_next_q_values * (1 - dones))
+            next_actions = self.policy_net(next_states).argmax(dim=1, keepdim=True)
+            next_q_values = self.target_net(next_states).gather(1, next_actions)
+            target_q_values = rewards + self.gamma * next_q_values * (1 - dones)
 
         # Compute the loss between current and target Q-values.
         # Huber (Smooth L1) loss is more robust to large Q-value errors than MSE.
@@ -113,12 +117,14 @@ class Agent:
         torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), max_norm=1.0)
         self.optimizer.step()
 
-        # Update the target network periodically
-        if self.steps_done % self.target_update_freq == 0:
-            self.target_net.load_state_dict(self.policy_net.state_dict())
-
-        # Increment the step counter
-        self.steps_done += 1
+        # Soft-update the target network after every policy optimizer step.
+        with torch.no_grad():
+            for target_param, policy_param in zip(
+                self.target_net.parameters(),
+                self.policy_net.parameters(),
+            ):
+                target_param.mul_(1.0 - self.tau)
+                target_param.add_(policy_param, alpha=self.tau)
 
     def decay_epsilon(self):
         # Decay epsilon once per episode (not per gradient step) so exploration
