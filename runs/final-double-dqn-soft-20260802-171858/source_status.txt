@@ -1,0 +1,12 @@
+ M .gitignore
+ M README.md
+ M diagnostic_report_unseen_100.json
+ M diagnostic_report_validation.json
+ M game.py
+ M model.py
+ M random_agent.py
+ M requirements.txt
+ M training_metrics.json
+ M training_plot.png
+ M weights.pth
+?? runs/
