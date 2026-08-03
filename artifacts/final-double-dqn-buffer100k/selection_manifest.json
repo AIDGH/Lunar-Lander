@@ -1,0 +1,42 @@
+{
+  "status": "final_selected_model",
+  "selected_variant": "double_dqn_buffer100k_only",
+  "selection_reason": "Selected over soft target updates using a controlled, paired evaluation on 1500 identical evaluation seeds.",
+  "training": {
+    "seed": 42,
+    "replay_buffer_capacity": 100000,
+    "target_update_strategy": "hard",
+    "target_update_freq": 1000,
+    "best_validation_episode": 1000,
+    "best_validation_mean_reward": 296.7253530123229
+  },
+  "evaluation": {
+    "benchmark_a": {
+      "episodes": 500,
+      "seed_start": 1234,
+      "seed_end": 1733,
+      "mean_reward": 267.8142,
+      "solved_count": 473,
+      "solved_rate_pct": 94.6
+    },
+    "benchmark_b": {
+      "episodes": 1000,
+      "seed_start": 5000,
+      "seed_end": 5999,
+      "mean_reward": 267.2425,
+      "solved_count": 953,
+      "solved_rate_pct": 95.3
+    },
+    "combined": {
+      "episodes": 1500,
+      "mean_reward": 267.43308086666667,
+      "median_reward": 279.79075,
+      "std_reward": 62.73502147872261,
+      "solved_count": 1426,
+      "solved_rate_pct": 95.06666666666666,
+      "low_score_count": 40,
+      "low_score_rate_pct": 2.666666666666667
+    }
+  },
+  "final_holdout_included": true
+}
