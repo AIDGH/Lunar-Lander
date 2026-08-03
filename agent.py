@@ -27,7 +27,7 @@ class Agent:
                  action_size,
                  state_size,
                  batch_size,
-                 replay_buffer_capacity=10000,
+                 replay_buffer_capacity=100000,
                  gamma=0.99,
                  epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.995,
                  lr=1e-3,

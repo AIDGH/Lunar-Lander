@@ -42,7 +42,7 @@ def _load_greedy_agent(env):
     return agent
 
 
-def run_rendered(episodes=5):
+def run_rendered(episodes=1000, algorithm="vanilla"):
     """Default mode: render greedy evaluation, identical to the original
     test.py workflow."""
     env = LunarLanderEnv(render_mode="human")
@@ -51,6 +51,7 @@ def run_rendered(episodes=5):
     print("Starting evaluation...")
 
     eval_rewards = []
+    total_wins = 0
     for episode in range(1, episodes + 1):
         state = env.reset()
         total_reward = 0
@@ -61,8 +62,9 @@ def run_rendered(episodes=5):
             next_state, reward, done = env.step(action)
             state = next_state
             total_reward += reward
-            time.sleep(0.02)  # make rendering watchable
-
+            # time.sleep(0.02)  # make rendering watchable
+        if total_reward >= 200.0:
+            total_wins += 1
         eval_rewards.append(total_reward)
         print(f"Test Episode {episode}: Total Reward = {total_reward:.2f}")
 
@@ -70,6 +72,7 @@ def run_rendered(episodes=5):
     print(f"Mean Evaluation Reward (over {len(eval_rewards)} episodes): "
           f"{np.mean(eval_rewards):.2f}")
     print(f"Standard Deviation of Reward: {np.std(eval_rewards):.2f}")
+    print(f"Win rate: {total_wins}/{len(eval_rewards)} ({total_wins/len(eval_rewards)*100:.2f}%)")
     print("==============================")
 
     env.close()

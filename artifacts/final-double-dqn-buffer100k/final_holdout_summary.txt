@@ -1,0 +1,19 @@
+================================================================
+FINAL HOLDOUT — Double DQN Buffer 100k
+================================================================
+Training seed          : 42
+Replay buffer          : 100000
+Target strategy        : hard
+Best validation       : 296.7254 at episode 1000
+Holdout seeds          : 10000–10099
+Holdout episodes       : 100
+----------------------------------------------------------------
+Mean reward            : 276.3329
+Median reward          : 282.5028
+Standard deviation     : 48.3066
+Minimum / maximum      : 11.9677 / 325.3100
+Solved                 : 97/100 (97.00%)
+Low scores             : 0/100 (0.00%)
+Mean episode length    : 204.55
+Max side-engine streak: {'fire_left_orientation_engine': 27, 'fire_right_orientation_engine': 46}
+================================================================

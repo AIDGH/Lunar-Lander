@@ -1,0 +1,61 @@
+==============================================================================
+Controlled Double DQN Ablation Comparison
+Training seed: 42
+Benchmark A: 500 episodes, seeds 1234–1733
+Benchmark B: 1000 episodes, seeds 5000–5999
+Final holdout seeds 10000–10099 remain untouched
+==============================================================================
+Buffer 100k
+  Backup path       : /mnt/e/uni/ai/mainProject/local-backups/double-dqn-buffer100k-seed42-20260803-203914
+  Benchmark A mean  : 267.8142
+  Benchmark A std   : 65.6777
+  Benchmark A win   : 473/500 (94.60%)
+  Benchmark B mean  : 267.2425
+  Benchmark B std   : 61.2098
+  Benchmark B win   : 953/1000 (95.30%)
+  Combined mean     : 267.4331
+  Combined median   : 279.7908
+  Combined std      : 62.7350
+  Minimum / maximum : -77.4255 / 329.5238
+  Combined win      : 1426/1500 (95.07%)
+  Low scores        : 40/1500 (2.67%)
+  Mean length       : 213.81
+  Best validation   : 296.7254 at episode 1000
+  Max streak A      : {'fire_left_orientation_engine': 45, 'fire_right_orientation_engine': 123}
+  Max streak B      : {'fire_left_orientation_engine': 48, 'fire_right_orientation_engine': 56}
+------------------------------------------------------------------------------
+Soft update
+  Backup path       : /mnt/e/uni/ai/mainProject/local-backups/double-dqn-soft-update-seed42-20260803-191503
+  Benchmark A mean  : 220.0306
+  Benchmark A std   : 91.1451
+  Benchmark A win   : 382/500 (76.40%)
+  Benchmark B mean  : 223.1184
+  Benchmark B std   : 86.2617
+  Benchmark B win   : 779/1000 (77.90%)
+  Combined mean     : 222.0891
+  Combined median   : 245.6090
+  Combined std      : 87.9317
+  Minimum / maximum : -396.1612 / 319.6746
+  Combined win      : 1161/1500 (77.40%)
+  Low scores        : 50/1500 (3.33%)
+  Mean length       : 411.31
+  Best validation   : 269.4025 at episode 600
+  Max streak A      : {'fire_left_orientation_engine': 468, 'fire_right_orientation_engine': 117}
+  Max streak B      : {'fire_left_orientation_engine': 293, 'fire_right_orientation_engine': 79}
+------------------------------------------------------------------------------
+Paired seed-by-seed comparison — Soft minus Buffer
+  Mean reward delta : -45.3439
+  95% bootstrap CI : [-51.2493, -39.5366]
+  Median delta      : -33.3216
+  Soft reward wins  : 278/1500
+  Buffer reward wins: 1222/1500
+  Exact ties        : 0/1500
+  Soft-only solved  : 69
+  Buffer-only solved: 334
+  Both solved       : 1092
+  Neither solved    : 5
+  Win-rate delta    : -17.67 percentage points
+  Low-rate delta    : +0.67 percentage points
+  Std delta         : +25.1966
+  Statistical read  : Buffer 100k has a statistically clear paired mean-reward advantage.
+==============================================================================
