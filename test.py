@@ -45,7 +45,7 @@ def _load_greedy_agent(env):
 def run_rendered(episodes=1000, algorithm="vanilla"):
     """Default mode: render greedy evaluation, identical to the original
     test.py workflow."""
-    env = LunarLanderEnv(render_mode=None)
+    env = LunarLanderEnv(render_mode="human")
     agent = _load_greedy_agent(env)
 
     print("Starting evaluation...")
