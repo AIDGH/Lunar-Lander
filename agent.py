@@ -31,7 +31,8 @@ class Agent:
                  gamma=0.99,
                  epsilon_start=1.0, epsilon_end=0.01, epsilon_decay=0.995,
                  lr=1e-3,
-                 target_update_freq=1000):
+                 target_update_freq=1000,
+                 tau=0.005):
         
         # Core hyperparameters
         self.action_size = action_size
@@ -42,7 +43,12 @@ class Agent:
         self.epsilon_end = epsilon_end
         self.epsilon_decay = epsilon_decay
         self.lr = lr
+        # Retained only for constructor compatibility with the base branch.
+        # Soft updates are applied after every successful optimizer step.
         self.target_update_freq = target_update_freq
+        if not 0.0 < tau <= 1.0:
+            raise ValueError("tau must be in the interval (0, 1].")
+        self.tau = tau
 
         # Initialize experience replay memory
         self.replay_buffer = ReplayBuffer(replay_buffer_capacity)
@@ -59,9 +65,6 @@ class Agent:
         
         # Setup the optimizer for the Policy Network
         self.optimizer = optim.Adam(self.policy_net.parameters(), lr=self.lr)
-        
-        # Counter to track when to update the target network
-        self.steps_done = 0
 
     def act(self, state):
         # Epsilon-greedy action selection to balance exploration and exploitation
@@ -113,12 +116,13 @@ class Agent:
         torch.nn.utils.clip_grad_norm_(self.policy_net.parameters(), max_norm=1.0)
         self.optimizer.step()
 
-        # Update the target network periodically
-        if self.steps_done % self.target_update_freq == 0:
-            self.target_net.load_state_dict(self.policy_net.state_dict())
-
-        # Increment the step counter
-        self.steps_done += 1
+        # Soft-update the target network after every successful optimizer step.
+        with torch.no_grad():
+            for target_param, policy_param in zip(
+                    self.target_net.parameters(),
+                    self.policy_net.parameters()):
+                target_param.mul_(1.0 - self.tau)
+                target_param.add_(policy_param, alpha=self.tau)
 
     def decay_epsilon(self):
         # Decay epsilon once per episode (not per gradient step) so exploration
