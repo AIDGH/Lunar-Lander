@@ -1,0 +1,22 @@
+================================================
+Double DQN — Soft Update Only
+================================================
+Training seed          : 42
+Replay buffer          : 10000
+Target strategy        : soft
+Tau                    : 0.005
+Best validation ep     : 600
+Best validation mean   : 269.4025
+------------------------------------------------
+Benchmark A: mean=220.0306, std=91.1451, solved=382/500, low=21/500, mean_len=425.79
+Benchmark B: mean=226.2358, std=80.5269, solved=395/500, low=12/500, mean_len=416.12
+------------------------------------------------
+Combined mean          : 223.1332
+Combined median        : 244.8034
+Combined std           : 86.0560
+Combined solved        : 777/1000 (77.70%)
+Combined low           : 33/1000 (3.30%)
+Combined mean length   : 420.95
+Max side streak A      : {'fire_left_orientation_engine': 468, 'fire_right_orientation_engine': 117}
+Max side streak B      : {'fire_left_orientation_engine': 205, 'fire_right_orientation_engine': 79}
+================================================
