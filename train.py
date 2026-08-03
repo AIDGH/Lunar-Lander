@@ -1,3 +1,4 @@
+import argparse
 import json
 import random
 import numpy as np
@@ -12,13 +13,34 @@ from game import LunarLanderEnv
 from agent import Agent
 
 # --- Reproducibility ---
-SEED = 42
+DEFAULT_SEED = 42
+
+parser = argparse.ArgumentParser(
+    description="Train the controlled Double DQN replay-buffer experiment."
+)
+parser.add_argument(
+    "--seed",
+    type=int,
+    default=DEFAULT_SEED,
+    help=f"Training seed (default: {DEFAULT_SEED}).",
+)
+args = parser.parse_args()
+
+SEED = args.seed
 random.seed(SEED)
 np.random.seed(SEED)
 torch.manual_seed(SEED)
 
 # Number of training episodes
 NUM_EPISODES = 1000
+
+# --- Controlled experiment configuration ---
+# This branch changes only replay-buffer capacity relative to the base branch.
+EXPERIMENT_VARIANT = "double_dqn_buffer100k_only"
+REPLAY_BUFFER_CAPACITY = 100000
+TARGET_UPDATE_STRATEGY = "hard"
+TARGET_UPDATE_FREQ = 1000
+
 # Window used for the moving-average reward curve (training metric).
 MOVING_AVG_WINDOW = 50
 # Evaluate average max Q-value on the hold-out states every N episodes.
@@ -99,7 +121,9 @@ action_size = env.action_space.n
 # Initialize the agent with standard hyperparameters
 agent = Agent(action_size=action_size,
               state_size=state_size,
-              batch_size=64)
+              batch_size=64,
+              replay_buffer_capacity=REPLAY_BUFFER_CAPACITY,
+              target_update_freq=TARGET_UPDATE_FREQ)
 
 # --- Hold-out States Collection ---
 # Collect a set of random states to track Q-value stability during training.
@@ -202,7 +226,13 @@ print("==============================")
 
 # --- Persist metrics for later analysis / report ---
 metrics = {
+    "algorithm": "double_dqn",
+    "experiment_variant": EXPERIMENT_VARIANT,
     "seed": SEED,
+    "training_seed": SEED,
+    "replay_buffer_capacity": REPLAY_BUFFER_CAPACITY,
+    "target_update_strategy": TARGET_UPDATE_STRATEGY,
+    "target_update_freq": TARGET_UPDATE_FREQ,
     "num_episodes": total_tests,
     "moving_avg_window": MOVING_AVG_WINDOW,
     "q_eval_every": Q_EVAL_EVERY,
